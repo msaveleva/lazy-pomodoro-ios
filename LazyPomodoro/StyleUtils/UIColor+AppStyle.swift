@@ -10,13 +10,21 @@ import UIKit
 
 public extension UIColor {
     
+    // MARK: Fill
+    
     class func lp_mainBackground() -> UIColor {
         return UIColor.white
+    }
+    
+    class func lp_mainGradientColors() -> (UIColor, UIColor) {
+        return (UIColor(hex: 0xFF0844), UIColor(hex: 0xFFB199))
     }
     
     class func lp_fillAccentRed() -> UIColor {
         return UIColor(hex: 0xFF0844)
     }
+    
+    //MARK: Grey
     
     class func lp_greyDarkest() -> UIColor {
         return UIColor(hex: 0x9B9B9B)
@@ -29,6 +37,8 @@ public extension UIColor {
     class func lp_greyMedium() -> UIColor {
         return UIColor(hex: 0xF2F2F2)
     }
+    
+    // MARK: Text
     
     class func lp_defaultTextColor() -> UIColor {
         return UIColor(hex: 0x333333)
