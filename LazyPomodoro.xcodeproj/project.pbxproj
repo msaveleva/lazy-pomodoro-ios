@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24502EBD5076335F58AA4DFD /* Pods_LazyPomodoroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */; };
+		2D5EDDDAF87AC7C18C1719BA /* Pods_LazyPomodoroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2CF45D22C9ACB3327CB819 /* Pods_LazyPomodoroUITests.framework */; };
+		3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBA8E222BA75400821988 /* AppDelegate.swift */; };
+		3F1CBA91222BA75400821988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBA90222BA75400821988 /* ViewController.swift */; };
+		3F1CBA94222BA75400821988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA92222BA75400821988 /* Main.storyboard */; };
+		3F1CBA96222BA75400821988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA95222BA75400821988 /* Assets.xcassets */; };
+		3F1CBA99222BA75400821988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */; };
+		3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */; };
+		3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */; };
+		8AE1678B2195F77D88046AC5 /* Pods_LazyPomodoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5D57ADD9F1CE52B8A31FF5 /* Pods_LazyPomodoro.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F1CBAA0222BA75400821988 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F1CBA83222BA75400821988 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F1CBA8A222BA75400821988;
+			remoteInfo = LazyPomodoro;
+		};
+		3F1CBAAB222BA75400821988 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F1CBA83222BA75400821988 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F1CBA8A222BA75400821988;
+			remoteInfo = LazyPomodoro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F1CBA8B222BA75400821988 /* LazyPomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1CBA8E222BA75400821988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F1CBA90222BA75400821988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F1CBA93222BA75400821988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F1CBA95222BA75400821988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F1CBA98222BA75400821988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F1CBA9A222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1CBA9F222BA75400821988 /* LazyPomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPomodoroTests.swift; sourceTree = "<group>"; };
+		3F1CBAA5222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1CBAAA222BA75400821988 /* LazyPomodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPomodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPomodoroUITests.swift; sourceTree = "<group>"; };
+		3F1CBAB0222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435770F8BA117F49406500D6 /* Pods-LazyPomodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoro.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoro/Pods-LazyPomodoro.release.xcconfig"; sourceTree = "<group>"; };
+		4F22ACE051B63520D0448E5F /* Pods-LazyPomodoroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoroTests.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoroTests/Pods-LazyPomodoroTests.release.xcconfig"; sourceTree = "<group>"; };
+		5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPomodoroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CA7E71FA5FAA126ACBF1E4F /* Pods-LazyPomodoro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoro.debug.xcconfig"; path = "Target Support Files/Pods-LazyPomodoro/Pods-LazyPomodoro.debug.xcconfig"; sourceTree = "<group>"; };
+		7C5D57ADD9F1CE52B8A31FF5 /* Pods_LazyPomodoro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPomodoro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1F6DEC28F2EC992CD714B5 /* Pods-LazyPomodoroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoroUITests.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoroUITests/Pods-LazyPomodoroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D2BC73962B5835702F448242 /* Pods-LazyPomodoroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoroUITests.debug.xcconfig"; path = "Target Support Files/Pods-LazyPomodoroUITests/Pods-LazyPomodoroUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6A86C20FA8B43C4E2B1C152 /* Pods-LazyPomodoroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoroTests.debug.xcconfig"; path = "Target Support Files/Pods-LazyPomodoroTests/Pods-LazyPomodoroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE2CF45D22C9ACB3327CB819 /* Pods_LazyPomodoroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPomodoroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F1CBA88222BA75400821988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE1678B2195F77D88046AC5 /* Pods_LazyPomodoro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1CBA9C222BA75400821988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24502EBD5076335F58AA4DFD /* Pods_LazyPomodoroTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1CBAA7222BA75400821988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5EDDDAF87AC7C18C1719BA /* Pods_LazyPomodoroUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F1CBA82222BA75400821988 = {
+			isa = PBXGroup;
+			children = (
+				3F1CBA8D222BA75400821988 /* LazyPomodoro */,
+				3F1CBAA2222BA75400821988 /* LazyPomodoroTests */,
+				3F1CBAAD222BA75400821988 /* LazyPomodoroUITests */,
+				3F1CBA8C222BA75400821988 /* Products */,
+				D725EEA4E2B71BE2B5597E5B /* Pods */,
+				40EF7AD40A84540B1009C3BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F1CBA8C222BA75400821988 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F1CBA8B222BA75400821988 /* LazyPomodoro.app */,
+				3F1CBA9F222BA75400821988 /* LazyPomodoroTests.xctest */,
+				3F1CBAAA222BA75400821988 /* LazyPomodoroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F1CBA8D222BA75400821988 /* LazyPomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				3F1CBA8E222BA75400821988 /* AppDelegate.swift */,
+				3F1CBA90222BA75400821988 /* ViewController.swift */,
+				3F1CBA92222BA75400821988 /* Main.storyboard */,
+				3F1CBA95222BA75400821988 /* Assets.xcassets */,
+				3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */,
+				3F1CBA9A222BA75400821988 /* Info.plist */,
+			);
+			path = LazyPomodoro;
+			sourceTree = "<group>";
+		};
+		3F1CBAA2222BA75400821988 /* LazyPomodoroTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */,
+				3F1CBAA5222BA75400821988 /* Info.plist */,
+			);
+			path = LazyPomodoroTests;
+			sourceTree = "<group>";
+		};
+		3F1CBAAD222BA75400821988 /* LazyPomodoroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */,
+				3F1CBAB0222BA75400821988 /* Info.plist */,
+			);
+			path = LazyPomodoroUITests;
+			sourceTree = "<group>";
+		};
+		40EF7AD40A84540B1009C3BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C5D57ADD9F1CE52B8A31FF5 /* Pods_LazyPomodoro.framework */,
+				5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */,
+				FE2CF45D22C9ACB3327CB819 /* Pods_LazyPomodoroUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D725EEA4E2B71BE2B5597E5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CA7E71FA5FAA126ACBF1E4F /* Pods-LazyPomodoro.debug.xcconfig */,
+				435770F8BA117F49406500D6 /* Pods-LazyPomodoro.release.xcconfig */,
+				D6A86C20FA8B43C4E2B1C152 /* Pods-LazyPomodoroTests.debug.xcconfig */,
+				4F22ACE051B63520D0448E5F /* Pods-LazyPomodoroTests.release.xcconfig */,
+				D2BC73962B5835702F448242 /* Pods-LazyPomodoroUITests.debug.xcconfig */,
+				9F1F6DEC28F2EC992CD714B5 /* Pods-LazyPomodoroUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F1CBA8A222BA75400821988 /* LazyPomodoro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1CBAB3222BA75500821988 /* Build configuration list for PBXNativeTarget "LazyPomodoro" */;
+			buildPhases = (
+				0BA07661EF6AB3DB177D6FCB /* [CP] Check Pods Manifest.lock */,
+				3F1CBA87222BA75400821988 /* Sources */,
+				3F1CBA88222BA75400821988 /* Frameworks */,
+				3F1CBA89222BA75400821988 /* Resources */,
+				8656929AE16B073AB8BF04EA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyPomodoro;
+			productName = LazyPomodoro;
+			productReference = 3F1CBA8B222BA75400821988 /* LazyPomodoro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F1CBA9E222BA75400821988 /* LazyPomodoroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1CBAB6222BA75500821988 /* Build configuration list for PBXNativeTarget "LazyPomodoroTests" */;
+			buildPhases = (
+				8F7D0CA6E992934A3D833079 /* [CP] Check Pods Manifest.lock */,
+				3F1CBA9B222BA75400821988 /* Sources */,
+				3F1CBA9C222BA75400821988 /* Frameworks */,
+				3F1CBA9D222BA75400821988 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F1CBAA1222BA75400821988 /* PBXTargetDependency */,
+			);
+			name = LazyPomodoroTests;
+			productName = LazyPomodoroTests;
+			productReference = 3F1CBA9F222BA75400821988 /* LazyPomodoroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F1CBAA9222BA75400821988 /* LazyPomodoroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1CBAB9222BA75500821988 /* Build configuration list for PBXNativeTarget "LazyPomodoroUITests" */;
+			buildPhases = (
+				977344FE0A8FBE039A3ED8B7 /* [CP] Check Pods Manifest.lock */,
+				3F1CBAA6222BA75400821988 /* Sources */,
+				3F1CBAA7222BA75400821988 /* Frameworks */,
+				3F1CBAA8222BA75400821988 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F1CBAAC222BA75400821988 /* PBXTargetDependency */,
+			);
+			name = LazyPomodoroUITests;
+			productName = LazyPomodoroUITests;
+			productReference = 3F1CBAAA222BA75400821988 /* LazyPomodoroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F1CBA83222BA75400821988 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Maria Saveleva";
+				TargetAttributes = {
+					3F1CBA8A222BA75400821988 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3F1CBA9E222BA75400821988 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3F1CBA8A222BA75400821988;
+					};
+					3F1CBAA9222BA75400821988 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3F1CBA8A222BA75400821988;
+					};
+				};
+			};
+			buildConfigurationList = 3F1CBA86222BA75400821988 /* Build configuration list for PBXProject "LazyPomodoro" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F1CBA82222BA75400821988;
+			productRefGroup = 3F1CBA8C222BA75400821988 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F1CBA8A222BA75400821988 /* LazyPomodoro */,
+				3F1CBA9E222BA75400821988 /* LazyPomodoroTests */,
+				3F1CBAA9222BA75400821988 /* LazyPomodoroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F1CBA89222BA75400821988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1CBA99222BA75400821988 /* LaunchScreen.storyboard in Resources */,
+				3F1CBA96222BA75400821988 /* Assets.xcassets in Resources */,
+				3F1CBA94222BA75400821988 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1CBA9D222BA75400821988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1CBAA8222BA75400821988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BA07661EF6AB3DB177D6FCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LazyPomodoro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8656929AE16B073AB8BF04EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LazyPomodoro/Pods-LazyPomodoro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LazyPomodoro/Pods-LazyPomodoro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F7D0CA6E992934A3D833079 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LazyPomodoroTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		977344FE0A8FBE039A3ED8B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LazyPomodoroUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F1CBA87222BA75400821988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1CBA91222BA75400821988 /* ViewController.swift in Sources */,
+				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1CBA9B222BA75400821988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1CBAA6222BA75400821988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F1CBAA1222BA75400821988 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F1CBA8A222BA75400821988 /* LazyPomodoro */;
+			targetProxy = 3F1CBAA0222BA75400821988 /* PBXContainerItemProxy */;
+		};
+		3F1CBAAC222BA75400821988 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F1CBA8A222BA75400821988 /* LazyPomodoro */;
+			targetProxy = 3F1CBAAB222BA75400821988 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F1CBA92222BA75400821988 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1CBA93222BA75400821988 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1CBA98222BA75400821988 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F1CBAB1222BA75500821988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F1CBAB2222BA75500821988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F1CBAB4222BA75500821988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CA7E71FA5FAA126ACBF1E4F /* Pods-LazyPomodoro.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				INFOPLIST_FILE = LazyPomodoro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dreadnoughtdev.LazyPomodoro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3F1CBAB5222BA75500821988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 435770F8BA117F49406500D6 /* Pods-LazyPomodoro.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				INFOPLIST_FILE = LazyPomodoro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dreadnoughtdev.LazyPomodoro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3F1CBAB7222BA75500821988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A86C20FA8B43C4E2B1C152 /* Pods-LazyPomodoroTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				INFOPLIST_FILE = LazyPomodoroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dreadnoughtdev.LazyPomodoroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyPomodoro.app/LazyPomodoro";
+			};
+			name = Debug;
+		};
+		3F1CBAB8222BA75500821988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F22ACE051B63520D0448E5F /* Pods-LazyPomodoroTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				INFOPLIST_FILE = LazyPomodoroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dreadnoughtdev.LazyPomodoroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyPomodoro.app/LazyPomodoro";
+			};
+			name = Release;
+		};
+		3F1CBABA222BA75500821988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2BC73962B5835702F448242 /* Pods-LazyPomodoroUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				INFOPLIST_FILE = LazyPomodoroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dreadnoughtdev.LazyPomodoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LazyPomodoro;
+			};
+			name = Debug;
+		};
+		3F1CBABB222BA75500821988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F1F6DEC28F2EC992CD714B5 /* Pods-LazyPomodoroUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				INFOPLIST_FILE = LazyPomodoroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dreadnoughtdev.LazyPomodoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LazyPomodoro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F1CBA86222BA75400821988 /* Build configuration list for PBXProject "LazyPomodoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1CBAB1222BA75500821988 /* Debug */,
+				3F1CBAB2222BA75500821988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1CBAB3222BA75500821988 /* Build configuration list for PBXNativeTarget "LazyPomodoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1CBAB4222BA75500821988 /* Debug */,
+				3F1CBAB5222BA75500821988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1CBAB6222BA75500821988 /* Build configuration list for PBXNativeTarget "LazyPomodoroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1CBAB7222BA75500821988 /* Debug */,
+				3F1CBAB8222BA75500821988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1CBAB9222BA75500821988 /* Build configuration list for PBXNativeTarget "LazyPomodoroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1CBABA222BA75500821988 /* Debug */,
+				3F1CBABB222BA75500821988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F1CBA83222BA75400821988 /* Project object */;
+}
