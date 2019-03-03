@@ -16,6 +16,7 @@
 		3F1CBA99222BA75400821988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */; };
 		3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */; };
 		3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */; };
+		3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */; };
 		8AE1678B2195F77D88046AC5 /* Pods_LazyPomodoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5D57ADD9F1CE52B8A31FF5 /* Pods_LazyPomodoro.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		3F1CBAAA222BA75400821988 /* LazyPomodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPomodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPomodoroUITests.swift; sourceTree = "<group>"; };
 		3F1CBAB0222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppStyle.swift"; sourceTree = "<group>"; };
 		435770F8BA117F49406500D6 /* Pods-LazyPomodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoro.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoro/Pods-LazyPomodoro.release.xcconfig"; sourceTree = "<group>"; };
 		4F22ACE051B63520D0448E5F /* Pods-LazyPomodoroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoroTests.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoroTests/Pods-LazyPomodoroTests.release.xcconfig"; sourceTree = "<group>"; };
 		5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPomodoroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +116,9 @@
 		3F1CBA8D222BA75400821988 /* LazyPomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				3FE6CD56222BDE3C006B1C4A /* StyleUtils */,
+				3FE6CD55222BDE2E006B1C4A /* ViewControllers */,
 				3F1CBA8E222BA75400821988 /* AppDelegate.swift */,
-				3F1CBA90222BA75400821988 /* ViewController.swift */,
 				3F1CBA92222BA75400821988 /* Main.storyboard */,
 				3F1CBA95222BA75400821988 /* Assets.xcassets */,
 				3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */,
@@ -142,6 +145,22 @@
 			path = LazyPomodoroUITests;
 			sourceTree = "<group>";
 		};
+		3FE6CD55222BDE2E006B1C4A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F1CBA90222BA75400821988 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3FE6CD56222BDE3C006B1C4A /* StyleUtils */ = {
+			isa = PBXGroup;
+			children = (
+				3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */,
+			);
+			path = StyleUtils;
+			sourceTree = "<group>";
+		};
 		40EF7AD40A84540B1009C3BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +181,6 @@
 				D2BC73962B5835702F448242 /* Pods-LazyPomodoroUITests.debug.xcconfig */,
 				9F1F6DEC28F2EC992CD714B5 /* Pods-LazyPomodoroUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -412,6 +430,7 @@
 			files = (
 				3F1CBA91222BA75400821988 /* ViewController.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
+				3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
