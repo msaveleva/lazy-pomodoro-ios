@@ -16,6 +16,9 @@ target 'LazyPomodoro' do
   pod 'RealmSwift', '~> 3.13.1'
   pod 'RxRealm', '~> 0.7.6'
 
+  # UI
+  pod 'SnapKit', '~> 4.2.0'
+
   target 'LazyPomodoroTests' do
     inherit! :search_paths
   end
