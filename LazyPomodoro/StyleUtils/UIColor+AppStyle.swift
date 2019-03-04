@@ -12,7 +12,7 @@ public extension UIColor {
     
     // MARK: Fill
     
-    class func lp_mainBackground() -> UIColor {
+    class func lp_mainFillColor() -> UIColor {
         return UIColor.white
     }
     

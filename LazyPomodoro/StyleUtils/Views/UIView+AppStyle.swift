@@ -13,10 +13,9 @@ extension UIView {
     // MARK: Shadows
     
     func lp_setCenterShadow() {
-        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-        layer.shadowRadius = 5
         layer.shadowOffset = .zero
-        layer.shadowOpacity = 0.1
+        layer.shadowOpacity = 0.1;
+        layer.shadowRadius = 5
     }
     
     // MARK: Gradient
