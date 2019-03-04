@@ -14,24 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let myView = UIView()
-//        myView.backgroundColor = UIColor.white
-//        myView.layer.cornerRadius = 40.0
-//        myView.lp_setCenterShadow()
-//
-//        view.addSubview(myView)
-//        myView.snp.makeConstraints { (make) in
-//            make.center.equalTo(view)
-//            make.height.width.equalTo(200)
-//        }
-        
-        let button = StandardButton.createStandardButton()
-        button.setTitle("Japanese", for: .normal)
-        view.addSubview(button)
-        
-        button.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.width.height.equalTo(150)
+        let progress = RedProgressView.createDefaultProgressView()
+        view.addSubview(progress)
+        progress.snp.makeConstraints { (make) in
+            make.leading.equalTo(view).offset(20)
+            make.trailing.equalTo(view).offset(-20)
+            make.centerY.equalTo(view)
+            make.height.equalTo(30)
         }
     }
 

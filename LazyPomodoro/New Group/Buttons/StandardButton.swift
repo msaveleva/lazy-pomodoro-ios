@@ -29,7 +29,7 @@ class StandardButton: UIButton {
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
-                backgroundColor = UIColor.lp_greyMedium()
+                backgroundColor = UIColor.lp_grayMedium()
             } else {
                 backgroundColor = UIColor.lp_mainFillColor()
             }

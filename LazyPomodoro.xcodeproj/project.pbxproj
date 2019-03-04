@@ -17,6 +17,7 @@
 		3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */; };
 		3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */; };
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
+		3F20AE1F222D83AB00DB0A87 /* RedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* RedProgressView.swift */; };
 		3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */; };
 		3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */; };
 		3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */; };
@@ -55,6 +56,7 @@
 		3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPomodoroUITests.swift; sourceTree = "<group>"; };
 		3F1CBAB0222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
+		3F20AE1E222D83AB00DB0A87 /* RedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedProgressView.swift; sourceTree = "<group>"; };
 		3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppStyle.swift"; sourceTree = "<group>"; };
 		3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AppStyle.swift"; sourceTree = "<group>"; };
 		3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppStyles.swift"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				3F20AE1B222D825500DB0A87 /* Buttons */,
+				3F20AE1E222D83AB00DB0A87 /* RedProgressView.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -467,6 +470,7 @@
 				3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */,
 				3F1CBA91222BA75400821988 /* ViewController.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
+				3F20AE1F222D83AB00DB0A87 /* RedProgressView.swift in Sources */,
 				3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,

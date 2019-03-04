@@ -24,17 +24,17 @@ public extension UIColor {
         return UIColor(hex: 0xFF0844)
     }
     
-    //MARK: Grey
+    //MARK: Gray
     
-    class func lp_greyDarkest() -> UIColor {
+    class func lp_grayDarkest() -> UIColor {
         return UIColor(hex: 0x9B9B9B)
     }
     
-    class func lp_greyDark() -> UIColor {
+    class func lp_grayDark() -> UIColor {
         return UIColor(hex: 0xE0E0E0)
     }
     
-    class func lp_greyMedium() -> UIColor {
+    class func lp_grayMedium() -> UIColor {
         return UIColor(hex: 0xF2F2F2)
     }
     
