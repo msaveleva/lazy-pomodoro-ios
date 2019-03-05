@@ -18,6 +18,12 @@
 		3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */; };
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
 		3F20AE1F222D83AB00DB0A87 /* RedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* RedProgressView.swift */; };
+		3FDA05B4222E431700D65C51 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B3222E431700D65C51 /* Scene.swift */; };
+		3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */; };
+		3FDA05B9222E444800D65C51 /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */; };
+		3FDA05BB222E453F00D65C51 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BA222E453F00D65C51 /* TimerViewController.swift */; };
+		3FDA05BD222E45FB00D65C51 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BC222E45FB00D65C51 /* SceneCoordinator.swift */; };
+		3FDA05BF222E472A00D65C51 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */; };
 		3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */; };
 		3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */; };
 		3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */; };
@@ -57,6 +63,12 @@
 		3F1CBAB0222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		3F20AE1E222D83AB00DB0A87 /* RedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedProgressView.swift; sourceTree = "<group>"; };
+		3FDA05B3222E431700D65C51 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerViewModel.swift; sourceTree = "<group>"; };
+		3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
+		3FDA05BA222E453F00D65C51 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		3FDA05BC222E45FB00D65C51 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
 		3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppStyle.swift"; sourceTree = "<group>"; };
 		3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AppStyle.swift"; sourceTree = "<group>"; };
 		3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppStyles.swift"; sourceTree = "<group>"; };
@@ -124,6 +136,8 @@
 		3F1CBA8D222BA75400821988 /* LazyPomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				3FDA05B5222E435A00D65C51 /* ViewModel */,
+				3FDA05B2222E430C00D65C51 /* Scenes */,
 				3FEF8384222D7F590016A088 /* Views */,
 				3FE6CD56222BDE3C006B1C4A /* StyleUtils */,
 				3FE6CD55222BDE2E006B1C4A /* ViewControllers */,
@@ -162,10 +176,30 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		3FDA05B2222E430C00D65C51 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3FDA05B3222E431700D65C51 /* Scene.swift */,
+				3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */,
+				3FDA05BC222E45FB00D65C51 /* SceneCoordinator.swift */,
+				3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3FDA05B5222E435A00D65C51 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3FE6CD55222BDE2E006B1C4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				3F1CBA90222BA75400821988 /* ViewController.swift */,
+				3FDA05BA222E453F00D65C51 /* TimerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -469,10 +503,16 @@
 			files = (
 				3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */,
 				3F1CBA91222BA75400821988 /* ViewController.swift in Sources */,
+				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,
+				3FDA05BD222E45FB00D65C51 /* SceneCoordinator.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
 				3F20AE1F222D83AB00DB0A87 /* RedProgressView.swift in Sources */,
+				3FDA05B4222E431700D65C51 /* Scene.swift in Sources */,
 				3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */,
+				3FDA05BF222E472A00D65C51 /* SceneTransitionType.swift in Sources */,
+				3FDA05B9222E444800D65C51 /* Scene+ViewController.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
+				3FDA05BB222E453F00D65C51 /* TimerViewController.swift in Sources */,
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
