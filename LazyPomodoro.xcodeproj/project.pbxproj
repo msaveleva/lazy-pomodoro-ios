@@ -24,7 +24,7 @@
 		3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */; };
 		3FDA05B9222E444800D65C51 /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */; };
 		3FDA05BB222E453F00D65C51 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BA222E453F00D65C51 /* TimerViewController.swift */; };
-		3FDA05BD222E45FB00D65C51 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BC222E45FB00D65C51 /* SceneCoordinator.swift */; };
+		3FDA05BD222E45FB00D65C51 /* ScenesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BC222E45FB00D65C51 /* ScenesRouter.swift */; };
 		3FDA05BF222E472A00D65C51 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */; };
 		3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */; };
 		3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */; };
@@ -71,7 +71,7 @@
 		3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerViewModel.swift; sourceTree = "<group>"; };
 		3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
 		3FDA05BA222E453F00D65C51 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		3FDA05BC222E45FB00D65C51 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		3FDA05BC222E45FB00D65C51 /* ScenesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesRouter.swift; sourceTree = "<group>"; };
 		3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
 		3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppStyle.swift"; sourceTree = "<group>"; };
 		3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AppStyle.swift"; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 			children = (
 				3FDA05B3222E431700D65C51 /* Scene.swift */,
 				3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */,
-				3FDA05BC222E45FB00D65C51 /* SceneCoordinator.swift */,
+				3FDA05BC222E45FB00D65C51 /* ScenesRouter.swift */,
 				3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */,
 			);
 			path = Scenes;
@@ -526,7 +526,7 @@
 				3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */,
 				3F1CBA91222BA75400821988 /* ViewController.swift in Sources */,
 				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,
-				3FDA05BD222E45FB00D65C51 /* SceneCoordinator.swift in Sources */,
+				3FDA05BD222E45FB00D65C51 /* ScenesRouter.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
 				3F20AE1F222D83AB00DB0A87 /* RedProgressView.swift in Sources */,
 				3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */,

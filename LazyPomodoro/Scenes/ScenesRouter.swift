@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SceneCoordinator {
+class ScenesRouter {
     
     private let window: UIWindow!
     private var currentViewController: UIViewController?
