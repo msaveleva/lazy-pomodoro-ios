@@ -8,7 +8,9 @@
 
 import UIKit
 
-class TimerViewController: UIViewController {
+class TimerViewController: UIViewController, BindableTypeProtocol {
+    
+    var viewModel: TimerControllerViewModel!
     
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -16,7 +18,8 @@ class TimerViewController: UIViewController {
         view.lp_fillWithDefaultGradient()
     }
     
-    func bindViewModel(to viewModel: TimerControllerViewModel) {
-        
+    func bindViewModel() {
+        //TODO msaveleva: implement
     }
+    
 }

@@ -12,7 +12,7 @@ extension Scene {
     func viewController() -> UIViewController {
         switch self {
         case .timer(let viewModel):
-            let timerController = TimerViewController() //TODO msaveleva: check
+            var timerController = TimerViewController()
             timerController.bindViewModel(to: viewModel)
             
             return timerController

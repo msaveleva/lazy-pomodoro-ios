@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24502EBD5076335F58AA4DFD /* Pods_LazyPomodoroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */; };
 		2D5EDDDAF87AC7C18C1719BA /* Pods_LazyPomodoroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2CF45D22C9ACB3327CB819 /* Pods_LazyPomodoroUITests.framework */; };
+		3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F002F19222F8F0F00B53C34 /* BindableTypeProtocol.swift */; };
 		3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBA8E222BA75400821988 /* AppDelegate.swift */; };
 		3F1CBA91222BA75400821988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBA90222BA75400821988 /* ViewController.swift */; };
 		3F1CBA94222BA75400821988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA92222BA75400821988 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F002F19222F8F0F00B53C34 /* BindableTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTypeProtocol.swift; sourceTree = "<group>"; };
 		3F1CBA8B222BA75400821988 /* LazyPomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1CBA8E222BA75400821988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F1CBA90222BA75400821988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F002F18222F8F0400B53C34 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3F002F19222F8F0F00B53C34 /* BindableTypeProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		3F1CBA82222BA75400821988 = {
 			isa = PBXGroup;
 			children = (
@@ -136,10 +146,11 @@
 		3F1CBA8D222BA75400821988 /* LazyPomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				3F002F18222F8F0400B53C34 /* Protocols */,
 				3FDA05B5222E435A00D65C51 /* ViewModel */,
 				3FDA05B2222E430C00D65C51 /* Scenes */,
 				3FEF8384222D7F590016A088 /* Views */,
-				3FE6CD56222BDE3C006B1C4A /* StyleUtils */,
+				3FE6CD56222BDE3C006B1C4A /* StyleExtensions */,
 				3FE6CD55222BDE2E006B1C4A /* ViewControllers */,
 				3F1CBA8E222BA75400821988 /* AppDelegate.swift */,
 				3F1CBA92222BA75400821988 /* Main.storyboard */,
@@ -204,14 +215,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		3FE6CD56222BDE3C006B1C4A /* StyleUtils */ = {
+		3FE6CD56222BDE3C006B1C4A /* StyleExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				3FEF838A222D7FAD0016A088 /* Views */,
 				3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */,
 				3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */,
 			);
-			path = StyleUtils;
+			path = StyleExtensions;
 			sourceTree = "<group>";
 		};
 		3FEF8384222D7F590016A088 /* Views */ = {
@@ -507,6 +518,7 @@
 				3FDA05BD222E45FB00D65C51 /* SceneCoordinator.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
 				3F20AE1F222D83AB00DB0A87 /* RedProgressView.swift in Sources */,
+				3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */,
 				3FDA05B4222E431700D65C51 /* Scene.swift in Sources */,
 				3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */,
 				3FDA05BF222E472A00D65C51 /* SceneTransitionType.swift in Sources */,
