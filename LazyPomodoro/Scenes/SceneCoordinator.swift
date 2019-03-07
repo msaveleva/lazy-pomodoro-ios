@@ -1,0 +1,55 @@
+//
+//  SceneCoordinator.swift
+//  LazyPomodoro
+//
+//  Created by Maria Saveleva on 05/03/2019.
+//  Copyright © 2019 Maria Saveleva. All rights reserved.
+//
+
+import UIKit
+
+class SceneCoordinator {
+    
+    private let window: UIWindow!
+    private var currentViewController: UIViewController?
+    
+    required init(window: UIWindow) {
+        self.window = window
+        currentViewController = window.rootViewController
+    }
+    
+    func transition(to scene: Scene, transitionType: SceneTransitionType, completion: @escaping () -> Void) {
+        let viewController = scene.viewController()
+        switch transitionType {
+        case .root:
+            window.rootViewController = viewController
+            completion()
+        case .push:
+            guard let navigationController = currentViewController?.navigationController else {
+                fatalError("Can't push view controller without navigation controller. ")
+            }
+            
+            navigationController.pushViewController(viewController, animated: true)
+            completion()
+        case .modal:
+            currentViewController?.present(viewController, animated: true, completion: {
+                completion()
+            })
+        }
+        
+        currentViewController = viewController
+    }
+    
+    func pop(animated: Bool, completion: @escaping () -> Void) {
+        if let presenterController = currentViewController?.presentingViewController {
+            //Dismiss modal view controller.
+            currentViewController?.dismiss(animated: animated) { [weak self] in
+                self?.currentViewController = presenterController
+                completion()
+            }
+        } else if let navigationController = currentViewController?.navigationController {
+            navigationController.popViewController(animated: animated)
+            currentViewController = navigationController.viewControllers.last
+        }
+    }
+}

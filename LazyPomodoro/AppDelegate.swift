@@ -13,9 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let coordinator = SceneCoordinator(window: window!)
+        
+        let timerScene = Scene.timer(TimerControllerViewModel())
+        coordinator.transition(to: timerScene, transitionType: .root) {
+            print("Transition completed.")
+        }
+        
         return true
     }
 
