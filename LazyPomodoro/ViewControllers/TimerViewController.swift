@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class TimerViewController: UIViewController, BindableTypeProtocol {
     
@@ -15,7 +16,7 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
     override func viewDidLoad() {
         super .viewDidLoad()
         
-        view.lp_fillWithDefaultGradient()
+        view.backgroundColor = UIColor.lp_mainFillColor()
     }
     
     func bindViewModel() {

@@ -9,43 +9,45 @@
 import UIKit
 import SnapKit
 
-class RedProgressView: UIView {
+class ProgressStackView: UIStackView {
     
     private static let kProgressIndicatorHeight = 5
+    private static let kDefaultMargin = 8
     
     private let titleLabel = UILabel()
     private let progressLabel = UILabel()
     private let progressIndicator = UIProgressView()
     
-    class func createDefaultProgressView() -> RedProgressView {
-        let progressView = RedProgressView(frame: CGRect(x: 0, y: 0, width: 311, height: 28))
+    class func createDefaultProgressView() -> ProgressStackView {
+        let progressView = ProgressStackView(frame: .zero)
+        progressView.axis = .vertical
         
         //Configure title
         progressView.titleLabel.font = UIFont.lp_body1()
         progressView.titleLabel.textColor = UIColor.lp_defaultTextColor()
         progressView.titleLabel.textAlignment = .left
+        progressView.titleLabel.numberOfLines = 0
         
-        progressView.addSubview(progressView.titleLabel)
-        progressView.titleLabel.snp.makeConstraints { (make) in
-            make.leading.trailing.top.equalTo(progressView)
-        }
+        progressView.addArrangedSubview(progressView.titleLabel)
         
         //Configure progress label
         progressView.progressLabel.font = UIFont.lp_body2()
         progressView.progressLabel.textColor = UIColor.lp_grayDarkest()
         progressView.progressLabel.textAlignment = .right
         
-        progressView.addSubview(progressView.progressLabel)
-        progressView.progressLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(progressView.titleLabel.snp.bottom)
-            make.leading.trailing.equalTo(progressView)
-        }
+        progressView.addArrangedSubview(progressView.progressLabel)
         
         //Configure indicator
-        progressView.addSubview(progressView.progressIndicator)
+        let progressBackground = UIView()
+        progressBackground.snp.makeConstraints { (make) in
+            make.height.equalTo(kProgressIndicatorHeight + kDefaultMargin)
+        }
+        
+        progressView.addArrangedSubview(progressBackground)
+        progressBackground.addSubview(progressView.progressIndicator)
         progressView.progressIndicator.snp.makeConstraints { (make) in
-            make.leading.trailing.bottom.equalTo(progressView)
             make.height.equalTo(kProgressIndicatorHeight)
+            make.bottom.leading.trailing.equalTo(progressBackground	)
         }
         
         progressView.progressIndicator.trackImage = UIImage(named: "slider-bg")
