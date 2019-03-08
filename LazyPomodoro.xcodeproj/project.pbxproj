@@ -18,7 +18,7 @@
 		3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */; };
 		3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */; };
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
-		3F20AE1F222D83AB00DB0A87 /* RedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* RedProgressView.swift */; };
+		3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */; };
 		3F9A29AA2231181F0006A3A4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A29A92231181F0006A3A4 /* Project.swift */; };
 		3FDA05B4222E431700D65C51 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B3222E431700D65C51 /* Scene.swift */; };
 		3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */; };
@@ -65,7 +65,7 @@
 		3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPomodoroUITests.swift; sourceTree = "<group>"; };
 		3F1CBAB0222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
-		3F20AE1E222D83AB00DB0A87 /* RedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedProgressView.swift; sourceTree = "<group>"; };
+		3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackView.swift; sourceTree = "<group>"; };
 		3F9A29A92231181F0006A3A4 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		3FDA05B3222E431700D65C51 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerViewModel.swift; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				3F20AE1B222D825500DB0A87 /* Buttons */,
-				3F20AE1E222D83AB00DB0A87 /* RedProgressView.swift */,
+				3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -528,7 +528,7 @@
 				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,
 				3FDA05BD222E45FB00D65C51 /* ScenesRouter.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
-				3F20AE1F222D83AB00DB0A87 /* RedProgressView.swift in Sources */,
+				3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */,
 				3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */,
 				3FDA05B4222E431700D65C51 /* Scene.swift in Sources */,
 				3F9A29AA2231181F0006A3A4 /* Project.swift in Sources */,
