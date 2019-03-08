@@ -13,20 +13,32 @@ class RedProgressView: UIView {
     
     private static let kProgressIndicatorHeight = 5
     
-    private let label = UILabel()
+    private let titleLabel = UILabel()
+    private let progressLabel = UILabel()
     private let progressIndicator = UIProgressView()
     
     class func createDefaultProgressView() -> RedProgressView {
         let progressView = RedProgressView(frame: CGRect(x: 0, y: 0, width: 311, height: 28))
         
-        //Configure progress label
-        progressView.label.font = UIFont.lp_body2()
-        progressView.label.textColor = UIColor.lp_grayDarkest()
-        progressView.label.textAlignment = .right
+        //Configure title
+        progressView.titleLabel.font = UIFont.lp_body1()
+        progressView.titleLabel.textColor = UIColor.lp_defaultTextColor()
+        progressView.titleLabel.textAlignment = .left
         
-        progressView.addSubview(progressView.label)
-        progressView.label.snp.makeConstraints { (make) in
-            make.top.right.equalTo(progressView)
+        progressView.addSubview(progressView.titleLabel)
+        progressView.titleLabel.snp.makeConstraints { (make) in
+            make.leading.trailing.top.equalTo(progressView)
+        }
+        
+        //Configure progress label
+        progressView.progressLabel.font = UIFont.lp_body2()
+        progressView.progressLabel.textColor = UIColor.lp_grayDarkest()
+        progressView.progressLabel.textAlignment = .right
+        
+        progressView.addSubview(progressView.progressLabel)
+        progressView.progressLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(progressView.titleLabel.snp.bottom)
+            make.leading.trailing.equalTo(progressView)
         }
         
         //Configure indicator

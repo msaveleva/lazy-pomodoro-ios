@@ -9,5 +9,13 @@
 import Foundation
 
 class TimerControllerViewModel {
+    private var project: Project!
     
+    func currentProjectName() -> String {
+        return project.name
+    }
+    
+    func showProjectGoal() -> Bool {
+        return project.goalPomodoros != nil
+    }
 }
