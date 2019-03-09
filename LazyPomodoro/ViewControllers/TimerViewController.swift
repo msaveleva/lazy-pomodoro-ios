@@ -20,7 +20,7 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
     }
     
     func bindViewModel() {
-        //TODO msaveleva: implement
+        //TODO msaveleva: implement using RxSwift
     }
     
 }
