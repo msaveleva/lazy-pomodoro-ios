@@ -9,5 +9,13 @@
 import Foundation
 
 class TimerControllerViewModel {
+    private var project: Project!
     
+    public var projectPomodoroStackVm: ProgressStackViewModel!
+    public var progressForTodayStackVm: ProgressStackViewModel!
+    public var projectGoalStackVm: ProgressStackViewModel?
+    
+    func getCurrentProjectName() -> String {
+        return project.name
+    }
 }
