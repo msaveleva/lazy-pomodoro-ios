@@ -29,6 +29,8 @@
 		3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */; };
 		3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */; };
 		3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */; };
+		3FFCF51322394C2100F5E552 /* ProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF51222394C2100F5E552 /* ProgressStackViewModel.swift */; };
+		3FFCF51522394D1D00F5E552 /* ModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF51422394D1D00F5E552 /* ModeViewModel.swift */; };
 		8AE1678B2195F77D88046AC5 /* Pods_LazyPomodoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5D57ADD9F1CE52B8A31FF5 /* Pods_LazyPomodoro.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppStyle.swift"; sourceTree = "<group>"; };
 		3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AppStyle.swift"; sourceTree = "<group>"; };
 		3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppStyles.swift"; sourceTree = "<group>"; };
+		3FFCF51222394C2100F5E552 /* ProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackViewModel.swift; sourceTree = "<group>"; };
+		3FFCF51422394D1D00F5E552 /* ModeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewModel.swift; sourceTree = "<group>"; };
 		435770F8BA117F49406500D6 /* Pods-LazyPomodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoro.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoro/Pods-LazyPomodoro.release.xcconfig"; sourceTree = "<group>"; };
 		4F22ACE051B63520D0448E5F /* Pods-LazyPomodoroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoroTests.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoroTests/Pods-LazyPomodoroTests.release.xcconfig"; sourceTree = "<group>"; };
 		5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPomodoroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */,
+				3FFCF51222394C2100F5E552 /* ProgressStackViewModel.swift */,
+				3FFCF51422394D1D00F5E552 /* ModeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFCF51522394D1D00F5E552 /* ModeViewModel.swift in Sources */,
 				3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */,
 				3F1CBA91222BA75400821988 /* ViewController.swift in Sources */,
 				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,
@@ -537,6 +544,7 @@
 				3FDA05B9222E444800D65C51 /* Scene+ViewController.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
 				3FDA05BB222E453F00D65C51 /* TimerViewController.swift in Sources */,
+				3FFCF51322394C2100F5E552 /* ProgressStackViewModel.swift in Sources */,
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

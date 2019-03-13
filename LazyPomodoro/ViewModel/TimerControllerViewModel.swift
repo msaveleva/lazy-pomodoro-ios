@@ -11,22 +11,11 @@ import Foundation
 class TimerControllerViewModel {
     private var project: Project!
     
+    public var projectPomodoroStackVm: ProgressStackViewModel!
+    public var progressForTodayStackVm: ProgressStackViewModel!
+    public var projectGoalStackVm: ProgressStackViewModel?
+    
     func getCurrentProjectName() -> String {
         return project.name
-    }
-    
-    func getCurrentProjectGoal() -> String? {
-        //TODO msaveleva: implement if exists comparing with what is done
-        return ""
-    }
-    
-    func getProgressForToday() -> String {
-        //TODO msaveleva: implement comparing with daily goal
-        return ""
-    }
-    
-    func getMotivationQuote() -> String? {
-        //TODO msaveleva: implement
-        return ""
     }
 }
