@@ -11,7 +11,17 @@ import SnapKit
 
 class TimerViewController: UIViewController, BindableTypeProtocol {
     
-    var viewModel: TimerControllerViewModel!
+    private(set) var viewModel: TimerControllerViewModel
+    
+    init(viewModel: TimerControllerViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.viewModel = TimerControllerViewModel()
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super .viewDidLoad()

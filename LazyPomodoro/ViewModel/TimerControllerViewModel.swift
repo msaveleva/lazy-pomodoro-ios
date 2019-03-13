@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TimerControllerViewModel {
+class TimerControllerViewModel: ViewModelProtocol {
     private var project: Project!
     
     public var projectPomodoroStackVm: ProgressStackViewModel!

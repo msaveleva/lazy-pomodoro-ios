@@ -11,15 +11,7 @@ import UIKit
 protocol BindableTypeProtocol {
     associatedtype ViewModelType
     
-    var viewModel: ViewModelType! { get set }
+    var viewModel: ViewModelType { get }
     func bindViewModel()
-}
-
-extension BindableTypeProtocol where Self: UIViewController {
-    mutating func bindViewModel(to model: Self.ViewModelType) {
-        viewModel = model
-        loadViewIfNeeded()
-        bindViewModel()
-    }
 }
 

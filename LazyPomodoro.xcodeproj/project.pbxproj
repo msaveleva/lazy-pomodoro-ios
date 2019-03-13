@@ -22,7 +22,6 @@
 		3F9A29AA2231181F0006A3A4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A29A92231181F0006A3A4 /* Project.swift */; };
 		3FDA05B4222E431700D65C51 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B3222E431700D65C51 /* Scene.swift */; };
 		3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */; };
-		3FDA05B9222E444800D65C51 /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */; };
 		3FDA05BB222E453F00D65C51 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BA222E453F00D65C51 /* TimerViewController.swift */; };
 		3FDA05BD222E45FB00D65C51 /* ScenesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BC222E45FB00D65C51 /* ScenesRouter.swift */; };
 		3FDA05BF222E472A00D65C51 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */; };
@@ -31,6 +30,10 @@
 		3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */; };
 		3FFCF51322394C2100F5E552 /* ProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF51222394C2100F5E552 /* ProgressStackViewModel.swift */; };
 		3FFCF51522394D1D00F5E552 /* ModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF51422394D1D00F5E552 /* ModeViewModel.swift */; };
+		3FFCF517223950E000F5E552 /* ScenesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF516223950E000F5E552 /* ScenesProvider.swift */; };
+		3FFCF519223950EA00F5E552 /* ViewModelsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF518223950EA00F5E552 /* ViewModelsProvider.swift */; };
+		3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF51B2239514500F5E552 /* ServicesProvider.swift */; };
+		3FFCF51E223951E400F5E552 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF51D223951E400F5E552 /* ViewModelProtocol.swift */; };
 		8AE1678B2195F77D88046AC5 /* Pods_LazyPomodoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5D57ADD9F1CE52B8A31FF5 /* Pods_LazyPomodoro.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +74,6 @@
 		3F9A29A92231181F0006A3A4 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		3FDA05B3222E431700D65C51 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerViewModel.swift; sourceTree = "<group>"; };
-		3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
 		3FDA05BA222E453F00D65C51 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		3FDA05BC222E45FB00D65C51 /* ScenesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesRouter.swift; sourceTree = "<group>"; };
 		3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
@@ -80,6 +82,10 @@
 		3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppStyles.swift"; sourceTree = "<group>"; };
 		3FFCF51222394C2100F5E552 /* ProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackViewModel.swift; sourceTree = "<group>"; };
 		3FFCF51422394D1D00F5E552 /* ModeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewModel.swift; sourceTree = "<group>"; };
+		3FFCF516223950E000F5E552 /* ScenesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesProvider.swift; sourceTree = "<group>"; };
+		3FFCF518223950EA00F5E552 /* ViewModelsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsProvider.swift; sourceTree = "<group>"; };
+		3FFCF51B2239514500F5E552 /* ServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProvider.swift; sourceTree = "<group>"; };
+		3FFCF51D223951E400F5E552 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		435770F8BA117F49406500D6 /* Pods-LazyPomodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoro.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoro/Pods-LazyPomodoro.release.xcconfig"; sourceTree = "<group>"; };
 		4F22ACE051B63520D0448E5F /* Pods-LazyPomodoroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoroTests.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoroTests/Pods-LazyPomodoroTests.release.xcconfig"; sourceTree = "<group>"; };
 		5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPomodoroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				3F002F19222F8F0F00B53C34 /* BindableTypeProtocol.swift */,
+				3FFCF51D223951E400F5E552 /* ViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -152,6 +159,8 @@
 		3F1CBA8D222BA75400821988 /* LazyPomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				3FFCF51F223952C500F5E552 /* Providers */,
+				3FFCF51A2239513300F5E552 /* Services */,
 				3F9A29A8223118110006A3A4 /* Model */,
 				3F002F18222F8F0400B53C34 /* Protocols */,
 				3FDA05B5222E435A00D65C51 /* ViewModel */,
@@ -206,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				3FDA05B3222E431700D65C51 /* Scene.swift */,
-				3FDA05B8222E444800D65C51 /* Scene+ViewController.swift */,
 				3FDA05BC222E45FB00D65C51 /* ScenesRouter.swift */,
 				3FDA05BE222E472A00D65C51 /* SceneTransitionType.swift */,
 			);
@@ -258,6 +266,23 @@
 				3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3FFCF51A2239513300F5E552 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3FFCF51F223952C500F5E552 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				3FFCF51B2239514500F5E552 /* ServicesProvider.swift */,
+				3FFCF516223950E000F5E552 /* ScenesProvider.swift */,
+				3FFCF518223950EA00F5E552 /* ViewModelsProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		40EF7AD40A84540B1009C3BA /* Frameworks */ = {
@@ -532,6 +557,8 @@
 				3FFCF51522394D1D00F5E552 /* ModeViewModel.swift in Sources */,
 				3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */,
 				3F1CBA91222BA75400821988 /* ViewController.swift in Sources */,
+				3FFCF51E223951E400F5E552 /* ViewModelProtocol.swift in Sources */,
+				3FFCF519223950EA00F5E552 /* ViewModelsProvider.swift in Sources */,
 				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,
 				3FDA05BD222E45FB00D65C51 /* ScenesRouter.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
@@ -541,8 +568,9 @@
 				3F9A29AA2231181F0006A3A4 /* Project.swift in Sources */,
 				3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */,
 				3FDA05BF222E472A00D65C51 /* SceneTransitionType.swift in Sources */,
-				3FDA05B9222E444800D65C51 /* Scene+ViewController.swift in Sources */,
+				3FFCF517223950E000F5E552 /* ScenesProvider.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
+				3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */,
 				3FDA05BB222E453F00D65C51 /* TimerViewController.swift in Sources */,
 				3FFCF51322394C2100F5E552 /* ProgressStackViewModel.swift in Sources */,
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,

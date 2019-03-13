@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Scene {
-    case timer(TimerControllerViewModel)
+enum Scene { //TODO msaveleva: rename to SceneType
+    case timer
     //TODO msaveleva: add other screens.
 }
