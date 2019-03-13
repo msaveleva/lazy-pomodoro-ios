@@ -14,9 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let coordinator = ScenesRouter(window: window!)
+        let servicesProvider = ServicesProvider()
+        let viewModelsProvider = ViewModelsProvider(servicesProvider: servicesProvider)
+        let scenesProvider = ScenesProvider(viewModelsProvider: viewModelsProvider)
+        let coordinator = ScenesRouter(window: window!, scenesProvider: scenesProvider)
         
-        let timerScene = Scene.timer(TimerControllerViewModel())
+        let timerScene = Scene.timer
         coordinator.transition(to: timerScene, transitionType: .root) {
             print("Transition completed.")
         }

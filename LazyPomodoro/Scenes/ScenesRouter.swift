@@ -13,13 +13,16 @@ class ScenesRouter {
     private let window: UIWindow!
     private var currentViewController: UIViewController?
     
-    required init(window: UIWindow) {
+    private let scenesProvider: ScenesProvider
+    
+    required init(window: UIWindow, scenesProvider: ScenesProvider) {
         self.window = window
+        self.scenesProvider = scenesProvider
         currentViewController = window.rootViewController
     }
     
     func transition(to scene: Scene, transitionType: SceneTransitionType, completion: @escaping () -> Void) {
-        let viewController = scene.viewController()
+        let viewController = scenesProvider.createControllerWithScene(scene: scene)
         switch transitionType {
         case .root:
             window.rootViewController = viewController
