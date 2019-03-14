@@ -26,12 +26,11 @@ class TimerControllerViewModel: ViewModelProtocol {
         return project.name
     }
     
-    func timerObservable() -> Observable<Int> {
-        return timerService.currentTimerObservable
+    func timerObservable() -> Observable<String?> {
+        return timerService.currentTimerObservable.map(createTimeStringForCurrentInterval)
     }
     
-    func createTimeStringForCurrentInterval(with value: Int) -> String? {
+    private func createTimeStringForCurrentInterval(with value: Int) -> String? {
         return String(value)
     }
-    
 }

@@ -37,7 +37,6 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
     
     func bindViewModel() {
         viewModel.timerObservable()
-            .map(viewModel.createTimeStringForCurrentInterval)
             .bind(to: testLabel.rx.text)
             .disposed(by: disposeBag)
     }
