@@ -34,6 +34,7 @@
 		3FFCF519223950EA00F5E552 /* ViewModelsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF518223950EA00F5E552 /* ViewModelsProvider.swift */; };
 		3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF51B2239514500F5E552 /* ServicesProvider.swift */; };
 		3FFCF51E223951E400F5E552 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF51D223951E400F5E552 /* ViewModelProtocol.swift */; };
+		3FFCF5212239569A00F5E552 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCF5202239569A00F5E552 /* TimerService.swift */; };
 		8AE1678B2195F77D88046AC5 /* Pods_LazyPomodoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5D57ADD9F1CE52B8A31FF5 /* Pods_LazyPomodoro.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		3FFCF518223950EA00F5E552 /* ViewModelsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsProvider.swift; sourceTree = "<group>"; };
 		3FFCF51B2239514500F5E552 /* ServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProvider.swift; sourceTree = "<group>"; };
 		3FFCF51D223951E400F5E552 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		3FFCF5202239569A00F5E552 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 		435770F8BA117F49406500D6 /* Pods-LazyPomodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoro.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoro/Pods-LazyPomodoro.release.xcconfig"; sourceTree = "<group>"; };
 		4F22ACE051B63520D0448E5F /* Pods-LazyPomodoroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyPomodoroTests.release.xcconfig"; path = "Target Support Files/Pods-LazyPomodoroTests/Pods-LazyPomodoroTests.release.xcconfig"; sourceTree = "<group>"; };
 		5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPomodoroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +273,7 @@
 		3FFCF51A2239513300F5E552 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3FFCF5202239569A00F5E552 /* TimerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
 				3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */,
 				3FDA05BB222E453F00D65C51 /* TimerViewController.swift in Sources */,
+				3FFCF5212239569A00F5E552 /* TimerService.swift in Sources */,
 				3FFCF51322394C2100F5E552 /* ProgressStackViewModel.swift in Sources */,
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,
 			);

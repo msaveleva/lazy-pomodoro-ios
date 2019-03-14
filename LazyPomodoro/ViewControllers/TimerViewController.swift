@@ -8,10 +8,15 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class TimerViewController: UIViewController, BindableTypeProtocol {
     
     private(set) var viewModel: TimerControllerViewModel
+    
+    private var testLabel = UILabel()
+    private var disposeBag = DisposeBag()
     
     init(viewModel: TimerControllerViewModel) {
         self.viewModel = viewModel
@@ -27,10 +32,24 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
         super .viewDidLoad()
         
         view.backgroundColor = UIColor.lp_mainFillColor()
+        createTestLabel()
     }
     
     func bindViewModel() {
-        //TODO msaveleva: implement using RxSwift
+        viewModel.timerObservable()
+            .map(viewModel.createTimeStringForCurrentInterval)
+            .bind(to: testLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    private func createTestLabel() {
+        testLabel.font = UIFont.lp_body1()
+        view.addSubview(testLabel)
+        testLabel.snp.makeConstraints { (make) in
+            make.center.equalTo(view)
+            make.leading.greaterThanOrEqualTo(view.snp_leadingMargin)
+            make.trailing.greaterThanOrEqualTo(view.snp_trailingMargin)
+        }
     }
     
 }

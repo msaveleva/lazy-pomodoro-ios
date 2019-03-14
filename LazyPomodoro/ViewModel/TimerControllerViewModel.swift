@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class TimerControllerViewModel: ViewModelProtocol {
     private var project: Project!
@@ -15,7 +16,22 @@ class TimerControllerViewModel: ViewModelProtocol {
     public var progressForTodayStackVm: ProgressStackViewModel!
     public var projectGoalStackVm: ProgressStackViewModel?
     
+    public var timerService: TimerService!
+    
+    func dependenciesInjected() {
+        //TODO msaveleva: implement
+    }
+    
     func getCurrentProjectName() -> String {
         return project.name
     }
+    
+    func timerObservable() -> Observable<Int> {
+        return timerService.currentTimerObservable
+    }
+    
+    func createTimeStringForCurrentInterval(with value: Int) -> String? {
+        return String(value)
+    }
+    
 }

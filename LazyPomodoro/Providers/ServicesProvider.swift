@@ -10,4 +10,10 @@ import Foundation
 
 class ServicesProvider {
     
+    private(set) var timerService: TimerService
+    
+    init() {
+        timerService = TimerService()
+    }
+    
 }
