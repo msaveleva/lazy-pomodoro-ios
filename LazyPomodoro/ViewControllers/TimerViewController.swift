@@ -13,10 +13,17 @@ import RxCocoa
 
 class TimerViewController: UIViewController, BindableTypeProtocol {
     
+    struct Constant {
+        static let defaultMargin = 32
+    }
+    
     private(set) var viewModel: TimerControllerViewModel
     
     private var testLabel = UILabel()
     private var disposeBag = DisposeBag()
+    
+    //MARK: UI elements
+    private var projectPomodoroStackView: ProgressStackView!
     
     init(viewModel: TimerControllerViewModel) {
         self.viewModel = viewModel
@@ -32,23 +39,27 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
         super .viewDidLoad()
         
         view.backgroundColor = UIColor.lp_mainFillColor()
-        createTestLabel()
+        setupView()
+    }
+    
+    private func setupView() {
+        setupProgressBars()
+    }
+    
+    private func setupProgressBars() {
+        projectPomodoroStackView = ProgressStackView.createDefaultProgressView()
+        view.addSubview(projectPomodoroStackView)
+        projectPomodoroStackView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo(view).offset(120) //TODO msaveleva: change
+            make.leading.equalTo(view).offset(Constant.defaultMargin)
+            make.trailing.equalTo(view).offset(-Constant.defaultMargin)
+        }
     }
     
     func bindViewModel() {
-        viewModel.timerObservable()
-            .bind(to: testLabel.rx.text)
-            .disposed(by: disposeBag)
-    }
-    
-    private func createTestLabel() {
-        testLabel.font = UIFont.lp_body1()
-        view.addSubview(testLabel)
-        testLabel.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.leading.greaterThanOrEqualTo(view.snp_leadingMargin)
-            make.trailing.greaterThanOrEqualTo(view.snp_trailingMargin)
-        }
+        loadViewIfNeeded()
+        projectPomodoroStackView.bindViewModel(viewModel.getProjectPomodoroStackVm())
     }
     
 }

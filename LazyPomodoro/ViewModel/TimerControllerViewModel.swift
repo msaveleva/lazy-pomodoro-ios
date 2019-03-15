@@ -12,7 +12,6 @@ import RxSwift
 class TimerControllerViewModel: ViewModelProtocol {
     private var project: Project!
     
-    public var projectPomodoroStackVm: ProgressStackViewModel!
     public var progressForTodayStackVm: ProgressStackViewModel!
     public var projectGoalStackVm: ProgressStackViewModel?
     
@@ -26,11 +25,8 @@ class TimerControllerViewModel: ViewModelProtocol {
         return project.name
     }
     
-    func timerObservable() -> Observable<String?> {
-        return timerService.currentTimerObservable.map(createTimeStringForCurrentInterval)
-    }
-    
-    private func createTimeStringForCurrentInterval(with value: Int) -> String? {
-        return String(value)
+    func getProjectPomodoroStackVm() -> ProgressStackViewModel {
+        let projectPomodoroStackVm = ProgressStackViewModel(title: "Default Project", type: .time, timerService: timerService)
+        return projectPomodoroStackVm
     }
 }

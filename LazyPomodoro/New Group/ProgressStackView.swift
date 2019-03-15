@@ -8,11 +8,16 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class ProgressStackView: UIStackView {
     
     private static let kProgressIndicatorHeight = 5
     private static let kDefaultMargin = 8
+    
+    private var viewModel: ProgressStackViewModel!
+    private let disposeBag = DisposeBag()
     
     private let titleLabel = UILabel()
     private let progressLabel = UILabel()
@@ -56,6 +61,13 @@ class ProgressStackView: UIStackView {
         return progressView
     }
     
-    //TODO msaveleva: add viewModel and bindViewModel
+    func bindViewModel(_ vm: ProgressStackViewModel) {
+        viewModel = vm
+        
+        titleLabel.text = viewModel.title
+        progressLabel.text = viewModel.getInitialProgressLabel()
+        viewModel.timerObservable().bind(to: progressLabel.rx.text).disposed(by: disposeBag)
+        viewModel.progressObservable().bind(to: progressIndicator.rx.progress).disposed(by: disposeBag)
+    }
     
 }
