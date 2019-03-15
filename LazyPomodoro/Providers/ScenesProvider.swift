@@ -20,7 +20,9 @@ class ScenesProvider {
         switch scene {
         case .timer:
             if let viewModel = viewModelsProvider.createViewModelForScene(scene: scene) as? TimerControllerViewModel {
-                return TimerViewController(viewModel: viewModel)
+                let controller = TimerViewController(viewModel: viewModel)
+                controller.bindViewModel()
+                return controller
             }
         }
         
