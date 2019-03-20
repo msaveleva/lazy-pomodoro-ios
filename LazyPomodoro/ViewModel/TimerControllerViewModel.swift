@@ -12,21 +12,21 @@ import RxSwift
 class TimerControllerViewModel: ViewModelProtocol {
     private var project: Project!
     
+    public var projectPomodoroStackVm: ProgressStackViewModel!
     public var progressForTodayStackVm: ProgressStackViewModel!
     public var projectGoalStackVm: ProgressStackViewModel?
     
     public var timerService: TimerService!
     
     func dependenciesInjected() {
-        //TODO msaveleva: implement
+        projectPomodoroStackVm = ProgressStackViewModel(title: "Default Project", type: .time, timerService: timerService)
     }
     
     func getCurrentProjectName() -> String {
         return project.name
     }
     
-    func getProjectPomodoroStackVm() -> ProgressStackViewModel {
-        let projectPomodoroStackVm = ProgressStackViewModel(title: "Default Project", type: .time, timerService: timerService)
-        return projectPomodoroStackVm
+    func startPauseButtonPressed() {
+        projectPomodoroStackVm.updateState()
     }
 }

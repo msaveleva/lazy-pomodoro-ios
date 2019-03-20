@@ -24,6 +24,7 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
     
     //MARK: UI elements
     private var projectPomodoroStackView: ProgressStackView!
+    private var startPauseButton: UIButton!
     
     init(viewModel: TimerControllerViewModel) {
         self.viewModel = viewModel
@@ -43,23 +44,43 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
     }
     
     private func setupView() {
+        setupStartPauseButton()
         setupProgressBars()
     }
     
+    func bindViewModel() {
+        loadViewIfNeeded()
+        
+        projectPomodoroStackView.bindViewModel(viewModel.projectPomodoroStackVm)
+        
+        startPauseButton.rx.tap.subscribe { [weak self] _ in
+            self?.viewModel.startPauseButtonPressed()
+        }.disposed(by: disposeBag)
+    }
+}
+
+extension TimerViewController {
     private func setupProgressBars() {
         projectPomodoroStackView = ProgressStackView.createDefaultProgressView()
         view.addSubview(projectPomodoroStackView)
+        
         projectPomodoroStackView.snp.makeConstraints { (make) in
             make.centerX.equalTo(view)
-            make.top.equalTo(view).offset(120) //TODO msaveleva: change
+            make.top.equalTo(startPauseButton.snp_bottomMargin).offset(120) //TODO msaveleva: change
             make.leading.equalTo(view).offset(Constant.defaultMargin)
             make.trailing.equalTo(view).offset(-Constant.defaultMargin)
         }
     }
     
-    func bindViewModel() {
-        loadViewIfNeeded()
-        projectPomodoroStackView.bindViewModel(viewModel.getProjectPomodoroStackVm())
+    private func setupStartPauseButton() {
+        startPauseButton = UIButton(type: .system)
+        startPauseButton.setTitle("Start Pause Button", for: .normal)
+        startPauseButton.sizeToFit()
+        view.addSubview(startPauseButton)
+        
+        startPauseButton.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo(view).offset(120) //TODO msaveleva: change
+        }
     }
-    
 }

@@ -66,8 +66,15 @@ class ProgressStackView: UIStackView {
         
         titleLabel.text = viewModel.title
         progressLabel.text = viewModel.getInitialProgressLabel()
-        viewModel.timerObservable().bind(to: progressLabel.rx.text).disposed(by: disposeBag)
-        viewModel.progressObservable().bind(to: progressIndicator.rx.progress).disposed(by: disposeBag)
+        viewModel.timerObservable()
+            .distinctUntilChanged()
+            .bind(to: progressLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.progressObservable()
+            .distinctUntilChanged()
+            .bind(to: progressIndicator.rx.progress)
+            .disposed(by: disposeBag)
     }
     
 }
