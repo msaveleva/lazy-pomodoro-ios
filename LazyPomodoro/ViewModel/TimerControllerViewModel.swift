@@ -19,7 +19,7 @@ class TimerControllerViewModel: ViewModelProtocol {
     public var timerService: TimerService!
     
     func dependenciesInjected() {
-        projectPomodoroStackVm = TimerProgressStackViewModel(title: "Default Project", type: .time, timerService: timerService)
+        projectPomodoroStackVm = TimerProgressStackViewModel(title: "Default Project", timerService: timerService)
         todayProgressStackVm = TodayProgressStackViewModel(title: "Progress for today") //TODO msaveleva: change to localized string
         
         //TODO msaveleva: add check if need to create this vm:

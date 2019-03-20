@@ -9,11 +9,6 @@
 import Foundation
 import RxSwift
 
-enum ProgressViewType {
-    case time
-    case part
-}
-
 enum TimerStateType {
     case inProgress
     case paused
@@ -24,16 +19,14 @@ class TimerProgressStackViewModel: ProgressStackViewModelProtocol {
     public let timerFinishedSubject = PublishSubject<Bool>()
     public var timerStateType = TimerStateType.paused
     
-    private let type: ProgressViewType
     private let timerService: TimerService
     
     //TODO: create settings service and take this value from there.
     private let intervalDuration: Float = 25 * 60 //duration in seconds.
     private var currentIntervalTime = 0
     
-    init(title: String, type: ProgressViewType, timerService: TimerService) {
+    init(title: String, timerService: TimerService) {
         self.title = title
-        self.type = type
         self.timerService = timerService
     }
     
@@ -47,12 +40,7 @@ class TimerProgressStackViewModel: ProgressStackViewModelProtocol {
     }
     
     func getInitialProgressText() -> String {
-        switch type {
-        case .time:
-            return String.lp_createTimeStringForCurrentInterval(with: 0)
-        case .part:
-            return "0/0" //TODO msaveleva: change
-        }
+        return String.lp_createTimeStringForCurrentInterval(with: 0)
     }
     
     func progressTextObservable() -> Observable<String?> {
