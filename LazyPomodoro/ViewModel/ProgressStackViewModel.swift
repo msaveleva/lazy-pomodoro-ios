@@ -17,11 +17,11 @@ enum ProgressViewType {
 enum TimerStateType {
     case inProgress
     case paused
-    case finished
 }
 
 class ProgressStackViewModel {
     public let title: String
+    public let timerFinishedSubject = PublishSubject<Bool>()
     public var timerStateType = TimerStateType.paused
     
     private let type: ProgressViewType
@@ -43,16 +43,13 @@ class ProgressStackViewModel {
             timerStateType = .paused
         case .paused:
             timerStateType = .inProgress
-        case .finished:
-            resetTimer()
-            timerStateType = .inProgress
         }
     }
     
     func getInitialProgressLabel() -> String {
         switch type {
         case .time:
-            return "00:00"
+            return createTimeStringForCurrentInterval(with: 0)! //TODO msaveleva: fix.
         case .part:
             return "0/0" //TODO msaveleva: change
         }
@@ -60,19 +57,20 @@ class ProgressStackViewModel {
     
     func timerObservable() -> Observable<String?> {
         return timerService.currentTimerObservable
-            .map({ [weak self] (value) -> String? in
-            if let interval = self?.currentIntervalTime {
-                //Do not increase values if timer is on pause or finished.
-                var valueToAdd = 0
-                if (self?.timerStateType == .inProgress) {
-                    valueToAdd = 1
-                }
-                self?.currentIntervalTime += valueToAdd
-                return self?.createTimeStringForCurrentInterval(with: interval + valueToAdd)
-            } else {
-                assertionFailure("ProtressStackViewModel was deallocated.")
-                return nil
+            .map({ [unowned self] (value) -> String? in
+            if self.shouldStopAndResetTimer() {
+                self.resetTimer()
             }
+            
+            //Do not increase values if timer is on pause or finished.
+            var valueToAdd = 0
+            if (self.timerStateType == .inProgress) {
+                valueToAdd = 1
+            }
+                
+            self.currentIntervalTime += valueToAdd
+                
+            return self.createTimeStringForCurrentInterval(with: self.currentIntervalTime)
         })
     }
     
@@ -80,8 +78,8 @@ class ProgressStackViewModel {
         return timerService.currentTimerObservable.map(createProgressValue)
     }
     
-    private func createProgressValue(with value: Int) -> Float {
-        let result = Float(value) / intervalDuration
+    private func createProgressValue(with _: Int) -> Float {
+        let result = Float(currentIntervalTime) / intervalDuration
         return result
     }
     
@@ -97,7 +95,14 @@ class ProgressStackViewModel {
         }
     }
     
+    private func shouldStopAndResetTimer() -> Bool {
+        return Float(currentIntervalTime) >= intervalDuration
+    }
+    
     private func resetTimer() {
-        //TODO msaveleva: implement
+        currentIntervalTime = 0
+        timerStateType = .paused
+        
+        timerFinishedSubject.onNext(true)
     }
 }
