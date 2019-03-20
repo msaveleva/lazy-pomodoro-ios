@@ -9,5 +9,10 @@
 import Foundation
 
 extension String {
-    
+    public static func lp_createTimeStringForCurrentInterval(with interval: Int) -> String {
+        let seconds = TimeInterval(interval)
+        let sec = Int(seconds.truncatingRemainder(dividingBy: 60))
+        let min = Int(seconds.truncatingRemainder(dividingBy: 3600) / 60)
+        return String(format: "%02d:%02d", min, sec)
+    }
 }

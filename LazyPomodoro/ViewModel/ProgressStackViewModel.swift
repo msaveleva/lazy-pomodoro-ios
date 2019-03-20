@@ -49,7 +49,7 @@ class ProgressStackViewModel {
     func getInitialProgressLabel() -> String {
         switch type {
         case .time:
-            return createTimeStringForCurrentInterval(with: 0)
+            return String.lp_createTimeStringForCurrentInterval(with: 0)
         case .part:
             return "0/0" //TODO msaveleva: change
         }
@@ -70,7 +70,7 @@ class ProgressStackViewModel {
                 
             self.currentIntervalTime += valueToAdd
                 
-            return self.createTimeStringForCurrentInterval(with: self.currentIntervalTime)
+            return String.lp_createTimeStringForCurrentInterval(with: self.currentIntervalTime)
         })
     }
     
@@ -81,18 +81,6 @@ class ProgressStackViewModel {
     private func createProgressValue(with _: Int) -> Float {
         let result = Float(currentIntervalTime) / intervalDuration
         return result
-    }
-    
-    private func createTimeStringForCurrentInterval(with interval: Int) -> String {
-        switch type {
-        case .time:
-            let seconds = TimeInterval(interval)
-            let sec = Int(seconds.truncatingRemainder(dividingBy: 60))
-            let min = Int(seconds.truncatingRemainder(dividingBy: 3600) / 60)
-            return String(format: "%02d:%02d", min, sec)
-        default:
-            return String(interval)
-        }
     }
     
     private func shouldStopAndResetTimer() -> Bool {
