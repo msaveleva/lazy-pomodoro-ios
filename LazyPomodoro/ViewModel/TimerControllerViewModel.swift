@@ -12,25 +12,25 @@ import RxSwift
 class TimerControllerViewModel: ViewModelProtocol {
     private var project: Project!
     
-    public var projectPomodoroStackVm: ProgressStackViewModel!
-    public var progressForTodayStackVm: ProgressStackViewModel!
-    public var projectGoalStackVm: ProgressStackViewModel?
+    public var projectPomodoroStackVm: TimerProgressStackViewModel!
+    public var todayProgressStackVm: TodayProgressStackViewModel!
+    public var goalProgressStackVm: GoalProgressStackViewModel?
     
     public var timerService: TimerService!
     
     func dependenciesInjected() {
-        //TODO msaveleva: implement
+        projectPomodoroStackVm = TimerProgressStackViewModel(title: "Default Project", timerService: timerService)
+        todayProgressStackVm = TodayProgressStackViewModel(title: "Progress for today") //TODO msaveleva: change to localized string
+        
+        //TODO msaveleva: add check if need to create this vm:
+        goalProgressStackVm = GoalProgressStackViewModel(title: "Project goal") //TODO msaveleva: change to localized string
     }
     
     func getCurrentProjectName() -> String {
         return project.name
     }
     
-    func timerObservable() -> Observable<String?> {
-        return timerService.currentTimerObservable.map(createTimeStringForCurrentInterval)
-    }
-    
-    private func createTimeStringForCurrentInterval(with value: Int) -> String? {
-        return String(value)
+    func startPauseButtonPressed() {
+        projectPomodoroStackVm.updateState()
     }
 }

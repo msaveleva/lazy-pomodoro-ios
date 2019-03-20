@@ -13,10 +13,18 @@ import RxCocoa
 
 class TimerViewController: UIViewController, BindableTypeProtocol {
     
+    struct Constant {
+        static let defaultMargin = 32
+    }
+    
     private(set) var viewModel: TimerControllerViewModel
     
     private var testLabel = UILabel()
     private var disposeBag = DisposeBag()
+    
+    //MARK: UI elements
+    private var projectPomodoroStackView: ProgressStackView!
+    private var startPauseButton: UIButton!
     
     init(viewModel: TimerControllerViewModel) {
         self.viewModel = viewModel
@@ -32,23 +40,47 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
         super .viewDidLoad()
         
         view.backgroundColor = UIColor.lp_mainFillColor()
-        createTestLabel()
+        setupView()
+    }
+    
+    private func setupView() {
+        setupStartPauseButton()
+        setupProgressBars()
     }
     
     func bindViewModel() {
-        viewModel.timerObservable()
-            .bind(to: testLabel.rx.text)
-            .disposed(by: disposeBag)
+        loadViewIfNeeded()
+        
+        projectPomodoroStackView.bindViewModel(viewModel.projectPomodoroStackVm)
+        
+        startPauseButton.rx.tap.subscribe { [weak self] _ in
+            self?.viewModel.startPauseButtonPressed()
+        }.disposed(by: disposeBag)
     }
-    
-    private func createTestLabel() {
-        testLabel.font = UIFont.lp_body1()
-        view.addSubview(testLabel)
-        testLabel.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.leading.greaterThanOrEqualTo(view.snp_leadingMargin)
-            make.trailing.greaterThanOrEqualTo(view.snp_trailingMargin)
+}
+
+extension TimerViewController {
+    private func setupProgressBars() {
+        projectPomodoroStackView = ProgressStackView.createDefaultProgressView()
+        view.addSubview(projectPomodoroStackView)
+        
+        projectPomodoroStackView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo(startPauseButton.snp_bottomMargin).offset(120) //TODO msaveleva: change
+            make.leading.equalTo(view).offset(Constant.defaultMargin)
+            make.trailing.equalTo(view).offset(-Constant.defaultMargin)
         }
     }
     
+    private func setupStartPauseButton() {
+        startPauseButton = UIButton(type: .system)
+        startPauseButton.setTitle("Start Pause Button", for: .normal)
+        startPauseButton.sizeToFit()
+        view.addSubview(startPauseButton)
+        
+        startPauseButton.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo(view).offset(120) //TODO msaveleva: change
+        }
+    }
 }
