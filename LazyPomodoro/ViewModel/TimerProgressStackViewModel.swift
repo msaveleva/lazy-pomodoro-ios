@@ -19,7 +19,7 @@ enum TimerStateType {
     case paused
 }
 
-class ProgressStackViewModel: ProgressStackViewModelProtocol {
+class TimerProgressStackViewModel: ProgressStackViewModelProtocol {
     public let title: String
     public let timerFinishedSubject = PublishSubject<Bool>()
     public var timerStateType = TimerStateType.paused

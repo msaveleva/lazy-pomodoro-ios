@@ -12,14 +12,14 @@ import RxSwift
 class TimerControllerViewModel: ViewModelProtocol {
     private var project: Project!
     
-    public var projectPomodoroStackVm: ProgressStackViewModel!
-    public var progressForTodayStackVm: ProgressStackViewModel!
-    public var projectGoalStackVm: ProgressStackViewModel?
+    public var projectPomodoroStackVm: TimerProgressStackViewModel!
+    public var progressForTodayStackVm: TimerProgressStackViewModel!
+    public var projectGoalStackVm: TimerProgressStackViewModel?
     
     public var timerService: TimerService!
     
     func dependenciesInjected() {
-        projectPomodoroStackVm = ProgressStackViewModel(title: "Default Project", type: .time, timerService: timerService)
+        projectPomodoroStackVm = TimerProgressStackViewModel(title: "Default Project", type: .time, timerService: timerService)
     }
     
     func getCurrentProjectName() -> String {
