@@ -19,7 +19,7 @@ enum TimerStateType {
     case paused
 }
 
-class ProgressStackViewModel {
+class ProgressStackViewModel: ProgressStackViewModelProtocol {
     public let title: String
     public let timerFinishedSubject = PublishSubject<Bool>()
     public var timerStateType = TimerStateType.paused
@@ -46,7 +46,7 @@ class ProgressStackViewModel {
         }
     }
     
-    func getInitialProgressLabel() -> String {
+    func getInitialProgressText() -> String {
         switch type {
         case .time:
             return String.lp_createTimeStringForCurrentInterval(with: 0)
@@ -55,7 +55,7 @@ class ProgressStackViewModel {
         }
     }
     
-    func timerObservable() -> Observable<String?> {
+    func progressTextObservable() -> Observable<String?> {
         return timerService.currentTimerObservable
             .map({ [unowned self] (value) -> String? in
             if self.shouldStopAndResetTimer() {
@@ -74,7 +74,7 @@ class ProgressStackViewModel {
         })
     }
     
-    func progressObservable() -> Observable<Float> {
+    func progressValueObservable() -> Observable<Float> {
         return timerService.currentTimerObservable.map(createProgressValue)
     }
     

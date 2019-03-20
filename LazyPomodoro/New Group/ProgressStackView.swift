@@ -16,7 +16,7 @@ class ProgressStackView: UIStackView {
     private static let kProgressIndicatorHeight = 5
     private static let kDefaultMargin = 8
     
-    private var viewModel: ProgressStackViewModel!
+    private var viewModel: ProgressStackViewModelProtocol!
     private let disposeBag = DisposeBag()
     
     private let titleLabel = UILabel()
@@ -61,17 +61,17 @@ class ProgressStackView: UIStackView {
         return progressView
     }
     
-    func bindViewModel(_ vm: ProgressStackViewModel) {
+    func bindViewModel(_ vm: ProgressStackViewModelProtocol) {
         viewModel = vm
         
         titleLabel.text = viewModel.title
-        progressLabel.text = viewModel.getInitialProgressLabel()
-        viewModel.timerObservable()
+        progressLabel.text = viewModel.getInitialProgressText()
+        viewModel.progressTextObservable()
             .distinctUntilChanged()
             .bind(to: progressLabel.rx.text)
             .disposed(by: disposeBag)
         
-        viewModel.progressObservable()
+        viewModel.progressValueObservable()
             .distinctUntilChanged()
             .bind(to: progressIndicator.rx.progress)
             .disposed(by: disposeBag)
