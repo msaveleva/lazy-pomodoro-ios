@@ -49,7 +49,7 @@ class ProgressStackViewModel {
     func getInitialProgressLabel() -> String {
         switch type {
         case .time:
-            return createTimeStringForCurrentInterval(with: 0)! //TODO msaveleva: fix.
+            return createTimeStringForCurrentInterval(with: 0)
         case .part:
             return "0/0" //TODO msaveleva: change
         }
@@ -83,7 +83,7 @@ class ProgressStackViewModel {
         return result
     }
     
-    private func createTimeStringForCurrentInterval(with interval: Int) -> String? {
+    private func createTimeStringForCurrentInterval(with interval: Int) -> String {
         switch type {
         case .time:
             let seconds = TimeInterval(interval)

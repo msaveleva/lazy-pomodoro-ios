@@ -19,6 +19,7 @@
 		3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */; };
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
 		3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */; };
+		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
 		3F9A29AA2231181F0006A3A4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A29A92231181F0006A3A4 /* Project.swift */; };
 		3FDA05B4222E431700D65C51 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B3222E431700D65C51 /* Scene.swift */; };
 		3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */; };
@@ -72,6 +73,7 @@
 		3F1CBAB0222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackView.swift; sourceTree = "<group>"; };
+		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		3F9A29A92231181F0006A3A4 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		3FDA05B3222E431700D65C51 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerViewModel.swift; sourceTree = "<group>"; };
@@ -161,20 +163,20 @@
 		3F1CBA8D222BA75400821988 /* LazyPomodoro */ = {
 			isa = PBXGroup;
 			children = (
-				3FFCF51F223952C500F5E552 /* Providers */,
-				3FFCF51A2239513300F5E552 /* Services */,
+				3F1CBA8E222BA75400821988 /* AppDelegate.swift */,
+				3F1CBA95222BA75400821988 /* Assets.xcassets */,
+				3F1CBA9A222BA75400821988 /* Info.plist */,
+				3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */,
+				3F1CBA92222BA75400821988 /* Main.storyboard */,
+				3F96E5D82242A8020094A6A9 /* Extensions */,
 				3F9A29A8223118110006A3A4 /* Model */,
 				3F002F18222F8F0400B53C34 /* Protocols */,
-				3FDA05B5222E435A00D65C51 /* ViewModel */,
+				3FFCF51F223952C500F5E552 /* Providers */,
 				3FDA05B2222E430C00D65C51 /* Scenes */,
-				3FEF8384222D7F590016A088 /* Views */,
-				3FE6CD56222BDE3C006B1C4A /* StyleExtensions */,
+				3FFCF51A2239513300F5E552 /* Services */,
 				3FE6CD55222BDE2E006B1C4A /* ViewControllers */,
-				3F1CBA8E222BA75400821988 /* AppDelegate.swift */,
-				3F1CBA92222BA75400821988 /* Main.storyboard */,
-				3F1CBA95222BA75400821988 /* Assets.xcassets */,
-				3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */,
-				3F1CBA9A222BA75400821988 /* Info.plist */,
+				3FDA05B5222E435A00D65C51 /* ViewModel */,
+				3FEF8384222D7F590016A088 /* Views */,
 			);
 			path = LazyPomodoro;
 			sourceTree = "<group>";
@@ -203,6 +205,15 @@
 				3F20AE1C222D826200DB0A87 /* StandardButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		3F96E5D82242A8020094A6A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */,
+				3FE6CD56222BDE3C006B1C4A /* StyleExtensions */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3F9A29A8223118110006A3A4 /* Model */ = {
@@ -574,6 +585,7 @@
 				3FFCF517223950E000F5E552 /* ScenesProvider.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
 				3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */,
+				3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */,
 				3FDA05BB222E453F00D65C51 /* TimerViewController.swift in Sources */,
 				3FFCF5212239569A00F5E552 /* TimerService.swift in Sources */,
 				3FFCF51322394C2100F5E552 /* ProgressStackViewModel.swift in Sources */,
