@@ -11,10 +11,12 @@ import Foundation
 //TODO msaveleva: support Realm
 class Project {
     var name: String
-    var goalPomodoros: UInt?
+    var projectPomodoroIntervals: UInt
+    var goalPomodoroIntervals: UInt?
     
-    init(name: String, goalPomodoros: UInt?) {
+    init(name: String, projectPomodoroIntervals: UInt, goalPomodoroIntervals: UInt?) {
         self.name = name
-        self.goalPomodoros = goalPomodoros
+        self.projectPomodoroIntervals = projectPomodoroIntervals
+        self.goalPomodoroIntervals = goalPomodoroIntervals
     }
 }

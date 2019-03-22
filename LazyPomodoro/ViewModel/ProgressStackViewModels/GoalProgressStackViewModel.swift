@@ -11,13 +11,15 @@ import RxSwift
 
 class GoalProgressStackViewModel: ProgressStackViewModelProtocol {
     public let title: String
+    private let currentProject: Project
     
-    init(title: String) { //TODO msaveleva: init with additional services to read values from saves settings.
+    init(title: String, currentProject: Project) {
         self.title = title
+        self.currentProject = currentProject
     }
     
     func getInitialProgressText() -> String {
-        return "0/0" //TODO msaveleva: implement
+        return String.lp_createStringForProgress(current: 0, total: 0)
     }
     
     func progressTextObservable() -> Observable<String?> {

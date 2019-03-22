@@ -15,4 +15,8 @@ extension String {
         let min = Int(seconds.truncatingRemainder(dividingBy: 3600) / 60)
         return String(format: "%02d:%02d", min, sec)
     }
+    
+    public static func lp_createStringForProgress(current: UInt, total: UInt) -> String {
+        return "\(current)/\(total)"
+    }
 }
