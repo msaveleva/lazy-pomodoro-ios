@@ -10,7 +10,8 @@ import Foundation
 import RxSwift
 
 class TimerControllerViewModel: ViewModelProtocol {
-    private var project: Project!
+    //TODO: load value from storage.
+    private var project: Project = Project(name: "Personal Project", currentPomodoroIntervals: 2, goalPomodoroIntervals: 15)
     
     public var projectPomodoroStackVm: TimerProgressStackViewModel!
     public var todayProgressStackVm: TodayProgressStackViewModel!
@@ -23,7 +24,7 @@ class TimerControllerViewModel: ViewModelProtocol {
         todayProgressStackVm = TodayProgressStackViewModel(title: "Progress for today") //TODO msaveleva: change to localized string
         
         //TODO msaveleva: add check if need to create this vm:
-        goalProgressStackVm = GoalProgressStackViewModel(title: "Project goal") //TODO msaveleva: change to localized string
+        goalProgressStackVm = GoalProgressStackViewModel(title: "Project goal", currentProject: project) //TODO msaveleva: change to localized string
     }
     
     func getCurrentProjectName() -> String {
