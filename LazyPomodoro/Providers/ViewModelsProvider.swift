@@ -16,13 +16,15 @@ class ViewModelsProvider {
         self.servicesProvider = servicesProvider
     }
     
-    func createViewModelForScene(scene: Scene) -> ViewModelProtocol {
+    func createViewModelForScene(scene: SceneType) -> ViewModelProtocol {
         switch scene {
         case .timer:
             let timerControllerViewModel = TimerControllerViewModel()
             timerControllerViewModel.timerService = servicesProvider.timerService
             timerControllerViewModel.dependenciesInjected()
             return timerControllerViewModel
+        default:
+            return TimerControllerViewModel() //TODO msaveleva: fix
         }
     }
     

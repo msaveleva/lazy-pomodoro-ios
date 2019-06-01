@@ -21,7 +21,7 @@ class ScenesRouter {
         currentViewController = window.rootViewController
     }
     
-    func transition(to scene: Scene, transitionType: SceneTransitionType, completion: @escaping () -> Void) {
+    func transition(to scene: SceneType, transitionType: SceneTransitionType, completion: @escaping () -> Void) {
         let viewController = scenesProvider.createControllerWithScene(scene: scene)
         switch transitionType {
         case .root:

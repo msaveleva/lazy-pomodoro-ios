@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let scenesProvider = ScenesProvider(viewModelsProvider: viewModelsProvider)
         let coordinator = ScenesRouter(window: window!, scenesProvider: scenesProvider)
         
-        let timerScene = Scene.timer
+        let timerScene = SceneType.timer
         coordinator.transition(to: timerScene, transitionType: .root) {
             print("Transition completed.")
         }

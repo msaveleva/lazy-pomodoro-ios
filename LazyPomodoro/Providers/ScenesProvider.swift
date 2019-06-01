@@ -16,7 +16,7 @@ class ScenesProvider {
         self.viewModelsProvider = viewModelsProvider
     }
     
-    func createControllerWithScene(scene: Scene) -> UIViewController {
+    func createControllerWithScene(scene: SceneType) -> UIViewController {
         switch scene {
         case .timer:
             if let viewModel = viewModelsProvider.createViewModelForScene(scene: scene) as? TimerControllerViewModel {
@@ -24,6 +24,8 @@ class ScenesProvider {
                 controller.bindViewModel()
                 return controller
             }
+        default:
+            return UIViewController() //TODO msaveleva: fix
         }
         
         assertionFailure("Can't create controller for scene")
