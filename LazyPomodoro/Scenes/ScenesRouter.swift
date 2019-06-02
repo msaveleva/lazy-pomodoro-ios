@@ -12,6 +12,7 @@ class ScenesRouter {
     
     private let window: UIWindow!
     private var currentViewController: UIViewController?
+    private let tabBarController = UITabBarController()
     
     private let scenesProvider: ScenesProvider
     
@@ -21,12 +22,30 @@ class ScenesRouter {
         currentViewController = window.rootViewController
     }
     
+    func tabBarControllerSetup(completion: @escaping () -> Void) {
+        let timersController = scenesProvider.createControllerWithScene(scene: .timer)
+        timersController.tabBarItem = UITabBarItem(title: "Timers", image: nil, tag: 0)
+        
+        let statisticsController = UIViewController()
+        statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: nil, tag: 1)
+        
+        let projectsController = UIViewController()
+        projectsController.tabBarItem = UITabBarItem(title: "Projects", image: nil, tag: 2)
+        
+        let settingsController = UIViewController()
+        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 3)
+        
+        window.rootViewController = tabBarController
+        tabBarController.viewControllers = [timersController,
+                                            statisticsController,
+                                            projectsController,
+                                            settingsController]
+        completion()
+    }
+    
     func transition(to scene: SceneType, transitionType: SceneTransitionType, completion: @escaping () -> Void) {
         let viewController = scenesProvider.createControllerWithScene(scene: scene)
         switch transitionType {
-        case .root:
-            window.rootViewController = viewController
-            completion()
         case .push:
             guard let navigationController = currentViewController?.navigationController else {
                 fatalError("Can't push view controller without navigation controller. ")
