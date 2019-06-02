@@ -24,6 +24,11 @@ class ScenesProvider {
                 controller.bindViewModel()
                 return controller
             }
+        case .statistics:
+            if let viewModel = viewModelsProvider.createViewModelForScene(scene: scene) as? StatisticsControllerViewModel {
+                let controller = StatisticsViewController(viewModel: viewModel)
+                controller.bindViewModel()
+            }
         default:
             return UIViewController() //TODO msaveleva: fix
         }

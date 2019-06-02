@@ -23,6 +23,9 @@ class ViewModelsProvider {
             timerControllerViewModel.timerService = servicesProvider.timerService
             timerControllerViewModel.dependenciesInjected()
             return timerControllerViewModel
+        case .statistics:
+            let statisticsControllerViewModel = StatisticsControllerViewModel()
+            return statisticsControllerViewModel
         default:
             return TimerControllerViewModel() //TODO msaveleva: fix
         }
