@@ -32,7 +32,7 @@ class ScenesRouter {
         let projectsController = scenesProvider.createControllerWithScene(scene: .projects)
         projectsController.tabBarItem = UITabBarItem(title: "Projects", image: nil, tag: 2)
         
-        let settingsController = scenesProvider.createControllerWithScene(scene: .Settings)
+        let settingsController = scenesProvider.createControllerWithScene(scene: .settings)
         settingsController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 3)
         
         window.rootViewController = tabBarController

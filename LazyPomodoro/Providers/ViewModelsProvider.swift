@@ -26,8 +26,12 @@ class ViewModelsProvider {
         case .statistics:
             let statisticsControllerViewModel = StatisticsControllerViewModel()
             return statisticsControllerViewModel
-        default:
-            return TimerControllerViewModel() //TODO msaveleva: fix
+        case .projects:
+            let projectsControllerViewModel = ProjectsControllerViewModel()
+            return projectsControllerViewModel
+        case .settings:
+            let settingsControllerViewModel = SettingsControllerViewModel()
+            return settingsControllerViewModel
         }
     }
     

@@ -17,21 +17,32 @@ class ScenesProvider {
     }
     
     func createControllerWithScene(scene: SceneType) -> UIViewController {
+        let vm = viewModelsProvider.createViewModelForScene(scene: scene)
         switch scene {
         case .timers:
-            if let viewModel = viewModelsProvider.createViewModelForScene(scene: scene) as? TimerControllerViewModel {
+            if let viewModel = vm as? TimerControllerViewModel {
                 let controller = TimersViewController(viewModel: viewModel)
                 controller.bindViewModel()
                 return controller
             }
         case .statistics:
-            if let viewModel = viewModelsProvider.createViewModelForScene(scene: scene) as? StatisticsControllerViewModel {
+            if let viewModel = vm as? StatisticsControllerViewModel {
                 let controller = StatisticsViewController(viewModel: viewModel)
                 controller.bindViewModel()
                 return controller
             }
-        default:
-            return UIViewController() //TODO msaveleva: fix
+        case .projects:
+            if let viewModel = vm as? ProjectsControllerViewModel {
+                let controller = ProjectsViewController(viewModel: viewModel)
+                controller.bindViewModel()
+                return controller
+            }
+        case .settings:
+            if let viewModel = vm as? SettingsControllerViewModel {
+                let controller = SettingsViewController(viewModel: viewModel)
+                controller.bindViewModel()
+                return controller
+            }
         }
         
         assertionFailure("Can't create controller for scene")

@@ -12,5 +12,5 @@ enum SceneType {
     case timers
     case statistics
     case projects
-    case Settings
+    case settings
 }
