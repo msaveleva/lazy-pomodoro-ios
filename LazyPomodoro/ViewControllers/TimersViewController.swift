@@ -1,5 +1,5 @@
 //
-//  TimerViewController.swift
+//  TimersViewController.swift
 //  LazyPomodoro
 //
 //  Created by Maria Saveleva on 05/03/2019.
@@ -11,7 +11,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class TimerViewController: UIViewController, BindableTypeProtocol {
+class TimersViewController: UIViewController, BindableTypeProtocol {
     
     struct Constant {
         static let defaultMargin = 32
@@ -32,8 +32,7 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.viewModel = TimerControllerViewModel()
-        super.init(coder: aDecoder)
+        fatalError("Unable to create controller via IB.")
     }
     
     override func viewDidLoad() {
@@ -59,7 +58,7 @@ class TimerViewController: UIViewController, BindableTypeProtocol {
     }
 }
 
-extension TimerViewController {
+extension TimersViewController {
     private func setupProgressBars() {
         projectPomodoroStackView = ProgressStackView.createDefaultProgressView()
         view.addSubview(projectPomodoroStackView)

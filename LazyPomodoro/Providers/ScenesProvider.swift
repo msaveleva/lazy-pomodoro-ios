@@ -18,9 +18,9 @@ class ScenesProvider {
     
     func createControllerWithScene(scene: SceneType) -> UIViewController {
         switch scene {
-        case .timer:
+        case .timers:
             if let viewModel = viewModelsProvider.createViewModelForScene(scene: scene) as? TimerControllerViewModel {
-                let controller = TimerViewController(viewModel: viewModel)
+                let controller = TimersViewController(viewModel: viewModel)
                 controller.bindViewModel()
                 return controller
             }
@@ -28,6 +28,7 @@ class ScenesProvider {
             if let viewModel = viewModelsProvider.createViewModelForScene(scene: scene) as? StatisticsControllerViewModel {
                 let controller = StatisticsViewController(viewModel: viewModel)
                 controller.bindViewModel()
+                return controller
             }
         default:
             return UIViewController() //TODO msaveleva: fix

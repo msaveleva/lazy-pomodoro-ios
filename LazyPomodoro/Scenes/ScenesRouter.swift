@@ -23,16 +23,16 @@ class ScenesRouter {
     }
     
     func tabBarControllerSetup(completion: @escaping () -> Void) {
-        let timersController = scenesProvider.createControllerWithScene(scene: .timer)
+        let timersController = scenesProvider.createControllerWithScene(scene: .timers)
         timersController.tabBarItem = UITabBarItem(title: "Timers", image: nil, tag: 0)
         
-        let statisticsController = UIViewController()
+        let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics)
         statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: nil, tag: 1)
         
-        let projectsController = UIViewController()
+        let projectsController = scenesProvider.createControllerWithScene(scene: .projects)
         projectsController.tabBarItem = UITabBarItem(title: "Projects", image: nil, tag: 2)
         
-        let settingsController = UIViewController()
+        let settingsController = scenesProvider.createControllerWithScene(scene: .Settings)
         settingsController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 3)
         
         window.rootViewController = tabBarController

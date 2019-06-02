@@ -24,6 +24,7 @@ class StatisticsViewController: UIViewController, BindableTypeProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = UIColor.lp_mainFillColor()
     }
     
     func bindViewModel() {

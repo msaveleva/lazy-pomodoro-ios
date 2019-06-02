@@ -9,7 +9,7 @@
 import Foundation
 
 enum SceneType {
-    case timer
+    case timers
     case statistics
     case projects
     case Settings
