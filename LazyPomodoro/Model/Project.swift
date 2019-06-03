@@ -9,14 +9,8 @@
 import Foundation
 
 //TODO msaveleva: support Realm
-class Project {
-    var name: String
-    var currentPomodoroIntervals: UInt
-    var goalPomodoroIntervals: UInt?
-    
-    init(name: String, currentPomodoroIntervals: UInt, goalPomodoroIntervals: UInt?) {
-        self.name = name
-        self.currentPomodoroIntervals = currentPomodoroIntervals
-        self.goalPomodoroIntervals = goalPomodoroIntervals
-    }
+struct Project {
+    let name: String
+    let pomodoros: UInt
+    let goalPomodoros: UInt?
 }
