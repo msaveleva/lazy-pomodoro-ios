@@ -1,5 +1,5 @@
 //
-//  Scene.swift
+//  SceneType.swift
 //  LazyPomodoro
 //
 //  Created by Maria Saveleva on 05/03/2019.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-enum Scene { //TODO msaveleva: rename to SceneType
-    case timer
-    //TODO msaveleva: add other screens.
+enum SceneType {
+    case timers
+    case statistics
+    case projects
+    case settings
 }

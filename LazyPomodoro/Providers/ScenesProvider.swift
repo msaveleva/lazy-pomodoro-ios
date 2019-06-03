@@ -16,11 +16,30 @@ class ScenesProvider {
         self.viewModelsProvider = viewModelsProvider
     }
     
-    func createControllerWithScene(scene: Scene) -> UIViewController {
+    func createControllerWithScene(scene: SceneType) -> UIViewController {
+        let vm = viewModelsProvider.createViewModelForScene(scene: scene)
         switch scene {
-        case .timer:
-            if let viewModel = viewModelsProvider.createViewModelForScene(scene: scene) as? TimerControllerViewModel {
-                let controller = TimerViewController(viewModel: viewModel)
+        case .timers:
+            if let viewModel = vm as? TimerControllerViewModel {
+                let controller = TimersViewController(viewModel: viewModel)
+                controller.bindViewModel()
+                return controller
+            }
+        case .statistics:
+            if let viewModel = vm as? StatisticsControllerViewModel {
+                let controller = StatisticsViewController(viewModel: viewModel)
+                controller.bindViewModel()
+                return controller
+            }
+        case .projects:
+            if let viewModel = vm as? ProjectsControllerViewModel {
+                let controller = ProjectsViewController(viewModel: viewModel)
+                controller.bindViewModel()
+                return controller
+            }
+        case .settings:
+            if let viewModel = vm as? SettingsControllerViewModel {
+                let controller = SettingsViewController(viewModel: viewModel)
                 controller.bindViewModel()
                 return controller
             }

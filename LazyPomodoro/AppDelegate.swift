@@ -19,9 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let scenesProvider = ScenesProvider(viewModelsProvider: viewModelsProvider)
         let coordinator = ScenesRouter(window: window!, scenesProvider: scenesProvider)
         
-        let timerScene = Scene.timer
-        coordinator.transition(to: timerScene, transitionType: .root) {
-            print("Transition completed.")
+        coordinator.tabBarControllerSetup {
+            print("TabBarController was setted up")
         }
         
         return true
