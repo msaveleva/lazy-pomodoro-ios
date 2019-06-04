@@ -40,4 +40,17 @@ class DatabaseService {
         }
     }
     
+    func loadPomodoros() -> Single<[Pomodoro]> {
+        return Single.create { [weak self] single in
+            
+            if let pomodoros = self?.realm.objects(Pomodoro.self).toArray() {
+                single(.success(pomodoros))
+            } else {
+                single(.success([Pomodoro]()))
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
 }
