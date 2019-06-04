@@ -30,6 +30,7 @@
 		3FC01B2122A42953003ECFD9 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC01B2022A42953003ECFD9 /* ProjectsViewController.swift */; };
 		3FC01B2322A4296B003ECFD9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC01B2222A4296B003ECFD9 /* SettingsViewController.swift */; };
 		3FC01B2522A583BE003ECFD9 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC01B2422A583BE003ECFD9 /* Pomodoro.swift */; };
+		3FC01B2722A5852E003ECFD9 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC01B2622A5852E003ECFD9 /* DatabaseService.swift */; };
 		3FC5E2EF224561490057D979 /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5E2EE224561490057D979 /* ProgressService.swift */; };
 		3FDA05B4222E431700D65C51 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B3222E431700D65C51 /* Scene.swift */; };
 		3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */; };
@@ -94,6 +95,7 @@
 		3FC01B2022A42953003ECFD9 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		3FC01B2222A4296B003ECFD9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3FC01B2422A583BE003ECFD9 /* Pomodoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
+		3FC01B2622A5852E003ECFD9 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		3FC5E2EE224561490057D979 /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressService.swift; sourceTree = "<group>"; };
 		3FDA05B3222E431700D65C51 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerViewModel.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			children = (
 				3FFCF5202239569A00F5E552 /* TimerService.swift */,
 				3FC5E2EE224561490057D979 /* ProgressService.swift */,
+				3FC01B2622A5852E003ECFD9 /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */,
 				3FDA05BF222E472A00D65C51 /* SceneTransitionType.swift in Sources */,
 				3FC01B2322A4296B003ECFD9 /* SettingsViewController.swift in Sources */,
+				3FC01B2722A5852E003ECFD9 /* DatabaseService.swift in Sources */,
 				3FFCF517223950E000F5E552 /* ScenesProvider.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
 				3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */,

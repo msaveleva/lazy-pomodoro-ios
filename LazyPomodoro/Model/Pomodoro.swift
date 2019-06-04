@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Pomodoro {
-    let duration: Double
-    let date: Date
+class Pomodoro: Object {
+    @objc dynamic var duration = 0.0
+    
+    @objc dynamic private let date = Date()
 }

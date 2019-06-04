@@ -18,6 +18,7 @@ class TimerControllerViewModel: ViewModelProtocol {
     public var goalProgressStackVm: GoalProgressStackViewModel?
     
     public var timerService: TimerService!
+    public var databaseService: DatabaseService!
     
     func dependenciesInjected() {
         projectPomodoroStackVm = TimerProgressStackViewModel(title: "Default Project", timerService: timerService)
