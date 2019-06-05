@@ -42,8 +42,23 @@ class DatabaseService {
     
     func loadPomodoros() -> Single<[Pomodoro]> {
         return Single.create { [weak self] single in
-            
             if let pomodoros = self?.realm.objects(Pomodoro.self).toArray() {
+                single(.success(pomodoros))
+            } else {
+                single(.success([Pomodoro]()))
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func loadTodaysPomodoros() -> Single<[Pomodoro]> {
+        return Single.create { [weak self] single in
+            let calendar = Calendar.current
+            let fromDate = calendar.startOfDay(for: Date()) as NSDate
+            
+            let todayPredicate = NSPredicate(format: "date >= %@", fromDate)
+            if let pomodoros = self?.realm.objects(Pomodoro.self).filter(todayPredicate).toArray() {
                 single(.success(pomodoros))
             } else {
                 single(.success([Pomodoro]()))
