@@ -18,6 +18,7 @@
 		3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */; };
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
 		3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */; };
+		3F44A19322B29F1800DCB738 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19222B29F1800DCB738 /* Log.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
 		3F96E5DC2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DB2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift */; };
 		3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */; };
@@ -84,6 +85,7 @@
 		3F1CBAB0222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackView.swift; sourceTree = "<group>"; };
+		3F44A19222B29F1800DCB738 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		3F96E5DB2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackViewModelProtocol.swift; sourceTree = "<group>"; };
 		3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressStackViewModel.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		3F1CBA8D222BA75400821988 /* LazyPomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				3F44A19122B29F0C00DCB738 /* Utils */,
 				3F1CBA8E222BA75400821988 /* AppDelegate.swift */,
 				3F1CBA95222BA75400821988 /* Assets.xcassets */,
 				3F1CBA9A222BA75400821988 /* Info.plist */,
@@ -230,6 +233,14 @@
 				3F20AE1C222D826200DB0A87 /* StandardButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		3F44A19122B29F0C00DCB738 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3F44A19222B29F1800DCB738 /* Log.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		3F96E5D82242A8020094A6A9 /* Extensions */ = {
@@ -604,6 +615,7 @@
 				3FFCF51E223951E400F5E552 /* ViewModelProtocol.swift in Sources */,
 				3F96E5DC2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift in Sources */,
 				3FFCF519223950EA00F5E552 /* ViewModelsProvider.swift in Sources */,
+				3F44A19322B29F1800DCB738 /* Log.swift in Sources */,
 				3FC01B2122A42953003ECFD9 /* ProjectsViewController.swift in Sources */,
 				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,
 				3FDA05BD222E45FB00D65C51 /* ScenesRouter.swift in Sources */,
