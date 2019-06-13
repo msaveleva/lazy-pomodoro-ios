@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 import RxSwift
+import os
 
 class DatabaseService {
     
@@ -17,6 +18,7 @@ class DatabaseService {
     init() {
         if let realm = try? Realm() {
             self.realm = realm
+            os_log("Database path: %s", log: Log.storage, type: .debug, Realm.defaultDatabasePath())
         } else {
             fatalError("Can't instantiate database.")
         }

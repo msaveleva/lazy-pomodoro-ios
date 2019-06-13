@@ -18,3 +18,15 @@ extension Results {
     }
     
 }
+
+extension Realm {
+    
+    class func defaultDatabasePath() -> String {
+        if let path = Realm.Configuration.defaultConfiguration.fileURL?.absoluteString {
+            return path
+        } else {
+            return "Unable to find database."
+        }
+    }
+    
+}
