@@ -63,13 +63,16 @@ class DatabaseService {
     }
     
     func loadThisWeekPomodoros() -> Single<[Pomodoro]> {
+        let today = Date()
         let calendar = Calendar.current
-        let fromDate = Date()
-        guard let toDate = calendar.date(byAdding: .day, value: -7, to: fromDate) else {
-            fatalError("Can't receive the correct date.")
+        let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date())
+        guard let sunday = calendar.date(from: components),
+            let startOfTheWeek = calendar.date(byAdding: .day, value: 1, to: sunday) else {
+            fatalError("Can't find start of the week.")
         }
         
-        let predicate = NSPredicate(format: "date <= %@ && date >= %@", fromDate as NSDate, toDate as NSDate)
+        let predicate = NSPredicate(format: "date <= %@ && date >= %@", today as NSDate, startOfTheWeek as NSDate)
+
         return loadPomodoros(with: predicate)
     }
     
