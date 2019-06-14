@@ -19,6 +19,7 @@
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
 		3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */; };
 		3F44A19322B29F1800DCB738 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19222B29F1800DCB738 /* Log.swift */; };
+		3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19422B40FB500DCB738 /* Date+StartDates.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
 		3F96E5DC2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DB2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift */; };
 		3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */; };
@@ -86,6 +87,7 @@
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackView.swift; sourceTree = "<group>"; };
 		3F44A19222B29F1800DCB738 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		3F44A19422B40FB500DCB738 /* Date+StartDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartDates.swift"; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		3F96E5DB2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackViewModelProtocol.swift; sourceTree = "<group>"; };
 		3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressStackViewModel.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				3FE6CD56222BDE3C006B1C4A /* StyleExtensions */,
 				3FCF72A622A6D58000424D60 /* Realm+Utils.swift */,
 				3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */,
+				3F44A19422B40FB500DCB738 /* Date+StartDates.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FFCF51522394D1D00F5E552 /* ModeViewModel.swift in Sources */,
+				3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */,
 				3FC01B1722A420F3003ECFD9 /* StatisticsControllerViewModel.swift in Sources */,
 				3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */,
 				3FFCF51E223951E400F5E552 /* ViewModelProtocol.swift in Sources */,

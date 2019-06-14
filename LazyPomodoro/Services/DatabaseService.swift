@@ -55,34 +55,18 @@ class DatabaseService {
     }
     
     func loadTodaysPomodoros() -> Single<[Pomodoro]> {
-        let calendar = Calendar.current
-        let fromDate = calendar.startOfDay(for: Date()) as NSDate
-        
-        let predicate = NSPredicate(format: "date >= %@", fromDate)
+        let predicate = NSPredicate(format: "date >= %@", Date.startOfTheDay() as NSDate)
         return loadPomodoros(with: predicate)
     }
     
     func loadThisWeekPomodoros() -> Single<[Pomodoro]> {
-        let today = Date()
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date())
-        guard let sunday = calendar.date(from: components),
-            let startOfTheWeek = calendar.date(byAdding: .day, value: 1, to: sunday) else {
-            fatalError("Can't find start of the week.")
-        }
-        
-        let predicate = NSPredicate(format: "date <= %@ && date >= %@", today as NSDate, startOfTheWeek as NSDate)
+        let predicate = NSPredicate(format: "date <= %@ && date >= %@", Date() as NSDate, Date.startOfTheWeek() as NSDate)
 
         return loadPomodoros(with: predicate)
     }
     
     func loadThisMonthPomodoros() -> Single<[Pomodoro]> {
-        let fromDate = Date()
-        guard let startOfTheMonth = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: fromDate))) else {
-            fatalError("Can't receive the correct date.")
-        }
-        
-        let predicate = NSPredicate(format: "date <= %@ && date >= %@", fromDate as NSDate, startOfTheMonth as NSDate)
+        let predicate = NSPredicate(format: "date <= %@ && date >= %@", Date() as NSDate, Date.startOfTheMonth() as NSDate)
         return loadPomodoros(with: predicate)
     }
     
