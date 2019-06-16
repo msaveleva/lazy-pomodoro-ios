@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-//TODO msaveleva: support Realm
-struct Project {
-    let name: String
-    let pomodoros: UInt
-    let goalPomodoros: UInt?
+class Project {
+    
+    @objc dynamic var name = ""
+    @objc dynamic var pomodoros = [Pomodoro]()
+    @objc dynamic var goalPomodoros: NSNumber? = nil
+    
 }

@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 class Pomodoro: Object {
+    
     @objc dynamic var date = Date()
     @objc dynamic var duration = 0.0
+    
 }
