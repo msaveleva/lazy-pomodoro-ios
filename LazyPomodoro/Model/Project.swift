@@ -9,10 +9,10 @@
 import Foundation
 import RealmSwift
 
-class Project {
+class Project: Object {
     
     @objc dynamic var name = ""
-    @objc dynamic var pomodoros = [Pomodoro]()
-    @objc dynamic var goalPomodoros: NSNumber? = nil
+    let goalPomodoros = RealmOptional<Int>()
+    var pomodoros = List<Pomodoro>()
     
 }

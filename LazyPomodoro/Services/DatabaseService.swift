@@ -27,6 +27,36 @@ class DatabaseService {
     
     //MARK: - Public methods
     
+    func save(project: Project) -> Completable {
+        return Completable.create { [weak self] completable in
+            do {
+                try self?.realm.write {
+                    self?.realm.add(project)
+                    completable(.completed)
+                }
+            } catch {
+                completable(.error(error))
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func loadProjects() -> Single<[Project]> {
+        return Single.create { [weak self] single in
+            if let projects = self?.realm.objects(Project.self).toArray() {
+                //Load projects if found in database.
+                single(.success(projects))
+            } else {
+                //If no projects found, return success with empy array of Projects.
+                single(.success([Project]()))
+            }
+            
+            return Disposables.create()
+        }
+    }
+
+    
     func save(pomodoro: Pomodoro) -> Completable {
         return Completable.create { [weak self] completable in
             do {
