@@ -9,6 +9,7 @@
 import Foundation
 
 extension String {
+    
     public static func lp_createTimeStringForCurrentInterval(with interval: Int) -> String {
         let seconds = TimeInterval(interval)
         let sec = Int(seconds.truncatingRemainder(dividingBy: 60))
@@ -19,4 +20,5 @@ extension String {
     public static func lp_createStringForProgress(current: UInt, total: UInt) -> String {
         return "\(current)/\(total)"
     }
+    
 }

@@ -7,16 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-//TODO msaveleva: support Realm
-class Project {
-    var name: String
-    var currentPomodoroIntervals: UInt
-    var goalPomodoroIntervals: UInt?
+class Project: Object {
     
-    init(name: String, currentPomodoroIntervals: UInt, goalPomodoroIntervals: UInt?) {
-        self.name = name
-        self.currentPomodoroIntervals = currentPomodoroIntervals
-        self.goalPomodoroIntervals = goalPomodoroIntervals
-    }
+    @objc dynamic var name = ""
+    let goalPomodoros = RealmOptional<Int>()
+    var pomodoros = List<Pomodoro>()
+    
 }

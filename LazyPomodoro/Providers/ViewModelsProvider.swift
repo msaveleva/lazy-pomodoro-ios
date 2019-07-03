@@ -21,6 +21,7 @@ class ViewModelsProvider {
         case .timers:
             let timerControllerViewModel = TimerControllerViewModel()
             timerControllerViewModel.timerService = servicesProvider.timerService
+            timerControllerViewModel.databaseService = servicesProvider.databaseService
             timerControllerViewModel.dependenciesInjected()
             return timerControllerViewModel
         case .statistics:
