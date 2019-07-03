@@ -13,6 +13,11 @@ import os
 
 class DatabaseService {
     
+    enum DatabaseError: Error {
+        case savingError
+        case updatingError
+    }
+    
     private let realm: Realm
     
     init() {
@@ -20,7 +25,7 @@ class DatabaseService {
             self.realm = realm
             os_log("Database path: %s", log: Log.storage, type: .debug, Realm.defaultDatabasePath())
         } else {
-            fatalError("Can't instantiate database.")
+            fatalError("Unable to setup database.")
         }
     }
     
@@ -35,7 +40,22 @@ class DatabaseService {
                     completable(.completed)
                 }
             } catch {
-                completable(.error(error))
+                completable(.error(DatabaseError.savingError))
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func updateProjects(with updateBlock: @escaping () -> [Project]) -> Single<[Project]> {
+        return Single.create { [weak self] single in
+            do {
+                try self?.realm.write {
+                    let updatedProjects = updateBlock()
+                    single(.success(updatedProjects))
+                }
+            } catch {
+                single(.error(DatabaseError.updatingError))
             }
             
             return Disposables.create()
@@ -56,7 +76,7 @@ class DatabaseService {
         }
     }
 
-    
+    //TODO msaveleva: remove
     func save(pomodoro: Pomodoro) -> Completable {
         return Completable.create { [weak self] completable in
             do {
@@ -65,14 +85,14 @@ class DatabaseService {
                     completable(.completed)
                 }
             } catch {
-                completable(.error(error))
+                completable(.error(DatabaseError.savingError))
             }
             
             return Disposables.create()
         }
     }
     
-    func loadPomodoros() -> Single<[Pomodoro]> {
+    func loadAllPomodoros() -> Single<[Pomodoro]> {
         return Single.create { [weak self] single in
             if let pomodoros = self?.realm.objects(Pomodoro.self).toArray() {
                 single(.success(pomodoros))

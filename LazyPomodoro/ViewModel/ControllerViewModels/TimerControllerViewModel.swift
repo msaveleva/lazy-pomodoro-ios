@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import os
 
 class TimerControllerViewModel: ViewModelProtocol {
     //TODO: load value from storage.
@@ -20,6 +21,8 @@ class TimerControllerViewModel: ViewModelProtocol {
     public var timerService: TimerService!
     public var databaseService: DatabaseService!
     
+    private let disposeBag = DisposeBag()
+    
     func dependenciesInjected() {
         projectPomodoroStackVm = TimerProgressStackViewModel(title: "Default Project", timerService: timerService)
         todayProgressStackVm = TodayProgressStackViewModel(title: "Progress for today") //TODO msaveleva: change to localized string
@@ -31,4 +34,5 @@ class TimerControllerViewModel: ViewModelProtocol {
     func startPauseButtonPressed() {
         projectPomodoroStackVm.updateState()
     }
+    
 }
