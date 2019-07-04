@@ -20,6 +20,8 @@
 		3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */; };
 		3F44A19322B29F1800DCB738 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19222B29F1800DCB738 /* Log.swift */; };
 		3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19422B40FB500DCB738 /* Date+StartDates.swift */; };
+		3F7C92C022CE5E02005A79A1 /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */; };
+		3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
 		3F96E5DC2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DB2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift */; };
 		3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */; };
@@ -88,6 +90,8 @@
 		3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackView.swift; sourceTree = "<group>"; };
 		3F44A19222B29F1800DCB738 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3F44A19422B40FB500DCB738 /* Date+StartDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartDates.swift"; sourceTree = "<group>"; };
+		3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
+		3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectControllerViewModel.swift; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		3F96E5DB2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackViewModelProtocol.swift; sourceTree = "<group>"; };
 		3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressStackViewModel.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 				3FC01B1622A420F3003ECFD9 /* StatisticsControllerViewModel.swift */,
 				3FC01B1C22A428C7003ECFD9 /* ProjectsControllerViewModel.swift */,
 				3FC01B1E22A428E0003ECFD9 /* SettingsControllerViewModel.swift */,
+				3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */,
 			);
 			path = ControllerViewModels;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				3FC01B1822A42146003ECFD9 /* StatisticsViewController.swift */,
 				3FC01B2022A42953003ECFD9 /* ProjectsViewController.swift */,
 				3FC01B2222A4296B003ECFD9 /* SettingsViewController.swift */,
+				3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7C92C022CE5E02005A79A1 /* CreateProjectViewController.swift in Sources */,
 				3FFCF51522394D1D00F5E552 /* ModeViewModel.swift in Sources */,
 				3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */,
 				3FC01B1722A420F3003ECFD9 /* StatisticsControllerViewModel.swift in Sources */,
@@ -629,6 +636,7 @@
 				3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */,
 				3FDA05B4222E431700D65C51 /* Scene.swift in Sources */,
 				3FC5E2EF224561490057D979 /* ProgressService.swift in Sources */,
+				3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */,
 				3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */,
 				3F9A29AA2231181F0006A3A4 /* Project.swift in Sources */,
 				3FC01B1F22A428E0003ECFD9 /* SettingsControllerViewModel.swift in Sources */,

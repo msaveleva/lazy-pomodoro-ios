@@ -33,6 +33,9 @@ class ViewModelsProvider {
         case .settings:
             let settingsControllerViewModel = SettingsControllerViewModel()
             return settingsControllerViewModel
+        case .createProject:
+            let createProjectControllerViewModel = CreateProjectControllerViewModel(scenesRouter: scenesRouter)
+            return createProjectControllerViewModel
         }
     }
     

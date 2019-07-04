@@ -1,24 +1,23 @@
 //
-//  ProjectsViewController.swift
+//  CreateProjectViewController.swift
 //  LazyPomodoro
 //
-//  Created by Maria Saveleva on 02/06/2019.
+//  Created by Maria Saveleva on 04/07/2019.
 //  Copyright © 2019 Maria Saveleva. All rights reserved.
 //
 
 import UIKit
 import RxSwift
-import SnapKit
 import os
 
-class ProjectsViewController: UIViewController, BindableTypeProtocol {
-
-    private(set) var viewModel: ProjectsControllerViewModel
+class CreateProjectViewController: UIViewController, BindableTypeProtocol {
+    
+    private(set) var viewModel: CreateProjectControllerViewModel
     private let disposeBag = DisposeBag()
     
-    let projectCreateBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+    private let projectCreateBarButtonItem = UIBarButtonItem(title: "Create", style: .done, target: nil, action: nil)
     
-    init(viewModel: ProjectsControllerViewModel) {
+    init(viewModel: CreateProjectControllerViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -31,21 +30,18 @@ class ProjectsViewController: UIViewController, BindableTypeProtocol {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.lp_mainFillColor()
-        title = "Projects"
-        
+        title = "New Project"
         setupUI()
     }
     
     func bindViewModel() {
         projectCreateBarButtonItem.rx.tap.subscribe(onNext: { _ in
-            os_log("Creating project!", log: Log.ui, type: .info)
+            os_log("Handling project creation", log: Log.ui, type: .info)
         }).disposed(by: disposeBag)
     }
     
     //MARK: - Private methods
     private func setupUI() {
         navigationItem.rightBarButtonItem = projectCreateBarButtonItem
-        
     }
-
 }

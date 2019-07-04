@@ -43,6 +43,12 @@ class ScenesProvider {
                 controller.bindViewModel()
                 return controller
             }
+        case .createProject:
+            if let viewModel = vm as? CreateProjectControllerViewModel {
+                let controller = CreateProjectViewController(viewModel: viewModel)
+                controller.bindViewModel()
+                return controller
+            }
         }
         
         assertionFailure("Can't create controller for scene")
