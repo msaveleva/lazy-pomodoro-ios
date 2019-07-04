@@ -28,26 +28,9 @@ class ScenesRouter {
     }
     
     func tabBarControllerSetup(completion: @escaping () -> Void) {
-        let timersController = scenesProvider.createControllerWithScene(scene: .timers, scenesRouter: self)
-        timersController.tabBarItem = UITabBarItem(title: "Timers", image: nil, tag: 0)
-        
-        let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics, scenesRouter: self)
-        statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: nil, tag: 1)
-        
-        projectsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .projects, scenesRouter: self)]
-        let projectsController = projectsNavController
-        projectsController.tabBarItem = UITabBarItem(title: "Projects", image: nil, tag: 2)
-        
-        settingsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .settings, scenesRouter: self)]
-        let settingsController = settingsNavController
-        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 3)
+        setupTabBarController()
         
         window.rootViewController = tabBarController
-        tabBarController.viewControllers = [timersController,
-                                            statisticsController,
-                                            projectsController,
-                                            settingsController]
-        
         tabBarController.rx.didSelect.subscribe(onNext: { [unowned self] selectedController in
             if let controller = selectedController as? UINavigationController {
                 self.currentViewController = controller.viewControllers.first
@@ -92,4 +75,30 @@ class ScenesRouter {
             currentViewController = navigationController.viewControllers.last
         }
     }
+}
+
+//UI extension
+extension ScenesRouter {
+    
+    private func setupTabBarController() {
+        let timersController = scenesProvider.createControllerWithScene(scene: .timers, scenesRouter: self)
+        timersController.tabBarItem = UITabBarItem(title: "Timers", image: UIImage(named: "tab-bar-timers"), tag: 0)
+        
+        let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics, scenesRouter: self)
+        statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: UIImage(named: "tab-bar-statistics"), tag: 1)
+        
+        projectsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .projects, scenesRouter: self)]
+        let projectsController = projectsNavController
+        projectsController.tabBarItem = UITabBarItem(title: "Projects", image: UIImage(named: "tab-bar-projects"), tag: 2)
+        
+        settingsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .settings, scenesRouter: self)]
+        let settingsController = settingsNavController
+        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "tab-bar-settings"), tag: 3)
+        
+        tabBarController.viewControllers = [timersController,
+                                            statisticsController,
+                                            projectsController,
+                                            settingsController]
+    }
+    
 }
