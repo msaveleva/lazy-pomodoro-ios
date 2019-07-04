@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import os
 
 class ProjectsControllerViewModel: ViewModelProtocol {
     
@@ -22,7 +23,9 @@ class ProjectsControllerViewModel: ViewModelProtocol {
     
     //MARK: - Public methods
     public func showCreateScreen() {
-        //TODO msaveleva: handle transition.
+        scenesRouter.transition(to: .createProject, transitionType: .push) {
+            os_log("Project screation screen presented", log: Log.ui, type: .debug)
+        }
     }
     
 }

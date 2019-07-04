@@ -37,8 +37,9 @@ class ProjectsViewController: UIViewController, BindableTypeProtocol {
     }
     
     func bindViewModel() {
-        projectCreateBarButtonItem.rx.tap.subscribe(onNext: { _ in
-            os_log("Creating project!", log: Log.ui, type: .info)
+        projectCreateBarButtonItem.rx.tap.subscribe(onNext: { [unowned self] _ in
+            os_log("Creating project!", log: Log.ui, type: .debug)
+            self.viewModel.showCreateScreen()
         }).disposed(by: disposeBag)
     }
     

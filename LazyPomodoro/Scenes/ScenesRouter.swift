@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class ScenesRouter {
     
@@ -15,6 +16,8 @@ class ScenesRouter {
     private let tabBarController = UITabBarController()
     private let projectsNavController = UINavigationController()
     private let settingsNavController = UINavigationController()
+    
+    private let disposeBag = DisposeBag()
     
     private let scenesProvider: ScenesProvider
     
@@ -44,6 +47,15 @@ class ScenesRouter {
                                             statisticsController,
                                             projectsController,
                                             settingsController]
+        
+        tabBarController.rx.didSelect.subscribe(onNext: { [unowned self] selectedController in
+            if let controller = selectedController as? UINavigationController {
+                self.currentViewController = controller.viewControllers.first
+            } else {
+                self.currentViewController = selectedController
+            }
+        }).disposed(by: disposeBag)
+        
         completion()
     }
     
@@ -56,8 +68,10 @@ class ScenesRouter {
             }
             
             navigationController.pushViewController(viewController, animated: true)
+            currentViewController = viewController
             completion()
         case .modal:
+            currentViewController = viewController
             currentViewController?.present(viewController, animated: true, completion: {
                 completion()
             })
