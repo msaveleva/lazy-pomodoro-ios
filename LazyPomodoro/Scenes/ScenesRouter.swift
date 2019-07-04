@@ -25,17 +25,17 @@ class ScenesRouter {
     }
     
     func tabBarControllerSetup(completion: @escaping () -> Void) {
-        let timersController = scenesProvider.createControllerWithScene(scene: .timers)
+        let timersController = scenesProvider.createControllerWithScene(scene: .timers, scenesRouter: self)
         timersController.tabBarItem = UITabBarItem(title: "Timers", image: nil, tag: 0)
         
-        let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics)
+        let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics, scenesRouter: self)
         statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: nil, tag: 1)
         
-        projectsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .projects)]
+        projectsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .projects, scenesRouter: self)]
         let projectsController = projectsNavController
         projectsController.tabBarItem = UITabBarItem(title: "Projects", image: nil, tag: 2)
         
-        settingsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .settings)]
+        settingsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .settings, scenesRouter: self)]
         let settingsController = settingsNavController
         settingsController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 3)
         
@@ -48,7 +48,7 @@ class ScenesRouter {
     }
     
     func transition(to scene: SceneType, transitionType: SceneTransitionType, completion: @escaping () -> Void) {
-        let viewController = scenesProvider.createControllerWithScene(scene: scene)
+        let viewController = scenesProvider.createControllerWithScene(scene: scene, scenesRouter: self)
         switch transitionType {
         case .push:
             guard let navigationController = currentViewController?.navigationController else {

@@ -16,8 +16,8 @@ class ScenesProvider {
         self.viewModelsProvider = viewModelsProvider
     }
     
-    func createControllerWithScene(scene: SceneType) -> UIViewController {
-        let vm = viewModelsProvider.createViewModelForScene(scene: scene)
+    func createControllerWithScene(scene: SceneType, scenesRouter: ScenesRouter) -> UIViewController {
+        let vm = viewModelsProvider.createViewModelForScene(scene: scene, scenesRouter: scenesRouter)
         switch scene {
         case .timers:
             if let viewModel = vm as? TimerControllerViewModel {

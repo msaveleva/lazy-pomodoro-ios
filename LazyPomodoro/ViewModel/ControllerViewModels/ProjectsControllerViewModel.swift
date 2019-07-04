@@ -10,8 +10,19 @@ import Foundation
 
 class ProjectsControllerViewModel: ViewModelProtocol {
     
+    private let scenesRouter: ScenesRouter
+    
+    init(scenesRouter: ScenesRouter) {
+        self.scenesRouter = scenesRouter
+    }
+    
     func dependenciesInjected() {
-        //TODO msaveleva: implement
+        //TODO msaveleva: implement.
+    }
+    
+    //MARK: - Public methods
+    public func showCreateScreen() {
+        //TODO msaveleva: handle transition.
     }
     
 }
