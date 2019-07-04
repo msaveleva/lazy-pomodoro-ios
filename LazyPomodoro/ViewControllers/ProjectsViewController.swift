@@ -25,6 +25,7 @@ class ProjectsViewController: UIViewController, BindableTypeProtocol {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.lp_mainFillColor()
+        title = "Projects"
     }
     
     func bindViewModel() {

@@ -13,6 +13,8 @@ class ScenesRouter {
     private let window: UIWindow!
     private var currentViewController: UIViewController?
     private let tabBarController = UITabBarController()
+    private let projectsNavController = UINavigationController()
+    private let settingsNavController = UINavigationController()
     
     private let scenesProvider: ScenesProvider
     
@@ -29,10 +31,12 @@ class ScenesRouter {
         let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics)
         statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: nil, tag: 1)
         
-        let projectsController = scenesProvider.createControllerWithScene(scene: .projects)
+        projectsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .projects)]
+        let projectsController = projectsNavController
         projectsController.tabBarItem = UITabBarItem(title: "Projects", image: nil, tag: 2)
         
-        let settingsController = scenesProvider.createControllerWithScene(scene: .settings)
+        settingsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .settings)]
+        let settingsController = settingsNavController
         settingsController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 3)
         
         window.rootViewController = tabBarController

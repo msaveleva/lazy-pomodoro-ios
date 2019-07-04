@@ -25,6 +25,7 @@ class SettingsViewController: UIViewController, BindableTypeProtocol {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.lp_mainFillColor()
+        title = "Settings"
     }
     
     func bindViewModel() {
