@@ -12,7 +12,7 @@ import RxSwift
 class ScenesRouter {
     
     private let window: UIWindow!
-    private var currentViewController: UIViewController?
+    
     private let tabBarController = UITabBarController()
     private let projectsNavController = UINavigationController()
     private let settingsNavController = UINavigationController()
@@ -24,21 +24,13 @@ class ScenesRouter {
     required init(window: UIWindow, scenesProvider: ScenesProvider) {
         self.window = window
         self.scenesProvider = scenesProvider
-        currentViewController = window.rootViewController
     }
     
+    //MARK: - Public methods
     func tabBarControllerSetup(completion: @escaping () -> Void) {
         setupTabBarController()
         
         window.rootViewController = tabBarController
-        tabBarController.rx.didSelect.subscribe(onNext: { [unowned self] selectedController in
-            if let controller = selectedController as? UINavigationController {
-                self.currentViewController = controller.viewControllers.first
-            } else {
-                self.currentViewController = selectedController
-            }
-        }).disposed(by: disposeBag)
-        
         completion()
     }
     
@@ -46,33 +38,37 @@ class ScenesRouter {
         let viewController = scenesProvider.createControllerWithScene(scene: scene, scenesRouter: self)
         switch transitionType {
         case .push:
-            guard let navigationController = currentViewController?.navigationController else {
+            var navigationController: UINavigationController
+            if let navController = getCurrentViewController().navigationController {
+                navigationController = navController
+            } else if let navController = getCurrentViewController() as? UINavigationController {
+                navigationController = navController
+            } else {
                 fatalError("Can't push view controller without navigation controller. ")
             }
             
             navigationController.pushViewController(viewController, animated: true)
-            currentViewController = viewController
             completion()
         case .modal:
-            currentViewController = viewController
-            currentViewController?.present(viewController, animated: true, completion: {
+            getCurrentViewController().present(viewController, animated: true, completion: {
                 completion()
             })
         }
-        
-        currentViewController = viewController
     }
     
-    func pop(animated: Bool, completion: @escaping () -> Void) {
-        if let presenterController = currentViewController?.presentingViewController {
-            //Dismiss modal view controller.
-            currentViewController?.dismiss(animated: animated) { [weak self] in
-                self?.currentViewController = presenterController
-                completion()
-            }
-        } else if let navigationController = currentViewController?.navigationController {
-            navigationController.popViewController(animated: animated)
-            currentViewController = navigationController.viewControllers.last
+    //MARK: - Private methods
+    private func getCurrentViewController() -> UIViewController {
+        guard let rootControllers = tabBarController.viewControllers else {
+            fatalError("No controllers presented.")
+        }
+        
+        //TODO msaveleva: add handle for presented view controllers.
+        let selectedTab = rootControllers[tabBarController.selectedIndex]
+        if let navigationController = selectedTab as? UINavigationController,
+            let topController = navigationController.topViewController {
+            return topController
+        } else {
+            return selectedTab
         }
     }
 }
