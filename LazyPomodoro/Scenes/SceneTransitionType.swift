@@ -9,6 +9,7 @@
 import Foundation
 
 enum SceneTransitionType {
+    case root //for debug only
     case push
     case modal
 }

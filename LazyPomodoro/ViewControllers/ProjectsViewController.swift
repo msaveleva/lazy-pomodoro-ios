@@ -16,7 +16,8 @@ class ProjectsViewController: UIViewController, BindableTypeProtocol {
     private(set) var viewModel: ProjectsControllerViewModel
     private let disposeBag = DisposeBag()
     
-    let projectCreateBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+    private let projectCreateBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+    private let stackView = UIStackView()
     
     init(viewModel: ProjectsControllerViewModel) {
         self.viewModel = viewModel
@@ -47,6 +48,7 @@ class ProjectsViewController: UIViewController, BindableTypeProtocol {
     private func setupUI() {
         navigationItem.rightBarButtonItem = projectCreateBarButtonItem
         
+        view.addSubview(stackView)
     }
 
 }

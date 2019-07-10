@@ -37,6 +37,9 @@ class ScenesRouter {
     func transition(to scene: SceneType, transitionType: SceneTransitionType, completion: @escaping () -> Void) {
         let viewController = scenesProvider.createControllerWithScene(scene: scene, scenesRouter: self)
         switch transitionType {
+        case .root:
+            window.rootViewController = viewController
+            completion()
         case .push:
             var navigationController: UINavigationController
             if let navController = getCurrentViewController().navigationController {
