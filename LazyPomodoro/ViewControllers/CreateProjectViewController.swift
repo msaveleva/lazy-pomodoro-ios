@@ -67,7 +67,7 @@ class CreateProjectViewController: UIViewController, BindableTypeProtocol {
 extension CreateProjectViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.sectionsVMs[section].cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -10,6 +10,7 @@ import Foundation
 
 class CreateProjectControllerViewModel: ViewModelProtocol {
     
+    private(set) var sectionsVMs = [TableViewSectionVM]()
     private let scenesRouter: ScenesRouter
     
     init(scenesRouter: ScenesRouter) {
@@ -17,7 +18,22 @@ class CreateProjectControllerViewModel: ViewModelProtocol {
     }
     
     func dependenciesInjected() {
-        //TODO msaveleva: implement.
+        setupViewModel()
+    }
+    
+    //MARK: - Private methods
+    private func setupViewModel() {
+        let firstTitle = "Project name"
+        let textCellVM = TextFieldCellVM(placeholder: "Enter name")
+        let firstSection = TableViewSectionVM(title: firstTitle.uppercased(), cells: [textCellVM])
+        
+        let secondTitle = "Goals"
+        let enableGoalCellVM = SwitchCellVM(with: "Enable Project Goal")
+        let numberCellVM = NumberCellVM(with: "Number of Interevals")
+        let secondSection = TableViewSectionVM(title: secondTitle, cells: [enableGoalCellVM, numberCellVM])
+        
+        sectionsVMs.append(firstSection)
+        sectionsVMs.append(secondSection)
     }
     
 }
