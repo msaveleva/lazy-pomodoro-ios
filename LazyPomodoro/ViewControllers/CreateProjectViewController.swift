@@ -14,13 +14,17 @@ class CreateProjectViewController: UIViewController, BindableTypeProtocol {
     
     private struct Constant {
         static let defaultCellId = "DefaultCellId"
+        
+        static let textFieldCellId = "TextFieldCellId"
+        static let switchCellId = "SwitchCellId"
+        static let numberCellId = "NumberCellId"
     }
     
     private(set) var viewModel: CreateProjectControllerViewModel
     private let disposeBag = DisposeBag()
     
     private let projectCreateBarButtonItem = UIBarButtonItem(title: "Create", style: .done, target: nil, action: nil)
-    private let tableView = UITableView()
+    private let tableView = UITableView(frame: UIScreen.main.bounds, style: .grouped)
     
     init(viewModel: CreateProjectControllerViewModel) {
         self.viewModel = viewModel
@@ -66,8 +70,20 @@ class CreateProjectViewController: UIViewController, BindableTypeProtocol {
 
 extension CreateProjectViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 46
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.sectionsVMs[section].title
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.sectionsVMs[section].cells.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.sectionsVMs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
