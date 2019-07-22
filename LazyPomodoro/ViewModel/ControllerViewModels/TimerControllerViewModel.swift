@@ -10,6 +10,11 @@ import Foundation
 import RxSwift
 import os
 
+
+protocol TimerControllerViewModelProtocol: ViewModelProtocol {
+    func startPauseButtonPressed()
+}
+
 class TimerControllerViewModel: ViewModelProtocol {
     //TODO: load value from storage.
 //    private var project: Project = Project(name: "Personal Project", currentPomodoroIntervals: 2, goalPomodoroIntervals: 15)

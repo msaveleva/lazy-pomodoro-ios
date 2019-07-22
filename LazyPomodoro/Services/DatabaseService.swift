@@ -21,6 +21,7 @@ class DatabaseService: DatabaseServiceProtocol {
     enum DatabaseError: Error {
         case savingError
         case updatingError
+        case deinitializedService
     }
     
     private let realm: Realm
@@ -39,9 +40,16 @@ class DatabaseService: DatabaseServiceProtocol {
     
     func save(project: Project) -> Completable {
         return Completable.create { [weak self] completable in
+            
+            // what is self?
+            
+            // let self: DatabaseService?
+            
+            
+            guard let self = self else { return Disposables.create() }
             do {
-                try self?.realm.write {
-                    self?.realm.add(project)
+                try self.realm.write {
+                    self.realm.add(project)
                     completable(.completed)
                 }
             } catch {

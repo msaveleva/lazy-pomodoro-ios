@@ -17,7 +17,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol {
         static let defaultMargin = 32
     }
     
-    private(set) var viewModel: TimerControllerViewModel
+    private(set) var viewModel: TimerControllerViewModelProtocol
     
     private var testLabel = UILabel()
     private var disposeBag = DisposeBag()
@@ -26,7 +26,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol {
     private var projectPomodoroStackView: ProgressStackView!
     private var startPauseButton: UIButton!
     
-    init(viewModel: TimerControllerViewModel) {
+    init(viewModel: TimerControllerViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
