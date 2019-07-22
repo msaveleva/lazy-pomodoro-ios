@@ -19,7 +19,7 @@ class TimerControllerViewModel: ViewModelProtocol {
     public var goalProgressStackVm: GoalProgressStackViewModel?
     
     public var timerService: TimerService!
-    public var databaseService: DatabaseService!
+    public var databaseService: DatabaseServiceProtocol!
     
     private let disposeBag = DisposeBag()
     

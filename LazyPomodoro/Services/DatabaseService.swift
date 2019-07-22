@@ -11,7 +11,12 @@ import RealmSwift
 import RxSwift
 import os
 
-class DatabaseService {
+protocol DatabaseServiceProtocol {
+    func save(project: Project) -> Completable
+}
+
+
+class DatabaseService: DatabaseServiceProtocol {
     
     enum DatabaseError: Error {
         case savingError

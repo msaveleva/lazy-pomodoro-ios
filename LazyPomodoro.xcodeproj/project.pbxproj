@@ -19,6 +19,10 @@
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
 		3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */; };
 		3F2CE52122D65AEB00BD7D04 /* TableViewSectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */; };
+		3F2CE52422D8E73700BD7D04 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52322D8E73700BD7D04 /* TextFieldCell.swift */; };
+		3F2CE52622D8E75900BD7D04 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52522D8E75900BD7D04 /* SwitchCell.swift */; };
+		3F2CE52822D8E76F00BD7D04 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52722D8E76F00BD7D04 /* NumberCell.swift */; };
+		3F2CE52A22E61CDD00BD7D04 /* TimerControllerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52922E61CDD00BD7D04 /* TimerControllerViewModelTests.swift */; };
 		3F44A19322B29F1800DCB738 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19222B29F1800DCB738 /* Log.swift */; };
 		3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19422B40FB500DCB738 /* Date+StartDates.swift */; };
 		3F7C92C022CE5E02005A79A1 /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */; };
@@ -90,6 +94,10 @@
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackView.swift; sourceTree = "<group>"; };
 		3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionVM.swift; sourceTree = "<group>"; };
+		3F2CE52322D8E73700BD7D04 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		3F2CE52522D8E75900BD7D04 /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		3F2CE52722D8E76F00BD7D04 /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		3F2CE52922E61CDD00BD7D04 /* TimerControllerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerViewModelTests.swift; sourceTree = "<group>"; };
 		3F44A19222B29F1800DCB738 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3F44A19422B40FB500DCB738 /* Date+StartDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartDates.swift"; sourceTree = "<group>"; };
 		3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */,
+				3F2CE52922E61CDD00BD7D04 /* TimerControllerViewModelTests.swift */,
 				3F1CBAA5222BA75400821988 /* Info.plist */,
 			);
 			path = LazyPomodoroTests;
@@ -249,6 +258,16 @@
 				3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */,
 			);
 			path = TableViewModels;
+			sourceTree = "<group>";
+		};
+		3F2CE52222D8E71A00BD7D04 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3F2CE52322D8E73700BD7D04 /* TextFieldCell.swift */,
+				3F2CE52522D8E75900BD7D04 /* SwitchCell.swift */,
+				3F2CE52722D8E76F00BD7D04 /* NumberCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		3F44A19122B29F0C00DCB738 /* Utils */ = {
@@ -347,6 +366,7 @@
 		3FEF8384222D7F590016A088 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F2CE52222D8E71A00BD7D04 /* TableViewCells */,
 				3F20AE1B222D825500DB0A87 /* Buttons */,
 				3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */,
 			);
@@ -649,6 +669,7 @@
 				3FDA05B4222E431700D65C51 /* Scene.swift in Sources */,
 				3FC5E2EF224561490057D979 /* ProgressService.swift in Sources */,
 				3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */,
+				3F2CE52822D8E76F00BD7D04 /* NumberCell.swift in Sources */,
 				3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */,
 				3F9A29AA2231181F0006A3A4 /* Project.swift in Sources */,
 				3FC01B1F22A428E0003ECFD9 /* SettingsControllerViewModel.swift in Sources */,
@@ -657,6 +678,7 @@
 				3FC01B2322A4296B003ECFD9 /* SettingsViewController.swift in Sources */,
 				3FC01B2722A5852E003ECFD9 /* DatabaseService.swift in Sources */,
 				3FFCF517223950E000F5E552 /* ScenesProvider.swift in Sources */,
+				3F2CE52622D8E75900BD7D04 /* SwitchCell.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
 				3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */,
 				3FC01B2522A583BE003ECFD9 /* Pomodoro.swift in Sources */,
@@ -668,6 +690,7 @@
 				3F96E5E12242ACA90094A6A9 /* GoalProgressStackViewModel.swift in Sources */,
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,
 				3FC01B1922A42146003ECFD9 /* StatisticsViewController.swift in Sources */,
+				3F2CE52422D8E73700BD7D04 /* TextFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +698,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2CE52A22E61CDD00BD7D04 /* TimerControllerViewModelTests.swift in Sources */,
 				3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
