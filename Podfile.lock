@@ -24,6 +24,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SnapKit (5.0.1)
+  - SwiftLint (0.39.1)
 
 DEPENDENCIES:
   - Action
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - RxRealm
   - RxSwift
   - SnapKit
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -48,6 +50,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Action: 0d14986aad0f1330aa27ce65d0cdeaacbb63d91c
@@ -61,7 +64,8 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: c770bddcb636225dee145f715e93f8948646fd2d
+PODFILE CHECKSUM: bfc85047ec80fbf646a1559d3b47c3be5a158dda
 
 COCOAPODS: 1.8.4

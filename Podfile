@@ -5,6 +5,8 @@ platform :ios, '12.0'
 
 target 'LazyPomodoro' do
   use_frameworks!
+  
+  pod 'SwiftLint'
 
   # core RxSwift
   pod 'RxSwift'
