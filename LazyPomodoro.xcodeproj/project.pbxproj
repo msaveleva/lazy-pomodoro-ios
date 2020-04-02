@@ -166,7 +166,6 @@
 			children = (
 				3F002F19222F8F0F00B53C34 /* BindableTypeProtocol.swift */,
 				3FFCF51D223951E400F5E552 /* ViewModelProtocol.swift */,
-				3F96E5DB2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -198,6 +197,7 @@
 			children = (
 				3F1CBA8E222BA75400821988 /* AppDelegate.swift */,
 				3F1CBA95222BA75400821988 /* Assets.xcassets */,
+				3F575AF3243646AB0007B811 /* DesignSystem */,
 				3F96E5D82242A8020094A6A9 /* Extensions */,
 				3F1CBA9A222BA75400821988 /* Info.plist */,
 				3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */,
@@ -209,7 +209,6 @@
 				3F44A19122B29F0C00DCB738 /* Utils */,
 				3FE6CD55222BDE2E006B1C4A /* ViewControllers */,
 				3FDA05B5222E435A00D65C51 /* ViewModel */,
-				3FEF8384222D7F590016A088 /* Views */,
 			);
 			path = LazyPomodoro;
 			sourceTree = "<group>";
@@ -232,12 +231,12 @@
 			path = LazyPomodoroUITests;
 			sourceTree = "<group>";
 		};
-		3F20AE1B222D825500DB0A87 /* Buttons */ = {
+		3F20AE1B222D825500DB0A87 /* StandardButton */ = {
 			isa = PBXGroup;
 			children = (
 				3F20AE1C222D826200DB0A87 /* StandardButton.swift */,
 			);
-			path = Buttons;
+			path = StandardButton;
 			sourceTree = "<group>";
 		};
 		3F2CE51F22D65ADD00BD7D04 /* TableViewModels */ = {
@@ -256,10 +255,27 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		3F96E5D82242A8020094A6A9 /* Extensions */ = {
+		3F575AF22436461D0007B811 /* CustomUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3F20AE1B222D825500DB0A87 /* StandardButton */,
+				3FEF8384222D7F590016A088 /* ProgressStackView */,
+			);
+			path = CustomUIComponents;
+			sourceTree = "<group>";
+		};
+		3F575AF3243646AB0007B811 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
 				3FE6CD56222BDE3C006B1C4A /* StyleExtensions */,
+				3F575AF22436461D0007B811 /* CustomUIComponents */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		3F96E5D82242A8020094A6A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				3FCF72A622A6D58000424D60 /* Realm+Utils.swift */,
 				3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */,
 				3F44A19422B40FB500DCB738 /* Date+StartDates.swift */,
@@ -341,13 +357,13 @@
 			path = StyleExtensions;
 			sourceTree = "<group>";
 		};
-		3FEF8384222D7F590016A088 /* Views */ = {
+		3FEF8384222D7F590016A088 /* ProgressStackView */ = {
 			isa = PBXGroup;
 			children = (
-				3F20AE1B222D825500DB0A87 /* Buttons */,
 				3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */,
+				3F96E5DB2242A9A90094A6A9 /* ProgressStackViewModelProtocol.swift */,
 			);
-			name = Views;
+			name = ProgressStackView;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
