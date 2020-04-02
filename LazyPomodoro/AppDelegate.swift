@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let scenesProvider = ScenesProvider(viewModelsProvider: viewModelsProvider)
         let coordinator = ScenesRouter(window: window, scenesProvider: scenesProvider)
         
-        coordinator.tabBarControllerSetup {}
+        coordinator.tabBarControllerSetup {
+            if ProcessInfo.processInfo.arguments.contains("DESIGN_DEMO") {
+                coordinator.transition(to: .designDemo, transitionType: .modal, completion: {})
+            }
+        }
         
         return true
     }
