@@ -11,13 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    let window = UIWindow()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        window.makeKeyAndVisible()
+        
         let servicesProvider = ServicesProvider()
         let viewModelsProvider = ViewModelsProvider(servicesProvider: servicesProvider)
         let scenesProvider = ScenesProvider(viewModelsProvider: viewModelsProvider)
-        let coordinator = ScenesRouter(window: window!, scenesProvider: scenesProvider)
+        let coordinator = ScenesRouter(window: window, scenesProvider: scenesProvider)
         
         coordinator.tabBarControllerSetup {
             print("TabBarController was setted up")

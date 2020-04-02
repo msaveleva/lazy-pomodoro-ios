@@ -11,7 +11,6 @@
 		2D5EDDDAF87AC7C18C1719BA /* Pods_LazyPomodoroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2CF45D22C9ACB3327CB819 /* Pods_LazyPomodoroUITests.framework */; };
 		3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F002F19222F8F0F00B53C34 /* BindableTypeProtocol.swift */; };
 		3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBA8E222BA75400821988 /* AppDelegate.swift */; };
-		3F1CBA94222BA75400821988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA92222BA75400821988 /* Main.storyboard */; };
 		3F1CBA96222BA75400821988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA95222BA75400821988 /* Assets.xcassets */; };
 		3F1CBA99222BA75400821988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */; };
 		3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */; };
@@ -77,7 +76,6 @@
 		3F002F19222F8F0F00B53C34 /* BindableTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTypeProtocol.swift; sourceTree = "<group>"; };
 		3F1CBA8B222BA75400821988 /* LazyPomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1CBA8E222BA75400821988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F1CBA93222BA75400821988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F1CBA95222BA75400821988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F1CBA98222BA75400821988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F1CBA9A222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				3F1CBA95222BA75400821988 /* Assets.xcassets */,
 				3F1CBA9A222BA75400821988 /* Info.plist */,
 				3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */,
-				3F1CBA92222BA75400821988 /* Main.storyboard */,
 				3F96E5D82242A8020094A6A9 /* Extensions */,
 				3F9A29A8223118110006A3A4 /* Model */,
 				3F002F18222F8F0400B53C34 /* Protocols */,
@@ -518,7 +515,6 @@
 			files = (
 				3F1CBA99222BA75400821988 /* LaunchScreen.storyboard in Resources */,
 				3F1CBA96222BA75400821988 /* Assets.xcassets in Resources */,
-				3F1CBA94222BA75400821988 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,14 +699,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3F1CBA92222BA75400821988 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F1CBA93222BA75400821988 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
