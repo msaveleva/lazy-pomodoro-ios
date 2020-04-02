@@ -7,71 +7,97 @@
 //
 
 import UIKit
+import RxSwift
 
 class ScenesRouter {
     
     private let window: UIWindow!
-    private var currentViewController: UIViewController?
+    
     private let tabBarController = UITabBarController()
+    private let projectsNavController = UINavigationController()
+    private let settingsNavController = UINavigationController()
+    
+    private let disposeBag = DisposeBag()
     
     private let scenesProvider: ScenesProvider
     
     required init(window: UIWindow, scenesProvider: ScenesProvider) {
         self.window = window
         self.scenesProvider = scenesProvider
-        currentViewController = window.rootViewController
     }
     
+    //MARK: - Public methods
     func tabBarControllerSetup(completion: @escaping () -> Void) {
-        let timersController = scenesProvider.createControllerWithScene(scene: .timers)
-        timersController.tabBarItem = UITabBarItem(title: "Timers", image: nil, tag: 0)
-        
-        let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics)
-        statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: nil, tag: 1)
-        
-        let projectsController = scenesProvider.createControllerWithScene(scene: .projects)
-        projectsController.tabBarItem = UITabBarItem(title: "Projects", image: nil, tag: 2)
-        
-        let settingsController = scenesProvider.createControllerWithScene(scene: .settings)
-        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 3)
+        setupTabBarController()
         
         window.rootViewController = tabBarController
-        tabBarController.viewControllers = [timersController,
-                                            statisticsController,
-                                            projectsController,
-                                            settingsController]
         completion()
     }
     
     func transition(to scene: SceneType, transitionType: SceneTransitionType, completion: @escaping () -> Void) {
-        let viewController = scenesProvider.createControllerWithScene(scene: scene)
+        let viewController = scenesProvider.createControllerWithScene(scene: scene, scenesRouter: self)
         switch transitionType {
+        case .root:
+            window.rootViewController = viewController
+            completion()
         case .push:
-            guard let navigationController = currentViewController?.navigationController else {
+            var navigationController: UINavigationController
+            if let navController = getCurrentViewController().navigationController {
+                navigationController = navController
+            } else if let navController = getCurrentViewController() as? UINavigationController {
+                navigationController = navController
+            } else {
                 fatalError("Can't push view controller without navigation controller. ")
             }
             
             navigationController.pushViewController(viewController, animated: true)
             completion()
         case .modal:
-            currentViewController?.present(viewController, animated: true, completion: {
+            getCurrentViewController().present(viewController, animated: true, completion: {
                 completion()
             })
         }
-        
-        currentViewController = viewController
     }
     
-    func pop(animated: Bool, completion: @escaping () -> Void) {
-        if let presenterController = currentViewController?.presentingViewController {
-            //Dismiss modal view controller.
-            currentViewController?.dismiss(animated: animated) { [weak self] in
-                self?.currentViewController = presenterController
-                completion()
-            }
-        } else if let navigationController = currentViewController?.navigationController {
-            navigationController.popViewController(animated: animated)
-            currentViewController = navigationController.viewControllers.last
+    //MARK: - Private methods
+    private func getCurrentViewController() -> UIViewController {
+        guard let rootControllers = tabBarController.viewControllers else {
+            fatalError("No controllers presented.")
+        }
+        
+        //TODO msaveleva: add handle for presented view controllers.
+        let selectedTab = rootControllers[tabBarController.selectedIndex]
+        if let navigationController = selectedTab as? UINavigationController,
+            let topController = navigationController.topViewController {
+            return topController
+        } else {
+            return selectedTab
         }
     }
+}
+
+//UI extension
+extension ScenesRouter {
+    
+    private func setupTabBarController() {
+        let timersController = scenesProvider.createControllerWithScene(scene: .timers, scenesRouter: self)
+        timersController.tabBarItem = UITabBarItem(title: "Timers", image: UIImage(named: "tab-bar-timers"), tag: 0)
+        
+        let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics, scenesRouter: self)
+        statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: UIImage(named: "tab-bar-statistics"), tag: 1)
+        
+        projectsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .projects, scenesRouter: self)]
+        let projectsController = projectsNavController
+        projectsController.tabBarItem = UITabBarItem(title: "Projects", image: UIImage(named: "tab-bar-projects"), tag: 2)
+        
+        settingsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .settings, scenesRouter: self)]
+        let settingsController = settingsNavController
+        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "tab-bar-settings"), tag: 3)
+        
+        tabBarController.viewControllers = [timersController,
+                                            statisticsController,
+                                            projectsController,
+                                            settingsController]
+    }
+    
 }

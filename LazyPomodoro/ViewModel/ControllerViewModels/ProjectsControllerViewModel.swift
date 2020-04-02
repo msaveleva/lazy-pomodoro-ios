@@ -7,11 +7,25 @@
 //
 
 import Foundation
+import os
 
 class ProjectsControllerViewModel: ViewModelProtocol {
     
+    private let scenesRouter: ScenesRouter
+    
+    init(scenesRouter: ScenesRouter) {
+        self.scenesRouter = scenesRouter
+    }
+    
     func dependenciesInjected() {
-        //TODO msaveleva: implement
+        //TODO msaveleva: implement.
+    }
+    
+    //MARK: - Public methods
+    public func showCreateScreen() {
+        scenesRouter.transition(to: .createProject, transitionType: .push) {
+            os_log("Project screation screen presented", log: Log.ui, type: .debug)
+        }
     }
     
 }

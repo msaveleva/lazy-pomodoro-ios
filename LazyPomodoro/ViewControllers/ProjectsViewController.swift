@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import RxSwift
+import SnapKit
+import os
 
 class ProjectsViewController: UIViewController, BindableTypeProtocol {
 
     private(set) var viewModel: ProjectsControllerViewModel
+    private let disposeBag = DisposeBag()
+    
+    private let projectCreateBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+    private let stackView = UIStackView()
     
     init(viewModel: ProjectsControllerViewModel) {
         self.viewModel = viewModel
@@ -25,10 +32,23 @@ class ProjectsViewController: UIViewController, BindableTypeProtocol {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.lp_mainFillColor()
+        title = "Projects"
+        
+        setupUI()
     }
     
     func bindViewModel() {
-        //TODO msaveleva: implement
+        projectCreateBarButtonItem.rx.tap.subscribe(onNext: { [unowned self] _ in
+            os_log("Creating project!", log: Log.ui, type: .debug)
+            self.viewModel.showCreateScreen()
+        }).disposed(by: disposeBag)
+    }
+    
+    //MARK: - Private methods
+    private func setupUI() {
+        navigationItem.rightBarButtonItem = projectCreateBarButtonItem
+        
+        view.addSubview(stackView)
     }
 
 }

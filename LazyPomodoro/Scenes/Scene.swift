@@ -13,4 +13,5 @@ enum SceneType {
     case statistics
     case projects
     case settings
+    case createProject
 }
