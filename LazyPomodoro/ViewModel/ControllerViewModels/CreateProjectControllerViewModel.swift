@@ -9,7 +9,6 @@
 import Foundation
 
 class CreateProjectControllerViewModel: ViewModelProtocol {
-    
     private(set) var sectionsVMs = [TableViewSectionVM]()
     private let scenesRouter: ScenesRouter
     
@@ -35,5 +34,4 @@ class CreateProjectControllerViewModel: ViewModelProtocol {
         sectionsVMs.append(firstSection)
         sectionsVMs.append(secondSection)
     }
-    
 }

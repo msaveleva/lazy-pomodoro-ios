@@ -9,9 +9,7 @@
 import Foundation
 
 class StatisticsControllerViewModel: ViewModelProtocol {
-    
     func dependenciesInjected() {
         //TODO msaveleva: implement
     }
-    
 }

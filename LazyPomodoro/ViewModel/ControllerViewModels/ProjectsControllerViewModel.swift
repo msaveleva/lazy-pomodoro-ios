@@ -10,7 +10,6 @@ import Foundation
 import os
 
 class ProjectsControllerViewModel: ViewModelProtocol {
-    
     private let scenesRouter: ScenesRouter
     
     init(scenesRouter: ScenesRouter) {
@@ -27,5 +26,4 @@ class ProjectsControllerViewModel: ViewModelProtocol {
             os_log("Project screation screen presented", log: Log.ui, type: .debug)
         }
     }
-    
 }

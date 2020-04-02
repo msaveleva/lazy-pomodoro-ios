@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 
 class ScenesRouter {
-    
     private let window: UIWindow!
     
     private let tabBarController = UITabBarController()
@@ -78,7 +77,6 @@ class ScenesRouter {
 
 //UI extension
 extension ScenesRouter {
-    
     private func setupTabBarController() {
         let timersController = scenesProvider.createControllerWithScene(scene: .timers, scenesRouter: self)
         timersController.tabBarItem = UITabBarItem(title: "Timers", image: UIImage(named: "tab-bar-timers"), tag: 0)
@@ -99,5 +97,4 @@ extension ScenesRouter {
                                             projectsController,
                                             settingsController]
     }
-    
 }

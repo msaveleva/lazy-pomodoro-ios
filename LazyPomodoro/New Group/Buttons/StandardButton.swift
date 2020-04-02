@@ -9,7 +9,6 @@
 import UIKit
 
 class StandardButton: UIButton {
-    
     private static let kDefaultCornerRadius: CGFloat = 10.0
     
     class func createStandardButton() -> StandardButton {
@@ -34,6 +33,5 @@ class StandardButton: UIButton {
                 backgroundColor = UIColor.lp_mainFillColor()
             }
         }
-    }
-    
+    }   
 }

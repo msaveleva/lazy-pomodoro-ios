@@ -10,11 +10,9 @@ import Foundation
 import RxSwift
 
 class TimerService {
-    
     private(set) var currentTimerObservable: Observable<Int>
     
     init() {
         currentTimerObservable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
     }
-    
 }
