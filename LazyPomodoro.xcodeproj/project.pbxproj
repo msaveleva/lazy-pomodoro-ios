@@ -20,6 +20,8 @@
 		3F2CE52122D65AEB00BD7D04 /* TableViewSectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */; };
 		3F44A19322B29F1800DCB738 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19222B29F1800DCB738 /* Log.swift */; };
 		3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19422B40FB500DCB738 /* Date+StartDates.swift */; };
+		3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF5243647D00007B811 /* DesignDemoViewController.swift */; };
+		3F575AF8243647DC0007B811 /* DesignDemoControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */; };
 		3F7C92C022CE5E02005A79A1 /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */; };
 		3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
@@ -90,6 +92,8 @@
 		3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionVM.swift; sourceTree = "<group>"; };
 		3F44A19222B29F1800DCB738 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3F44A19422B40FB500DCB738 /* Date+StartDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartDates.swift"; sourceTree = "<group>"; };
+		3F575AF5243647D00007B811 /* DesignDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoViewController.swift; sourceTree = "<group>"; };
+		3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoControllerViewModel.swift; sourceTree = "<group>"; };
 		3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
 		3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectControllerViewModel.swift; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
@@ -267,10 +271,20 @@
 		3F575AF3243646AB0007B811 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				3F575AF4243647C50007B811 /* Demo */,
 				3FE6CD56222BDE3C006B1C4A /* StyleExtensions */,
 				3F575AF22436461D0007B811 /* CustomUIComponents */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		3F575AF4243647C50007B811 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				3F575AF5243647D00007B811 /* DesignDemoViewController.swift */,
+				3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		3F96E5D82242A8020094A6A9 /* Extensions */ = {
@@ -657,6 +671,7 @@
 				3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */,
 				3FC01B1D22A428C7003ECFD9 /* ProjectsControllerViewModel.swift in Sources */,
 				3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */,
+				3F575AF8243647DC0007B811 /* DesignDemoControllerViewModel.swift in Sources */,
 				3F2CE52122D65AEB00BD7D04 /* TableViewSectionVM.swift in Sources */,
 				3FDA05B4222E431700D65C51 /* Scene.swift in Sources */,
 				3FC5E2EF224561490057D979 /* ProgressService.swift in Sources */,
@@ -680,6 +695,7 @@
 				3F96E5E12242ACA90094A6A9 /* GoalProgressStackViewModel.swift in Sources */,
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,
 				3FC01B1922A42146003ECFD9 /* StatisticsViewController.swift in Sources */,
+				3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

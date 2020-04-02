@@ -37,6 +37,11 @@ class ViewModelsProvider {
             let createProjectControllerViewModel = CreateProjectControllerViewModel(scenesRouter: scenesRouter)
             createProjectControllerViewModel.dependenciesInjected()
             return createProjectControllerViewModel
+            
+        case .designDemo:
+            let designDemoViewModel = DesignDemoControllerViewModel()
+            designDemoViewModel.dependenciesInjected()
+            return designDemoViewModel
         }
     }
     

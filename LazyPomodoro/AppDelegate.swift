@@ -21,9 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let scenesProvider = ScenesProvider(viewModelsProvider: viewModelsProvider)
         let coordinator = ScenesRouter(window: window, scenesProvider: scenesProvider)
         
-        coordinator.tabBarControllerSetup {
-            print("TabBarController was setted up")
-        }
+        coordinator.tabBarControllerSetup {}
         
         return true
     }
