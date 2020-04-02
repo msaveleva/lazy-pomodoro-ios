@@ -14,4 +14,6 @@ enum SceneType {
     case projects
     case settings
     case createProject
+    
+    case designDemo //Temporary scene for testing Design System elements.
 }

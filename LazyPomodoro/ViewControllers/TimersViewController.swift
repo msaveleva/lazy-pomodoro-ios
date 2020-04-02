@@ -12,7 +12,6 @@ import RxSwift
 import RxCocoa
 
 class TimersViewController: UIViewController, BindableTypeProtocol {
-    
     private struct Constant {
         static let defaultMargin = 32
     }

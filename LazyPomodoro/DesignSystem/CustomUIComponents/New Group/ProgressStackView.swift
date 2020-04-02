@@ -12,7 +12,6 @@ import RxSwift
 import RxCocoa
 
 class ProgressStackView: UIStackView {
-    
     private static let kProgressIndicatorHeight = 5
     private static let kDefaultMargin = 8
     
@@ -76,5 +75,4 @@ class ProgressStackView: UIStackView {
             .bind(to: progressIndicator.rx.progress)
             .disposed(by: disposeBag)
     }
-    
 }

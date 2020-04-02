@@ -12,7 +12,6 @@ import RxSwift
 import os
 
 class DatabaseService {
-    
     enum DatabaseError: Error {
         case savingError
         case updatingError
@@ -133,5 +132,4 @@ class DatabaseService {
             return Disposables.create()
         }
     }
-    
 }
