@@ -21,7 +21,7 @@ extension Results {
 
 extension Realm {
     
-    class func defaultDatabasePath() -> String {
+    static func defaultDatabasePath() -> String {
         if let path = Realm.Configuration.defaultConfiguration.fileURL?.absoluteString {
             return path
         } else {

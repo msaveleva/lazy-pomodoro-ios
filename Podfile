@@ -1,23 +1,26 @@
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
 platform :ios, '12.0'
 
 target 'LazyPomodoro' do
   use_frameworks!
 
   # core RxSwift
-  pod 'RxSwift', '~> 4.4.1'
-  pod 'RxCocoa', '~> 4.4.1'
-  pod 'RxDataSources', '~> 3.1.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
 
   # Community projects
-  pod 'Action', '~> 3.10.0'
-  pod 'NSObject+Rx', '~> 4.4.1'
-  
+  pod 'Action'
+  pod 'NSObject+Rx'
+
   # Realm database
-  pod 'RealmSwift', '~> 3.13.1'
-  pod 'RxRealm', '~> 0.7.6'
+  pod 'RealmSwift'
+  pod 'RxRealm'
 
   # UI
-  pod 'SnapKit', '~> 4.2.0'
+  pod 'SnapKit'
 
   target 'LazyPomodoroTests' do
     inherit! :search_paths
