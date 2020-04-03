@@ -22,6 +22,8 @@
 		3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19422B40FB500DCB738 /* Date+StartDates.swift */; };
 		3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF5243647D00007B811 /* DesignDemoViewController.swift */; };
 		3F575AF8243647DC0007B811 /* DesignDemoControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */; };
+		3F575AFC243796DC0007B811 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F575AFB243796DC0007B811 /* Icons.xcassets */; };
+		3F575AFF2437975C0007B811 /* IconsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AFE2437975C0007B811 /* IconsNames.swift */; };
 		3F7C92C022CE5E02005A79A1 /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */; };
 		3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
@@ -94,6 +96,8 @@
 		3F44A19422B40FB500DCB738 /* Date+StartDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartDates.swift"; sourceTree = "<group>"; };
 		3F575AF5243647D00007B811 /* DesignDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoViewController.swift; sourceTree = "<group>"; };
 		3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoControllerViewModel.swift; sourceTree = "<group>"; };
+		3F575AFB243796DC0007B811 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		3F575AFE2437975C0007B811 /* IconsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsNames.swift; sourceTree = "<group>"; };
 		3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
 		3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectControllerViewModel.swift; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 		3F575AF3243646AB0007B811 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				3F575AFB243796DC0007B811 /* Icons.xcassets */,
+				3F575AFD2437973B0007B811 /* Generated */,
 				3F575AF4243647C50007B811 /* Demo */,
 				3FE6CD56222BDE3C006B1C4A /* StyleExtensions */,
 				3F575AF22436461D0007B811 /* CustomUIComponents */,
@@ -285,6 +291,14 @@
 				3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		3F575AFD2437973B0007B811 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				3F575AFE2437975C0007B811 /* IconsNames.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		3F96E5D82242A8020094A6A9 /* Extensions */ = {
@@ -544,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1CBA99222BA75400821988 /* LaunchScreen.storyboard in Resources */,
+				3F575AFC243796DC0007B811 /* Icons.xcassets in Resources */,
 				3F1CBA96222BA75400821988 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,6 +699,7 @@
 				3FC01B2322A4296B003ECFD9 /* SettingsViewController.swift in Sources */,
 				3FC01B2722A5852E003ECFD9 /* DatabaseService.swift in Sources */,
 				3FFCF517223950E000F5E552 /* ScenesProvider.swift in Sources */,
+				3F575AFF2437975C0007B811 /* IconsNames.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
 				3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */,
 				3FC01B2522A583BE003ECFD9 /* Pomodoro.swift in Sources */,

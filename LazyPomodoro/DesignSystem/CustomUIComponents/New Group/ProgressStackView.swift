@@ -54,8 +54,8 @@ class ProgressStackView: UIStackView {
             make.bottom.leading.trailing.equalTo(progressBackground	)
         }
         
-        progressView.progressIndicator.trackImage = UIImage(named: "slider-bg")
-        progressView.progressIndicator.progressImage = UIImage(named: "slider-fill")
+        progressView.progressIndicator.trackImage = UIImage(asset: IconAsset.sliderBg)
+        progressView.progressIndicator.progressImage = UIImage(asset: IconAsset.sliderFill)
         
         return progressView
     }
