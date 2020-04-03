@@ -7,6 +7,7 @@ target 'LazyPomodoro' do
   use_frameworks!
   
   pod 'SwiftLint'
+  pod 'SwiftGen'
 
   # core RxSwift
   pod 'RxSwift'

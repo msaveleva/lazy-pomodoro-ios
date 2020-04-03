@@ -79,18 +79,18 @@ class ScenesRouter {
 extension ScenesRouter {
     private func setupTabBarController() {
         let timersController = scenesProvider.createControllerWithScene(scene: .timers, scenesRouter: self)
-        timersController.tabBarItem = UITabBarItem(title: "Timers", image: UIImage(named: "tab-bar-timers"), tag: 0)
+        timersController.tabBarItem = UITabBarItem(title: "Timers", image: UIImage(asset: IconAsset.tabBarTimers), tag: 0)
         
         let statisticsController = scenesProvider.createControllerWithScene(scene: .statistics, scenesRouter: self)
-        statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: UIImage(named: "tab-bar-statistics"), tag: 1)
+        statisticsController.tabBarItem = UITabBarItem(title: "Statistics", image: UIImage(asset: IconAsset.tabBarStatistics), tag: 1)
         
         projectsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .projects, scenesRouter: self)]
         let projectsController = projectsNavController
-        projectsController.tabBarItem = UITabBarItem(title: "Projects", image: UIImage(named: "tab-bar-projects"), tag: 2)
+        projectsController.tabBarItem = UITabBarItem(title: "Projects", image: UIImage(asset: IconAsset.tabBarProjects), tag: 2)
         
         settingsNavController.viewControllers = [scenesProvider.createControllerWithScene(scene: .settings, scenesRouter: self)]
         let settingsController = settingsNavController
-        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "tab-bar-settings"), tag: 3)
+        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(asset: IconAsset.tabBarSettings), tag: 3)
         
         tabBarController.viewControllers = [timersController,
                                             statisticsController,
