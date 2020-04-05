@@ -1,4 +1,5 @@
 <p align="left">
+    <img src="https://travis-ci.org/msaveleva/lazy-pomodoro-ios.svg?branch=develop">
     <img src="https://img.shields.io/badge/iOS-12.0+-blue.svg" />
     <img src="https://img.shields.io/badge/Swift-5.0-brightgreen.svg" />
     <a href="https://twitter.com/lyumotech">
