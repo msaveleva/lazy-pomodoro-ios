@@ -6,30 +6,20 @@ platform :ios, '12.0'
 target 'LazyPomodoro' do
   use_frameworks!
   
-  pod 'SwiftLint'
-  pod 'SwiftGen'
+  pod 'SwiftLint', '~> 0.39'
+  pod 'SwiftGen', '~> 6.1'
 
   # core RxSwift
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxDataSources'
-
-  # Community projects
-  pod 'Action'
-  pod 'NSObject+Rx'
+  pod 'RxSwift', '~> 5.1'
+  pod 'RxCocoa', '~> 5.1'
 
   # Realm database
-  pod 'RealmSwift'
-  pod 'RxRealm'
+  pod 'RealmSwift', '~> 4.4'
 
   # UI
-  pod 'SnapKit'
+  pod 'SnapKit', '~> 5.0'
 
   target 'LazyPomodoroTests' do
-    inherit! :search_paths
-  end
-
-  target 'LazyPomodoroUITests' do
     inherit! :search_paths
   end
 

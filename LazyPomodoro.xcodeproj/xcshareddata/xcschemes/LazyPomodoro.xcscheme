@@ -38,16 +38,6 @@
                ReferencedContainer = "container:LazyPomodoro.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F1CBAA9222BA75400821988"
-               BuildableName = "LazyPomodoroUITests.xctest"
-               BlueprintName = "LazyPomodoroUITests"
-               ReferencedContainer = "container:LazyPomodoro.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

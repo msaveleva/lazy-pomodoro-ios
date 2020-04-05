@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		24502EBD5076335F58AA4DFD /* Pods_LazyPomodoroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCD99B9A2E66E5A0500CE07 /* Pods_LazyPomodoroTests.framework */; };
-		2D5EDDDAF87AC7C18C1719BA /* Pods_LazyPomodoroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2CF45D22C9ACB3327CB819 /* Pods_LazyPomodoroUITests.framework */; };
 		3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F002F19222F8F0F00B53C34 /* BindableTypeProtocol.swift */; };
 		3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBA8E222BA75400821988 /* AppDelegate.swift */; };
 		3F1CBA96222BA75400821988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA95222BA75400821988 /* Assets.xcassets */; };
 		3F1CBA99222BA75400821988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */; };
 		3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */; };
-		3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */; };
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
 		3F20AE1F222D83AB00DB0A87 /* ProgressStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */; };
 		3F2CE52122D65AEB00BD7D04 /* TableViewSectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */; };
@@ -67,13 +65,6 @@
 			remoteGlobalIDString = 3F1CBA8A222BA75400821988;
 			remoteInfo = LazyPomodoro;
 		};
-		3F1CBAAB222BA75400821988 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F1CBA83222BA75400821988 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F1CBA8A222BA75400821988;
-			remoteInfo = LazyPomodoro;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -86,9 +77,6 @@
 		3F1CBA9F222BA75400821988 /* LazyPomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPomodoroTests.swift; sourceTree = "<group>"; };
 		3F1CBAA5222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F1CBAAA222BA75400821988 /* LazyPomodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPomodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPomodoroUITests.swift; sourceTree = "<group>"; };
-		3F1CBAB0222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		3F20AE1E222D83AB00DB0A87 /* ProgressStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStackView.swift; sourceTree = "<group>"; };
 		3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionVM.swift; sourceTree = "<group>"; };
@@ -158,14 +146,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F1CBAA7222BA75400821988 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D5EDDDAF87AC7C18C1719BA /* Pods_LazyPomodoroUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -183,7 +163,6 @@
 			children = (
 				3F1CBA8D222BA75400821988 /* LazyPomodoro */,
 				3F1CBAA2222BA75400821988 /* LazyPomodoroTests */,
-				3F1CBAAD222BA75400821988 /* LazyPomodoroUITests */,
 				3F1CBA8C222BA75400821988 /* Products */,
 				D725EEA4E2B71BE2B5597E5B /* Pods */,
 				40EF7AD40A84540B1009C3BA /* Frameworks */,
@@ -195,7 +174,6 @@
 			children = (
 				3F1CBA8B222BA75400821988 /* LazyPomodoro.app */,
 				3F1CBA9F222BA75400821988 /* LazyPomodoroTests.xctest */,
-				3F1CBAAA222BA75400821988 /* LazyPomodoroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,15 +206,6 @@
 				3F1CBAA5222BA75400821988 /* Info.plist */,
 			);
 			path = LazyPomodoroTests;
-			sourceTree = "<group>";
-		};
-		3F1CBAAD222BA75400821988 /* LazyPomodoroUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3F1CBAAE222BA75400821988 /* LazyPomodoroUITests.swift */,
-				3F1CBAB0222BA75400821988 /* Info.plist */,
-			);
-			path = LazyPomodoroUITests;
 			sourceTree = "<group>";
 		};
 		3F20AE1B222D825500DB0A87 /* StandardButton */ = {
@@ -487,25 +456,6 @@
 			productReference = 3F1CBA9F222BA75400821988 /* LazyPomodoroTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3F1CBAA9222BA75400821988 /* LazyPomodoroUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F1CBAB9222BA75500821988 /* Build configuration list for PBXNativeTarget "LazyPomodoroUITests" */;
-			buildPhases = (
-				977344FE0A8FBE039A3ED8B7 /* [CP] Check Pods Manifest.lock */,
-				3F1CBAA6222BA75400821988 /* Sources */,
-				3F1CBAA7222BA75400821988 /* Frameworks */,
-				3F1CBAA8222BA75400821988 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3F1CBAAC222BA75400821988 /* PBXTargetDependency */,
-			);
-			name = LazyPomodoroUITests;
-			productName = LazyPomodoroUITests;
-			productReference = 3F1CBAAA222BA75400821988 /* LazyPomodoroUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -521,11 +471,6 @@
 						LastSwiftMigration = 1020;
 					};
 					3F1CBA9E222BA75400821988 = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
-						TestTargetID = 3F1CBA8A222BA75400821988;
-					};
-					3F1CBAA9222BA75400821988 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
 						TestTargetID = 3F1CBA8A222BA75400821988;
@@ -547,7 +492,6 @@
 			targets = (
 				3F1CBA8A222BA75400821988 /* LazyPomodoro */,
 				3F1CBA9E222BA75400821988 /* LazyPomodoroTests */,
-				3F1CBAA9222BA75400821988 /* LazyPomodoroUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -564,13 +508,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3F1CBA9D222BA75400821988 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F1CBAA8222BA75400821988 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -641,28 +578,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		977344FE0A8FBE039A3ED8B7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LazyPomodoroUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -723,14 +638,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F1CBAA6222BA75400821988 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F1CBAAF222BA75400821988 /* LazyPomodoroUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -738,11 +645,6 @@
 			isa = PBXTargetDependency;
 			target = 3F1CBA8A222BA75400821988 /* LazyPomodoro */;
 			targetProxy = 3F1CBAA0222BA75400821988 /* PBXContainerItemProxy */;
-		};
-		3F1CBAAC222BA75400821988 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3F1CBA8A222BA75400821988 /* LazyPomodoro */;
-			targetProxy = 3F1CBAAB222BA75400821988 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -958,48 +860,6 @@
 			};
 			name = Release;
 		};
-		3F1CBABA222BA75500821988 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2BC73962B5835702F448242 /* Pods-LazyPomodoroUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37QQLS7AS9;
-				INFOPLIST_FILE = LazyPomodoroUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dreadnoughtdev.LazyPomodoroUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LazyPomodoro;
-			};
-			name = Debug;
-		};
-		3F1CBABB222BA75500821988 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F1F6DEC28F2EC992CD714B5 /* Pods-LazyPomodoroUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 37QQLS7AS9;
-				INFOPLIST_FILE = LazyPomodoroUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dreadnoughtdev.LazyPomodoroUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LazyPomodoro;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1026,15 +886,6 @@
 			buildConfigurations = (
 				3F1CBAB7222BA75500821988 /* Debug */,
 				3F1CBAB8222BA75500821988 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3F1CBAB9222BA75500821988 /* Build configuration list for PBXNativeTarget "LazyPomodoroUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F1CBABA222BA75500821988 /* Debug */,
-				3F1CBABB222BA75500821988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
