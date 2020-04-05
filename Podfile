@@ -29,8 +29,4 @@ target 'LazyPomodoro' do
     inherit! :search_paths
   end
 
-  target 'LazyPomodoroUITests' do
-    inherit! :search_paths
-  end
-
 end
