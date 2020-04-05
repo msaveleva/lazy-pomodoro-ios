@@ -20,7 +20,7 @@ DEPENDENCIES:
   - RxSwift (~> 5.1)
   - SnapKit (~> 5.0)
   - SwiftGen (~> 6.1)
-  - SwiftLint
+  - SwiftLint (~> 0.39)
 
 SPEC REPOS:
   trunk:
@@ -43,6 +43,6 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 396d3b460fce01d43b9fd598208dbd4b31437478
+PODFILE CHECKSUM: 29c415962820e054cd50bd8f8055d51369d654c4
 
 COCOAPODS: 1.9.1
