@@ -1,5 +1,5 @@
 //
-//  ProgressStackViewModel.swift
+//  LazyProgressViewModel.swift
 //  LazyPomodoro
 //
 //  Created by Maria Saveleva on 13/03/2019.
@@ -14,7 +14,7 @@ enum TimerStateType {
     case paused
 }
 
-class TimerProgressStackViewModel: ProgressStackViewModelProtocol {
+class TimerLazyProgressViewModel: LazyProgressViewConfigurable {
     public let title: String
     public let timerFinishedSubject = PublishSubject<Bool>()
     public var timerStateType = TimerStateType.paused

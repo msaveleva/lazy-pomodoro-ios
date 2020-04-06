@@ -1,5 +1,5 @@
 //
-//  GoalProgressStackViewModel.swift
+//  GoalLazyProgressViewModel.swift
 //  LazyPomodoro
 //
 //  Created by Maria Saveleva on 20/03/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class GoalProgressStackViewModel: ProgressStackViewModelProtocol {
+class GoalLazyProgressViewModel: LazyProgressViewConfigurable {
     public let title: String
     private let currentProject: Project
     

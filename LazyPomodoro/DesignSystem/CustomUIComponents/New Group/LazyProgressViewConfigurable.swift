@@ -1,5 +1,5 @@
 //
-//  ProgressStackViewModelProtocol.swift
+//  LazyProgressViewConfigurable.swift
 //  LazyPomodoro
 //
 //  Created by Maria Saveleva on 20/03/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol ProgressStackViewModelProtocol {
+protocol LazyProgressViewConfigurable {
     var title: String { get }
     func getInitialProgressText() -> String
     func progressTextObservable() -> Observable<String?>

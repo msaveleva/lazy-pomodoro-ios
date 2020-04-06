@@ -22,7 +22,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol {
     private var disposeBag = DisposeBag()
     
     //MARK: UI elements
-    private var projectPomodoroStackView: ProgressStackView!
+    private var projectPomodoroStackView: LazyProgressView!
     private var startPauseButton: UIButton!
     
     init(viewModel: TimerControllerViewModel) {
@@ -59,7 +59,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol {
 
 extension TimersViewController {
     private func setupProgressBars() {
-        projectPomodoroStackView = ProgressStackView.createDefaultProgressView()
+        projectPomodoroStackView = LazyProgressView.createDefaultProgressView()
         view.addSubview(projectPomodoroStackView)
         
         projectPomodoroStackView.snp.makeConstraints { (make) in
