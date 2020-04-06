@@ -13,7 +13,7 @@
 		3F1CBA96222BA75400821988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA95222BA75400821988 /* Assets.xcassets */; };
 		3F1CBA99222BA75400821988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1CBA97222BA75400821988 /* LaunchScreen.storyboard */; };
 		3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */; };
-		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
+		3F20AE1D222D826200DB0A87 /* LazyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* LazyButton.swift */; };
 		3F20AE1F222D83AB00DB0A87 /* LazyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* LazyProgressView.swift */; };
 		3F277FAC243BA954005C6173 /* DemoLazyProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F277FAB243BA954005C6173 /* DemoLazyProgressViewModel.swift */; };
 		3F2CE52122D65AEB00BD7D04 /* TableViewSectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */; };
@@ -78,7 +78,7 @@
 		3F1CBA9F222BA75400821988 /* LazyPomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPomodoroTests.swift; sourceTree = "<group>"; };
 		3F1CBAA5222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
+		3F20AE1C222D826200DB0A87 /* LazyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyButton.swift; sourceTree = "<group>"; };
 		3F20AE1E222D83AB00DB0A87 /* LazyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyProgressView.swift; sourceTree = "<group>"; };
 		3F277FAB243BA954005C6173 /* DemoLazyProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLazyProgressViewModel.swift; sourceTree = "<group>"; };
 		3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionVM.swift; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 		3F20AE1B222D825500DB0A87 /* StandardButton */ = {
 			isa = PBXGroup;
 			children = (
-				3F20AE1C222D826200DB0A87 /* StandardButton.swift */,
+				3F20AE1C222D826200DB0A87 /* LazyButton.swift */,
 			);
 			path = StandardButton;
 			sourceTree = "<group>";
@@ -618,7 +618,7 @@
 				3FC01B2722A5852E003ECFD9 /* DatabaseService.swift in Sources */,
 				3FFCF517223950E000F5E552 /* ScenesProvider.swift in Sources */,
 				3F575AFF2437975C0007B811 /* IconsNames.swift in Sources */,
-				3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */,
+				3F20AE1D222D826200DB0A87 /* LazyButton.swift in Sources */,
 				3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */,
 				3FC01B2522A583BE003ECFD9 /* Pomodoro.swift in Sources */,
 				3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */,

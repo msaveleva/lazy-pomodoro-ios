@@ -1,5 +1,5 @@
 //
-//  StandardButton.swift
+//  LazyButton.swift
 //  LazyPomodoro
 //
 //  Created by Maria Saveleva on 04/03/2019.
@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SnapKit
 
-class StandardButton: UIButton {
+class LazyButton: UIButton {
     private static let kDefaultCornerRadius: CGFloat = 10.0
     
-    class func createStandardButton() -> StandardButton {
-        let button = StandardButton(type: .system)
+    class func createLazyButton() -> LazyButton {
+        let button = LazyButton(type: .system)
         
         button.layer.cornerRadius = kDefaultCornerRadius
         button.backgroundColor = UIColor.lp_mainFillColor()
@@ -21,6 +22,10 @@ class StandardButton: UIButton {
         button.lp_setCenterShadow()
         
         button.titleLabel?.font = UIFont.lp_body2()
+        
+        button.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
         
         return button
     }
