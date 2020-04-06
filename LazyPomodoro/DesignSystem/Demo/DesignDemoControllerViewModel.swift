@@ -9,6 +9,8 @@
 import Foundation
 
 class DesignDemoControllerViewModel: ViewModelProtocol {
+    let demoLazyProgressVM = DemoLazyProgressViewModel()
+    
     func dependenciesInjected() {
         
     }

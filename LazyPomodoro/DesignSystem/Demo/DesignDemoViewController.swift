@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class DesignDemoViewController: UIViewController {
     private(set) var viewModel: DesignDemoControllerViewModel
@@ -25,9 +26,24 @@ class DesignDemoViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         bindViewModel()
+        
+        setupLazyProgress()
     }
     
     func bindViewModel() {
         
+    }
+    
+    private func setupLazyProgress() {
+        let lazyProgressView = LazyProgressView.createDefaultProgressView()
+        
+        view.addSubview(lazyProgressView)
+        lazyProgressView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20 )
+        }
+        
+        lazyProgressView.bindViewModel(viewModel.demoLazyProgressVM)
     }
 }

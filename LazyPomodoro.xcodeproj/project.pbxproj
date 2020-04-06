@@ -15,6 +15,7 @@
 		3F1CBAA4222BA75400821988 /* LazyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CBAA3222BA75400821988 /* LazyPomodoroTests.swift */; };
 		3F20AE1D222D826200DB0A87 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1C222D826200DB0A87 /* StandardButton.swift */; };
 		3F20AE1F222D83AB00DB0A87 /* LazyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20AE1E222D83AB00DB0A87 /* LazyProgressView.swift */; };
+		3F277FAC243BA954005C6173 /* DemoLazyProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F277FAB243BA954005C6173 /* DemoLazyProgressViewModel.swift */; };
 		3F2CE52122D65AEB00BD7D04 /* TableViewSectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */; };
 		3F44A19322B29F1800DCB738 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19222B29F1800DCB738 /* Log.swift */; };
 		3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19422B40FB500DCB738 /* Date+StartDates.swift */; };
@@ -79,6 +80,7 @@
 		3F1CBAA5222BA75400821988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F20AE1C222D826200DB0A87 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		3F20AE1E222D83AB00DB0A87 /* LazyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyProgressView.swift; sourceTree = "<group>"; };
+		3F277FAB243BA954005C6173 /* DemoLazyProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLazyProgressViewModel.swift; sourceTree = "<group>"; };
 		3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionVM.swift; sourceTree = "<group>"; };
 		3F44A19222B29F1800DCB738 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3F44A19422B40FB500DCB738 /* Date+StartDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartDates.swift"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				3F575AF5243647D00007B811 /* DesignDemoViewController.swift */,
 				3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */,
+				3F277FAB243BA954005C6173 /* DemoLazyProgressViewModel.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				3FFCF51322394C2100F5E552 /* TimerProgressStackViewModel.swift in Sources */,
 				3F96E5E12242ACA90094A6A9 /* GoalProgressStackViewModel.swift in Sources */,
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,
+				3F277FAC243BA954005C6173 /* DemoLazyProgressViewModel.swift in Sources */,
 				3FC01B1922A42146003ECFD9 /* StatisticsViewController.swift in Sources */,
 				3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */,
 			);
