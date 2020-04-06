@@ -1,5 +1,5 @@
 //
-//  RedProgressView.swift
+//  LazyProgressView.swift
 //  LazyPomodoro
 //
 //  Created by Maria Saveleva on 04/03/2019.
@@ -11,19 +11,19 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class ProgressStackView: UIStackView {
+class LazyProgressView: UIStackView {
     private static let kProgressIndicatorHeight = 5
     private static let kDefaultMargin = 8
     
-    private var viewModel: ProgressStackViewModelProtocol!
+    private var viewModel: LazyProgressViewConfigurable!
     private let disposeBag = DisposeBag()
     
     private let titleLabel = UILabel()
     private let progressLabel = UILabel()
     private let progressIndicator = UIProgressView()
     
-    class func createDefaultProgressView() -> ProgressStackView {
-        let progressView = ProgressStackView(frame: .zero)
+    class func createDefaultProgressView() -> LazyProgressView {
+        let progressView = LazyProgressView(frame: .zero)
         progressView.axis = .vertical
         
         //Configure title
@@ -60,7 +60,7 @@ class ProgressStackView: UIStackView {
         return progressView
     }
     
-    func bindViewModel(_ vm: ProgressStackViewModelProtocol) {
+    func bindViewModel(_ vm: LazyProgressViewConfigurable) {
         viewModel = vm
         
         titleLabel.text = viewModel.title

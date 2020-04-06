@@ -14,9 +14,9 @@ class TimerControllerViewModel: ViewModelProtocol {
     //TODO: load value from storage.
 //    private var project: Project = Project(name: "Personal Project", currentPomodoroIntervals: 2, goalPomodoroIntervals: 15)
     
-    public var projectPomodoroStackVm: TimerProgressStackViewModel!
-    public var todayProgressStackVm: TodayProgressStackViewModel!
-    public var goalProgressStackVm: GoalProgressStackViewModel?
+    public var projectPomodoroStackVm: TimerLazyProgressViewModel!
+    public var todayProgressStackVm: TodayLazyProgressViewModel!
+    public var goalProgressStackVm: GoalLazyProgressViewModel?
     
     public var timerService: TimerService!
     public var databaseService: DatabaseService!
@@ -24,11 +24,11 @@ class TimerControllerViewModel: ViewModelProtocol {
     private let disposeBag = DisposeBag()
     
     func dependenciesInjected() {
-        projectPomodoroStackVm = TimerProgressStackViewModel(title: "Default Project", timerService: timerService)
-        todayProgressStackVm = TodayProgressStackViewModel(title: "Progress for today") //TODO msaveleva: change to localized string
+        projectPomodoroStackVm = TimerLazyProgressViewModel(title: "Default Project", timerService: timerService)
+        todayProgressStackVm = TodayLazyProgressViewModel(title: "Progress for today") //TODO msaveleva: change to localized string
         
         //TODO msaveleva: add check if need to create this vm:
-//        goalProgressStackVm = GoalProgressStackViewModel(title: "Project goal", currentProject: project) //TODO msaveleva: change to localized string
+//        goalProgressStackVm = GoalLazyProgressViewModel(title: "Project goal", currentProject: project) //TODO msaveleva: change to localized string
     }
     
     func startPauseButtonPressed() {
