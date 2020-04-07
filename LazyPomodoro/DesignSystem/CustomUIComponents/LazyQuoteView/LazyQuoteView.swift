@@ -12,6 +12,10 @@ import RxSwift
 import RxCocoa
 
 class LazyQuoteView: UIView {
+    private enum ViewSizes {
+        static let separatorSize = CGSize(width: 56, height: 1)
+    }
+    
     let viewModel: LazyQuoteViewConfigurable
     
     private(set) var quoteLabel = UILabel()
@@ -40,10 +44,10 @@ class LazyQuoteView: UIView {
         addSubview(quoteLabel)
         quoteLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.top.greaterThanOrEqualToSuperview().offset(40)
-            make.bottom.lessThanOrEqualToSuperview().offset(-40)
-            make.leading.greaterThanOrEqualToSuperview().offset(32)
-            make.trailing.lessThanOrEqualToSuperview().offset(-32)
+            make.top.greaterThanOrEqualToSuperview().offset(Spacing.s40)
+            make.bottom.lessThanOrEqualToSuperview().offset(-Spacing.s40)
+            make.leading.greaterThanOrEqualToSuperview().offset(Spacing.s40)
+            make.trailing.lessThanOrEqualToSuperview().offset(-Spacing.s40)
         }
         
         quoteLabel.numberOfLines = 0
@@ -57,8 +61,8 @@ class LazyQuoteView: UIView {
     private func addSeparator() {
         addSubview(separatorView)
         separatorView.snp.makeConstraints { make in
-            make.width.equalTo(56)
-            make.height.equalTo(1)
+            make.width.equalTo(ViewSizes.separatorSize.width)
+            make.height.equalTo(ViewSizes.separatorSize.height)
             make.top.centerX.equalToSuperview()
         }
         

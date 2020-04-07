@@ -8,9 +8,10 @@
 
 import UIKit
 
-enum Spacing: CGFloat {
-    case spacing8 = 8
-    case spacing16 = 16
-    case spacing24 = 24
-    case spacing32 = 32
+enum Spacing {
+    static let s8: CGFloat = 8
+    static let s16: CGFloat = 16
+    static let s24: CGFloat = 24
+    static let s32: CGFloat = 32
+    static let s40: CGFloat = 40
 }
