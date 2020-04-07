@@ -31,7 +31,8 @@ class DesignDemoViewController: UIViewController {
         bindViewModel()
         
 //        setupLazyProgress()
-        setupLazyButton()
+//        setupLazyButton()
+        setupLazyQuoteView()
     }
     
     func bindViewModel() {
@@ -65,5 +66,14 @@ class DesignDemoViewController: UIViewController {
         lazyButton.rx.tap.subscribe(onNext: { _ in
             print("Hello world!")
         }).disposed(by: disposeBag)
+    }
+    
+    private func setupLazyQuoteView() {
+        let lazyQuoteView = LazyQuoteView(with: DemoLazyQuoteViewModel())
+        view.addSubview(lazyQuoteView)
+        lazyQuoteView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
     }
 }

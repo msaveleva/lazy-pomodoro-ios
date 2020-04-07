@@ -19,6 +19,10 @@
 		3F2CE52122D65AEB00BD7D04 /* TableViewSectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */; };
 		3F44A19322B29F1800DCB738 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19222B29F1800DCB738 /* Log.swift */; };
 		3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44A19422B40FB500DCB738 /* Date+StartDates.swift */; };
+		3F539C15243CD99F001BB4A0 /* LazyQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C14243CD99F001BB4A0 /* LazyQuoteView.swift */; };
+		3F539C17243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C16243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift */; };
+		3F539C19243CDC9B001BB4A0 /* Spacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C18243CDC9B001BB4A0 /* Spacings.swift */; };
+		3F539C1B243CDF22001BB4A0 /* DemoLazyQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C1A243CDF22001BB4A0 /* DemoLazyQuoteView.swift */; };
 		3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF5243647D00007B811 /* DesignDemoViewController.swift */; };
 		3F575AF8243647DC0007B811 /* DesignDemoControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */; };
 		3F575AFC243796DC0007B811 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F575AFB243796DC0007B811 /* Icons.xcassets */; };
@@ -84,6 +88,10 @@
 		3F2CE52022D65AEB00BD7D04 /* TableViewSectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionVM.swift; sourceTree = "<group>"; };
 		3F44A19222B29F1800DCB738 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3F44A19422B40FB500DCB738 /* Date+StartDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartDates.swift"; sourceTree = "<group>"; };
+		3F539C14243CD99F001BB4A0 /* LazyQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyQuoteView.swift; sourceTree = "<group>"; };
+		3F539C16243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyQuoteViewConfigurable.swift; sourceTree = "<group>"; };
+		3F539C18243CDC9B001BB4A0 /* Spacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacings.swift; sourceTree = "<group>"; };
+		3F539C1A243CDF22001BB4A0 /* DemoLazyQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLazyQuoteView.swift; sourceTree = "<group>"; };
 		3F575AF5243647D00007B811 /* DesignDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoViewController.swift; sourceTree = "<group>"; };
 		3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoControllerViewModel.swift; sourceTree = "<group>"; };
 		3F575AFB243796DC0007B811 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -210,12 +218,12 @@
 			path = LazyPomodoroTests;
 			sourceTree = "<group>";
 		};
-		3F20AE1B222D825500DB0A87 /* StandardButton */ = {
+		3F20AE1B222D825500DB0A87 /* LazyButton */ = {
 			isa = PBXGroup;
 			children = (
 				3F20AE1C222D826200DB0A87 /* LazyButton.swift */,
 			);
-			path = StandardButton;
+			path = LazyButton;
 			sourceTree = "<group>";
 		};
 		3F2CE51F22D65ADD00BD7D04 /* TableViewModels */ = {
@@ -234,10 +242,20 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		3F539C13243CD994001BB4A0 /* LazyQuoteView */ = {
+			isa = PBXGroup;
+			children = (
+				3F539C14243CD99F001BB4A0 /* LazyQuoteView.swift */,
+				3F539C16243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift */,
+			);
+			path = LazyQuoteView;
+			sourceTree = "<group>";
+		};
 		3F575AF22436461D0007B811 /* CustomUIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				3F20AE1B222D825500DB0A87 /* StandardButton */,
+				3F539C13243CD994001BB4A0 /* LazyQuoteView */,
+				3F20AE1B222D825500DB0A87 /* LazyButton */,
 				3FEF8384222D7F590016A088 /* ProgressStackView */,
 			);
 			path = CustomUIComponents;
@@ -249,7 +267,7 @@
 				3F575AFB243796DC0007B811 /* Icons.xcassets */,
 				3F575AFD2437973B0007B811 /* Generated */,
 				3F575AF4243647C50007B811 /* Demo */,
-				3FE6CD56222BDE3C006B1C4A /* StyleExtensions */,
+				3FE6CD56222BDE3C006B1C4A /* StyleUtils */,
 				3F575AF22436461D0007B811 /* CustomUIComponents */,
 			);
 			path = DesignSystem;
@@ -261,6 +279,7 @@
 				3F575AF5243647D00007B811 /* DesignDemoViewController.swift */,
 				3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */,
 				3F277FAB243BA954005C6173 /* DemoLazyProgressViewModel.swift */,
+				3F539C1A243CDF22001BB4A0 /* DemoLazyQuoteView.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -347,14 +366,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		3FE6CD56222BDE3C006B1C4A /* StyleExtensions */ = {
+		3FE6CD56222BDE3C006B1C4A /* StyleUtils */ = {
 			isa = PBXGroup;
 			children = (
 				3FE6CD57222BE013006B1C4A /* UIColor+AppStyle.swift */,
 				3FE6CD5B222BECD4006B1C4A /* UIFont+AppStyles.swift */,
-				3FEF838A222D7FAD0016A088 /* Views */,
+				3FEF838A222D7FAD0016A088 /* ViewsExtensions */,
+				3F539C18243CDC9B001BB4A0 /* Spacings.swift */,
 			);
-			path = StyleExtensions;
+			path = StyleUtils;
 			sourceTree = "<group>";
 		};
 		3FEF8384222D7F590016A088 /* ProgressStackView */ = {
@@ -367,12 +387,12 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
-		3FEF838A222D7FAD0016A088 /* Views */ = {
+		3FEF838A222D7FAD0016A088 /* ViewsExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				3FE6CD59222BE54B006B1C4A /* UIView+AppStyle.swift */,
 			);
-			path = Views;
+			path = ViewsExtensions;
 			sourceTree = "<group>";
 		};
 		3FFCF51A2239513300F5E552 /* Services */ = {
@@ -595,9 +615,11 @@
 				3FE6CD5A222BE54B006B1C4A /* UIView+AppStyle.swift in Sources */,
 				3FFCF51E223951E400F5E552 /* ViewModelProtocol.swift in Sources */,
 				3F96E5DC2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift in Sources */,
+				3F539C15243CD99F001BB4A0 /* LazyQuoteView.swift in Sources */,
 				3FFCF519223950EA00F5E552 /* ViewModelsProvider.swift in Sources */,
 				3F44A19322B29F1800DCB738 /* Log.swift in Sources */,
 				3FC01B2122A42953003ECFD9 /* ProjectsViewController.swift in Sources */,
+				3F539C1B243CDF22001BB4A0 /* DemoLazyQuoteView.swift in Sources */,
 				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,
 				3FDA05BD222E45FB00D65C51 /* ScenesRouter.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
@@ -610,6 +632,7 @@
 				3FC5E2EF224561490057D979 /* ProgressService.swift in Sources */,
 				3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */,
 				3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */,
+				3F539C19243CDC9B001BB4A0 /* Spacings.swift in Sources */,
 				3F9A29AA2231181F0006A3A4 /* Project.swift in Sources */,
 				3FC01B1F22A428E0003ECFD9 /* SettingsControllerViewModel.swift in Sources */,
 				3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */,
@@ -619,6 +642,7 @@
 				3FFCF517223950E000F5E552 /* ScenesProvider.swift in Sources */,
 				3F575AFF2437975C0007B811 /* IconsNames.swift in Sources */,
 				3F20AE1D222D826200DB0A87 /* LazyButton.swift in Sources */,
+				3F539C17243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift in Sources */,
 				3FFCF51C2239514500F5E552 /* ServicesProvider.swift in Sources */,
 				3FC01B2522A583BE003ECFD9 /* Pomodoro.swift in Sources */,
 				3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */,
