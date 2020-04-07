@@ -218,12 +218,12 @@
 			path = LazyPomodoroTests;
 			sourceTree = "<group>";
 		};
-		3F20AE1B222D825500DB0A87 /* StandardButton */ = {
+		3F20AE1B222D825500DB0A87 /* LazyButton */ = {
 			isa = PBXGroup;
 			children = (
 				3F20AE1C222D826200DB0A87 /* LazyButton.swift */,
 			);
-			path = StandardButton;
+			path = LazyButton;
 			sourceTree = "<group>";
 		};
 		3F2CE51F22D65ADD00BD7D04 /* TableViewModels */ = {
@@ -255,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				3F539C13243CD994001BB4A0 /* LazyQuoteView */,
-				3F20AE1B222D825500DB0A87 /* StandardButton */,
+				3F20AE1B222D825500DB0A87 /* LazyButton */,
 				3FEF8384222D7F590016A088 /* ProgressStackView */,
 			);
 			path = CustomUIComponents;
