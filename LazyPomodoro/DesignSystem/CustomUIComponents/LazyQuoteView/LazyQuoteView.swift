@@ -40,12 +40,14 @@ class LazyQuoteView: UIView {
         addSubview(quoteLabel)
         quoteLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.top.greaterThanOrEqualToSuperview().offset(18)
-            make.bottom.lessThanOrEqualToSuperview().offset(-18)
-            make.leading.greaterThanOrEqualToSuperview().offset(18)
-            make.trailing.lessThanOrEqualToSuperview().offset(-18)
+            make.top.greaterThanOrEqualToSuperview().offset(40)
+            make.bottom.lessThanOrEqualToSuperview().offset(-40)
+            make.leading.greaterThanOrEqualToSuperview().offset(32)
+            make.trailing.lessThanOrEqualToSuperview().offset(-32)
         }
         
+        quoteLabel.numberOfLines = 0
+        quoteLabel.textAlignment = .center
         quoteLabel.textColor = .lp_grayDarkest()
         quoteLabel.font = .lp_body1()
         
@@ -59,5 +61,7 @@ class LazyQuoteView: UIView {
             make.height.equalTo(1)
             make.top.centerX.equalToSuperview()
         }
+        
+        separatorView.backgroundColor = .lp_grayMedium()
     }
 }

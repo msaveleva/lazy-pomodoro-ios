@@ -22,6 +22,7 @@
 		3F539C15243CD99F001BB4A0 /* LazyQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C14243CD99F001BB4A0 /* LazyQuoteView.swift */; };
 		3F539C17243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C16243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift */; };
 		3F539C19243CDC9B001BB4A0 /* Spacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C18243CDC9B001BB4A0 /* Spacings.swift */; };
+		3F539C1B243CDF22001BB4A0 /* DemoLazyQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C1A243CDF22001BB4A0 /* DemoLazyQuoteView.swift */; };
 		3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF5243647D00007B811 /* DesignDemoViewController.swift */; };
 		3F575AF8243647DC0007B811 /* DesignDemoControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */; };
 		3F575AFC243796DC0007B811 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F575AFB243796DC0007B811 /* Icons.xcassets */; };
@@ -90,6 +91,7 @@
 		3F539C14243CD99F001BB4A0 /* LazyQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyQuoteView.swift; sourceTree = "<group>"; };
 		3F539C16243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyQuoteViewConfigurable.swift; sourceTree = "<group>"; };
 		3F539C18243CDC9B001BB4A0 /* Spacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacings.swift; sourceTree = "<group>"; };
+		3F539C1A243CDF22001BB4A0 /* DemoLazyQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLazyQuoteView.swift; sourceTree = "<group>"; };
 		3F575AF5243647D00007B811 /* DesignDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoViewController.swift; sourceTree = "<group>"; };
 		3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoControllerViewModel.swift; sourceTree = "<group>"; };
 		3F575AFB243796DC0007B811 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				3F575AF5243647D00007B811 /* DesignDemoViewController.swift */,
 				3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */,
 				3F277FAB243BA954005C6173 /* DemoLazyProgressViewModel.swift */,
+				3F539C1A243CDF22001BB4A0 /* DemoLazyQuoteView.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				3FFCF519223950EA00F5E552 /* ViewModelsProvider.swift in Sources */,
 				3F44A19322B29F1800DCB738 /* Log.swift in Sources */,
 				3FC01B2122A42953003ECFD9 /* ProjectsViewController.swift in Sources */,
+				3F539C1B243CDF22001BB4A0 /* DemoLazyQuoteView.swift in Sources */,
 				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,
 				3FDA05BD222E45FB00D65C51 /* ScenesRouter.swift in Sources */,
 				3F1CBA8F222BA75400821988 /* AppDelegate.swift in Sources */,
