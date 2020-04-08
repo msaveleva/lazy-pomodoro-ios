@@ -28,6 +28,32 @@ extension LazyNavigation {
             NSAttributedString.Key.font: UIFont.lp_h2Bold()
         ]
         
-//        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.tintColor = UIColor.lp_defaultTextColor()
+    }
+    
+    func addLeftButton(image: ImageAsset, completion: @escaping () -> Void) {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(asset: image).withRenderingMode(.alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: nil
+        )
+        
+        navigationItem.leftBarButtonItem?.rx.tap.subscribe(onNext: { _ in
+            completion()
+        }).disposed(by: disposeBag)
+    }
+    
+    func addRightButton(image: ImageAsset, completion: @escaping () -> Void) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(asset: image).withRenderingMode(.alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: nil
+        )
+        
+        navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: { _ in
+            completion()
+        }).disposed(by: disposeBag)
     }
 }

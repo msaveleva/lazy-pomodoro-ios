@@ -39,7 +39,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
         
         view.backgroundColor = UIColor.lp_mainFillColor()
         setupView()
-        setupCustomNavigationBar()
+        setupNavigationBar()
         
         bindViewModel()
     }
@@ -47,6 +47,13 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
     private func setupView() {
         setupStartPauseButton()
         setupProgressBars()
+    }
+    
+    private func setupNavigationBar() {
+        setupCustomNavigationBar()
+        addRightButton(image: IconAsset.navibarMode) {
+            print("Show navibar mode")
+        }
     }
     
     func bindViewModel() {
