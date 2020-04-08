@@ -11,7 +11,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class TimersViewController: UIViewController, BindableTypeProtocol {
+class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigation {
     private struct Constant {
         static let defaultMargin = 32
     }
@@ -19,7 +19,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol {
     private(set) var viewModel: TimerControllerViewModel
     
     private var testLabel = UILabel()
-    private var disposeBag = DisposeBag()
+    private(set) var disposeBag = DisposeBag()
     
     //MARK: UI elements
     private var projectPomodoroStackView: LazyProgressView!
@@ -39,6 +39,9 @@ class TimersViewController: UIViewController, BindableTypeProtocol {
         
         view.backgroundColor = UIColor.lp_mainFillColor()
         setupView()
+        setupCustomNavigationBar()
+        
+        bindViewModel()
     }
     
     private func setupView() {
@@ -47,7 +50,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol {
     }
     
     func bindViewModel() {
-        loadViewIfNeeded()
+        title = "Timers" //TODO: get localized strings from viewModel
         
         projectPomodoroStackView.bindViewModel(viewModel.projectPomodoroStackVm)
         
