@@ -38,6 +38,10 @@ public extension UIColor {
         return UIColor(hex: 0xF2F2F2)
     }
     
+    class func lp_grayLight() -> UIColor {
+        return UIColor(hex: 0xF7F7F7)
+    }
+    
     // MARK: Text
     
     class func lp_defaultTextColor() -> UIColor {
