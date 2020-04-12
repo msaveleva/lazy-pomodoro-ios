@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class LazyPlayButton: UIButton {
     private static let playImage = UIImage(asset: IconAsset.playButton)
@@ -14,14 +15,23 @@ class LazyPlayButton: UIButton {
     
     var isPlaying: Bool = false {
         didSet {
-            let image = isPlaying ? LazyPlayButton.pauseImage : LazyPlayButton.playImage
+            var image: UIImage?
+            if isPlaying {
+                image = LazyPlayButton.pauseImage
+            } else {
+                image = LazyPlayButton.playImage
+            }
+            
             setImage(image, for: .normal)
         }
     }
     
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 72, height: 72)
+    }
+    
     class func createLazyPlayButton() -> LazyPlayButton {
-        let button = LazyPlayButton.init(type: .system)
-        button.lp_fillWithDefaultGradient()
+        let button = LazyPlayButton.init(type: .custom)
         button.setImage(LazyPlayButton.playImage, for: .normal)
         
         return button
@@ -31,5 +41,9 @@ class LazyPlayButton: UIButton {
         super.layoutSubviews()
         
         layer.cornerRadius = frame.width / 2
+        if lp_getGradientLayer() == nil {
+            lp_fillWithDefaultGradient()
+            lp_getGradientLayer()?.cornerRadius = frame.width / 2
+        }
     }
 }

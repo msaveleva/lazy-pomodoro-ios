@@ -23,7 +23,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
     
     //MARK: UI elements
     private var projectPomodoroStackView: LazyProgressView!
-    private var startPauseButton: UIButton!
+    private var startPauseButton: LazyPlayButton!
     
     init(viewModel: TimerControllerViewModel) {
         self.viewModel = viewModel
@@ -62,7 +62,10 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
         projectPomodoroStackView.bindViewModel(viewModel.projectPomodoroStackVm)
         
         startPauseButton.rx.tap.subscribe { [weak self] _ in
-            self?.viewModel.startPauseButtonPressed()
+            guard let strongSelf = self else { return }
+            
+            strongSelf.startPauseButton.isPlaying = !strongSelf.startPauseButton.isPlaying
+            strongSelf.viewModel.startPauseButtonPressed()
         }.disposed(by: disposeBag)
     }
 }
@@ -81,9 +84,7 @@ extension TimersViewController {
     }
     
     private func setupStartPauseButton() {
-        startPauseButton = UIButton(type: .system)
-        startPauseButton.setTitle("Start Pause Button", for: .normal)
-        startPauseButton.sizeToFit()
+        startPauseButton = LazyPlayButton.createLazyPlayButton()
         view.addSubview(startPauseButton)
         
         startPauseButton.snp.makeConstraints { (make) in
