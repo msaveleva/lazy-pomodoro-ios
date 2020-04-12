@@ -28,7 +28,21 @@ extension UIView {
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         gradientLayer.frame = bounds
         
-        layer.addSublayer(gradientLayer)
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func lp_getGradientLayer() -> CAGradientLayer? {
+        guard let sublayers = layer.sublayers else {
+            return nil
+        }
+        
+        for layer in sublayers {
+            if let resultLayer = layer as? CAGradientLayer {
+                return resultLayer
+            }
+        }
+        
+        return nil
     }
     
     func lp_clearFromGradient() {

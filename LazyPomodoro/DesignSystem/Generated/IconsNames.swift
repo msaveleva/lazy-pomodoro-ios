@@ -18,6 +18,8 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum IconAsset {
+  internal static let pauseButton = ImageAsset(name: "PauseButton")
+  internal static let playButton = ImageAsset(name: "PlayButton")
   internal static let navibarMode = ImageAsset(name: "navibar-mode")
   internal static let sliderBg = ImageAsset(name: "slider-bg")
   internal static let sliderFill = ImageAsset(name: "slider-fill")
