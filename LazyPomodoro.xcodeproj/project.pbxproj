@@ -29,6 +29,7 @@
 		3F575AFF2437975C0007B811 /* IconsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AFE2437975C0007B811 /* IconsNames.swift */; };
 		3F7C92C022CE5E02005A79A1 /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */; };
 		3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */; };
+		3F8C6EAD2443301900D25957 /* LazyPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EAC2443301900D25957 /* LazyPlayButton.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
 		3F96E5DC2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DB2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift */; };
 		3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */; };
@@ -98,6 +99,7 @@
 		3F575AFE2437975C0007B811 /* IconsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsNames.swift; sourceTree = "<group>"; };
 		3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
 		3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectControllerViewModel.swift; sourceTree = "<group>"; };
+		3F8C6EAC2443301900D25957 /* LazyPlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPlayButton.swift; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		3F96E5DB2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyProgressViewConfigurable.swift; sourceTree = "<group>"; };
 		3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressStackViewModel.swift; sourceTree = "<group>"; };
@@ -218,12 +220,13 @@
 			path = LazyPomodoroTests;
 			sourceTree = "<group>";
 		};
-		3F20AE1B222D825500DB0A87 /* LazyButton */ = {
+		3F20AE1B222D825500DB0A87 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				3F20AE1C222D826200DB0A87 /* LazyButton.swift */,
+				3F8C6EAC2443301900D25957 /* LazyPlayButton.swift */,
 			);
-			path = LazyButton;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		3F2CE51F22D65ADD00BD7D04 /* TableViewModels */ = {
@@ -255,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				3F539C13243CD994001BB4A0 /* LazyQuoteView */,
-				3F20AE1B222D825500DB0A87 /* LazyButton */,
+				3F20AE1B222D825500DB0A87 /* Buttons */,
 				3FEF8384222D7F590016A088 /* ProgressStackView */,
 			);
 			path = CustomUIComponents;
@@ -609,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7C92C022CE5E02005A79A1 /* CreateProjectViewController.swift in Sources */,
+				3F8C6EAD2443301900D25957 /* LazyPlayButton.swift in Sources */,
 				3FFCF51522394D1D00F5E552 /* ModeViewModel.swift in Sources */,
 				3F44A19522B40FB500DCB738 /* Date+StartDates.swift in Sources */,
 				3FC01B1722A420F3003ECFD9 /* StatisticsControllerViewModel.swift in Sources */,

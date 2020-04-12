@@ -1,6 +1,6 @@
 xcassets:
   inputs:
-    - LazyPomodoro/Icons.xcassets
+    - LazyPomodoro/DesignSystem/Icons.xcassets
   outputs:
     - templateName: swift4
       output: LazyPomodoro/DesignSystem/Generated/IconsNames.swift
