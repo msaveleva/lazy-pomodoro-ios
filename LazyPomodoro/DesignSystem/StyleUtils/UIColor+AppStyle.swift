@@ -24,6 +24,10 @@ public extension UIColor {
         return UIColor(hex: 0xFF0844)
     }
     
+    class func lp_fillAccentPeach() -> UIColor {
+        return UIColor(hex: 0xFF5A6E)
+    }
+    
     //MARK: Gray
     
     class func lp_grayDarkest() -> UIColor {

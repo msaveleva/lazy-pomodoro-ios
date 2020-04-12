@@ -92,7 +92,7 @@ extension ScenesRouter {
         let settingsController = settingsNavController
         settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(asset: IconAsset.tabBarSettings), tag: 3)
         
-        tabBarController.tabBar.tintColor = .lp_fillAccentRed()
+        tabBarController.tabBar.tintColor = .lp_fillAccentPeach()
         
         tabBarController.viewControllers =
             [
