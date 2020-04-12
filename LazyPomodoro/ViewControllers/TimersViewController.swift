@@ -51,7 +51,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
     
     private func setupNavigationBar() {
         setupCustomNavigationBar()
-        addRightButton(image: IconAsset.navibarMode) {
+        addButtonItem(to: .right, image: IconAsset.navibarMode) {
             print("Show navibar mode")
         }
     }
@@ -88,7 +88,7 @@ extension TimersViewController {
         
         startPauseButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(view)
-            make.top.equalTo(view).offset(120) //TODO msaveleva: change
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(120)
         }
     }
 }

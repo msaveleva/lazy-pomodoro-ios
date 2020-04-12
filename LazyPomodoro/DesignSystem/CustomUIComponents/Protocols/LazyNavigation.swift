@@ -10,6 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+enum ButtonItemPosition {
+    case left
+    case right
+}
+
 protocol LazyNavigation: UINavigationBarDelegate where Self: UIViewController {
     var disposeBag: DisposeBag { get }
 }
@@ -31,29 +36,23 @@ extension LazyNavigation {
         navigationController?.navigationBar.tintColor = UIColor.lp_defaultTextColor()
     }
     
-    func addLeftButton(image: ImageAsset, completion: @escaping () -> Void) {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
+    func addButtonItem(to position: ButtonItemPosition, image: ImageAsset, completion: @escaping () -> Void) {
+        let buttonItem = UIBarButtonItem(
             image: UIImage(asset: image).withRenderingMode(.alwaysOriginal),
             style: .plain,
             target: self,
             action: nil
         )
         
-        navigationItem.leftBarButtonItem?.rx.tap.subscribe(onNext: { _ in
+        buttonItem.rx.tap.subscribe(onNext: { _ in
             completion()
         }).disposed(by: disposeBag)
-    }
-    
-    func addRightButton(image: ImageAsset, completion: @escaping () -> Void) {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(asset: image).withRenderingMode(.alwaysOriginal),
-            style: .plain,
-            target: self,
-            action: nil
-        )
         
-        navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: { _ in
-            completion()
-        }).disposed(by: disposeBag)
+        switch position {
+        case .left:
+            navigationItem.leftBarButtonItem = buttonItem
+        case .right:
+            navigationItem.rightBarButtonItem = buttonItem
+        }
     }
 }
