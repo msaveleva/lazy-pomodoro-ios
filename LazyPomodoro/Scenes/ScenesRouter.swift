@@ -92,9 +92,12 @@ extension ScenesRouter {
         let settingsController = settingsNavController
         settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(asset: IconAsset.tabBarSettings), tag: 3)
         
-        tabBarController.viewControllers = [timersController,
-                                            statisticsController,
-                                            projectsController,
-                                            settingsController]
+        tabBarController.viewControllers =
+            [
+                scenesProvider.embedInNavigationController(controller: timersController),
+                statisticsController,
+                projectsController,
+                settingsController
+            ]
     }
 }

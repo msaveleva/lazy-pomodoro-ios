@@ -9,6 +9,9 @@
 import UIKit
 
 extension UIFont {
+    class func lp_h1Bold() -> UIFont {
+        return UIFont.systemFont(ofSize: 32.0, weight: .bold)
+    }
     
     class func lp_h2Bold() -> UIFont {
         return UIFont.systemFont(ofSize: 24.0, weight: .bold)
@@ -29,5 +32,4 @@ extension UIFont {
     class func lp_body3() -> UIFont {
         return UIFont.systemFont(ofSize: 10.0, weight: .regular)
     }
-    
 }

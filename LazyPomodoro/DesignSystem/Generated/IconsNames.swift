@@ -20,6 +20,7 @@
 internal enum IconAsset {
   internal static let pauseButton = ImageAsset(name: "PauseButton")
   internal static let playButton = ImageAsset(name: "PlayButton")
+  internal static let navibarMode = ImageAsset(name: "navibar-mode")
   internal static let sliderBg = ImageAsset(name: "slider-bg")
   internal static let sliderFill = ImageAsset(name: "slider-fill")
   internal static let tabBarProjects = ImageAsset(name: "tab-bar-projects")
