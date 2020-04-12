@@ -23,6 +23,7 @@
 		3F539C17243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C16243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift */; };
 		3F539C19243CDC9B001BB4A0 /* Spacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C18243CDC9B001BB4A0 /* Spacings.swift */; };
 		3F539C1B243CDF22001BB4A0 /* DemoLazyQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C1A243CDF22001BB4A0 /* DemoLazyQuoteView.swift */; };
+		3F539C20243CE6A6001BB4A0 /* LazyNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F539C1F243CE6A6001BB4A0 /* LazyNavigation.swift */; };
 		3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF5243647D00007B811 /* DesignDemoViewController.swift */; };
 		3F575AF8243647DC0007B811 /* DesignDemoControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */; };
 		3F575AFC243796DC0007B811 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F575AFB243796DC0007B811 /* Icons.xcassets */; };
@@ -92,6 +93,7 @@
 		3F539C16243CD9AA001BB4A0 /* LazyQuoteViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyQuoteViewConfigurable.swift; sourceTree = "<group>"; };
 		3F539C18243CDC9B001BB4A0 /* Spacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacings.swift; sourceTree = "<group>"; };
 		3F539C1A243CDF22001BB4A0 /* DemoLazyQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLazyQuoteView.swift; sourceTree = "<group>"; };
+		3F539C1F243CE6A6001BB4A0 /* LazyNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyNavigation.swift; sourceTree = "<group>"; };
 		3F575AF5243647D00007B811 /* DesignDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoViewController.swift; sourceTree = "<group>"; };
 		3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoControllerViewModel.swift; sourceTree = "<group>"; };
 		3F575AFB243796DC0007B811 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -251,12 +253,37 @@
 			path = LazyQuoteView;
 			sourceTree = "<group>";
 		};
-		3F575AF22436461D0007B811 /* CustomUIComponents */ = {
+		3F539C1C243CE67C001BB4A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				3F539C13243CD994001BB4A0 /* LazyQuoteView */,
-				3F20AE1B222D825500DB0A87 /* LazyButton */,
 				3FEF8384222D7F590016A088 /* ProgressStackView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3F539C1D243CE682001BB4A0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3F539C1F243CE6A6001BB4A0 /* LazyNavigation.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3F539C1E243CE696001BB4A0 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3F20AE1B222D825500DB0A87 /* LazyButton */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		3F575AF22436461D0007B811 /* CustomUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3F539C1E243CE696001BB4A0 /* Buttons */,
+				3F539C1D243CE682001BB4A0 /* Protocols */,
+				3F539C1C243CE67C001BB4A0 /* Views */,
 			);
 			path = CustomUIComponents;
 			sourceTree = "<group>";
@@ -655,6 +682,7 @@
 				3F277FAC243BA954005C6173 /* DemoLazyProgressViewModel.swift in Sources */,
 				3FC01B1922A42146003ECFD9 /* StatisticsViewController.swift in Sources */,
 				3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */,
+				3F539C20243CE6A6001BB4A0 /* LazyNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
