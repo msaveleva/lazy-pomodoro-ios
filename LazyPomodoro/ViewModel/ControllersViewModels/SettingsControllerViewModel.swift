@@ -13,7 +13,28 @@ protocol SettingsViewControllerConfigurable where Self: ViewModelProtocol {
 }
 
 class SettingsControllerViewModel: SettingsViewControllerConfigurable {
-    func dependenciesInjected() {
-        //TODO msaveleva: implement
+    private(set) var baseSettingsVMs = [LazySwitchTableViewCellConfigurable]()
+    
+    init() {
+        self.dependenciesInjected()
+    }
+    
+    internal func dependenciesInjected() {
+        createBaseSettingsViewModels()
+    }
+    
+    private func createBaseSettingsViewModels() {
+        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Intervals Auto Start", switchAction: { (value) in
+            print("Auto start intervals: \(value)")
+        }))
+        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Breaks Auto Start", switchAction: { (value) in
+            print("Auto start breaks: \(value)")
+        }))
+        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Prevent From Sleep", switchAction: { (value) in
+            print("Prevent from sleep: \(value)")
+        }))
+        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Show Motivating Quotes", switchAction: { (value) in
+            print("Show quotes: \(value)")
+        }))
     }
 }
