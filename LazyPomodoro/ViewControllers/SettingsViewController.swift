@@ -12,9 +12,9 @@ import RxSwift
 class SettingsViewController: UIViewController, BindableTypeProtocol, LazyNavigation {
     private(set) var disposeBag = DisposeBag()
 
-    private(set) var viewModel: SettingsControllerViewModel
+    private(set) var viewModel: SettingsViewControllerConfigurable
     
-    init(viewModel: SettingsControllerViewModel) {
+    init(viewModel: SettingsViewControllerConfigurable) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

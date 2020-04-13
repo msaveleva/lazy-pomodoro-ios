@@ -8,7 +8,11 @@
 
 import Foundation
 
-class SettingsControllerViewModel: ViewModelProtocol {
+protocol SettingsViewControllerConfigurable where Self: ViewModelProtocol {
+    
+}
+
+class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     func dependenciesInjected() {
         //TODO msaveleva: implement
     }
