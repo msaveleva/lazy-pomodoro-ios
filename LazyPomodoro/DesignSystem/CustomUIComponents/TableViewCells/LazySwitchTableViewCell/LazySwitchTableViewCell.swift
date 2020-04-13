@@ -46,6 +46,7 @@ class LazySwitchTableViewCell: UITableViewCell {
     private func setupUI() {
         titleLabel.font = .lp_body2()
         titleLabel.textColor = .lp_defaultTextColor()
+        switcher.onTintColor = .lp_fillAccentPeach()
         
         contentView.addSubview(titleLabel)
         contentView.addSubview(switcher)
