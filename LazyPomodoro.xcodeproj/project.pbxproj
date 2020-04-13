@@ -33,6 +33,7 @@
 		3F8C6EAF2443340300D25957 /* LazyPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EAE2443340300D25957 /* LazyPlayButton.swift */; };
 		3F8C6EF824447CA000D25957 /* LazySwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EF724447CA000D25957 /* LazySwitchTableViewCell.swift */; };
 		3F8C6EFB244480E400D25957 /* LazySwitchTableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EFA244480E400D25957 /* LazySwitchTableViewCellConfigurable.swift */; };
+		3F8C6EFE2444819C00D25957 /* SwitchTableViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EFD2444819C00D25957 /* SwitchTableViewCellVM.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
 		3F96E5DC2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DB2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift */; };
 		3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */; };
@@ -106,6 +107,7 @@
 		3F8C6EAE2443340300D25957 /* LazyPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyPlayButton.swift; sourceTree = "<group>"; };
 		3F8C6EF724447CA000D25957 /* LazySwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazySwitchTableViewCell.swift; sourceTree = "<group>"; };
 		3F8C6EFA244480E400D25957 /* LazySwitchTableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazySwitchTableViewCellConfigurable.swift; sourceTree = "<group>"; };
+		3F8C6EFD2444819C00D25957 /* SwitchTableViewCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCellVM.swift; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		3F96E5DB2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyProgressViewConfigurable.swift; sourceTree = "<group>"; };
 		3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressStackViewModel.swift; sourceTree = "<group>"; };
@@ -336,6 +338,14 @@
 			path = LazySwitchTableViewCell;
 			sourceTree = "<group>";
 		};
+		3F8C6EFC2444818B00D25957 /* TableViewCellsVMs */ = {
+			isa = PBXGroup;
+			children = (
+				3F8C6EFD2444819C00D25957 /* SwitchTableViewCellVM.swift */,
+			);
+			path = TableViewCellsVMs;
+			sourceTree = "<group>";
+		};
 		3F96E5D82242A8020094A6A9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +400,7 @@
 		3FDA05B5222E435A00D65C51 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3F8C6EFC2444818B00D25957 /* TableViewCellsVMs */,
 				3F2CE51F22D65ADD00BD7D04 /* TableViewModels */,
 				3FC01B1522A420DB003ECFD9 /* ControllersViewModels */,
 				3F96E5DD2242AB4E0094A6A9 /* ProgressStackViewModels */,
@@ -662,6 +673,7 @@
 				3F539C15243CD99F001BB4A0 /* LazyQuoteView.swift in Sources */,
 				3FFCF519223950EA00F5E552 /* ViewModelsProvider.swift in Sources */,
 				3F44A19322B29F1800DCB738 /* Log.swift in Sources */,
+				3F8C6EFE2444819C00D25957 /* SwitchTableViewCellVM.swift in Sources */,
 				3FC01B2122A42953003ECFD9 /* ProjectsViewController.swift in Sources */,
 				3F539C1B243CDF22001BB4A0 /* DemoLazyQuoteView.swift in Sources */,
 				3FDA05B7222E440900D65C51 /* TimerControllerViewModel.swift in Sources */,

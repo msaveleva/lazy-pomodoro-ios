@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxCocoa
 
 protocol LazySwitchTableViewCellConfigurable {
     var titleText: BehaviorRelay<String> { get }
