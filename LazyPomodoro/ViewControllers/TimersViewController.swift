@@ -16,7 +16,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
         static let defaultMargin = 32
     }
     
-    private(set) var viewModel: TimerControllerViewModel
+    private(set) var viewModel: TimerViewControllerConfigurable
     
     private var testLabel = UILabel()
     private(set) var disposeBag = DisposeBag()
@@ -25,7 +25,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
     private var projectPomodoroStackView: LazyProgressView!
     private var startPauseButton: LazyPlayButton!
     
-    init(viewModel: TimerControllerViewModel) {
+    init(viewModel: TimerViewControllerConfigurable) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -37,23 +37,17 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
     override func viewDidLoad() {
         super .viewDidLoad()
         
-        view.backgroundColor = UIColor.lp_mainFillColor()
-        setupView()
         setupNavigationBar()
+        setupUI()
         
         bindViewModel()
     }
     
-    private func setupView() {
+    private func setupUI() {
+        view.backgroundColor = UIColor.lp_mainFillColor()
+        
         setupStartPauseButton()
         setupProgressBars()
-    }
-    
-    private func setupNavigationBar() {
-        setupCustomNavigationBar()
-        addButtonItem(to: .right, image: IconAsset.navibarMode) {
-            print("Show navibar mode")
-        }
     }
     
     func bindViewModel() {
@@ -68,9 +62,15 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
             strongSelf.viewModel.startPauseButtonPressed()
         }.disposed(by: disposeBag)
     }
-}
-
-extension TimersViewController {
+    
+    // MARK: - Private methods
+    private func setupNavigationBar() {
+        setupCustomNavigationBar()
+        addButtonItem(to: .right, image: IconAsset.navibarMode) {
+            print("Show navibar mode")
+        }
+    }
+    
     private func setupProgressBars() {
         projectPomodoroStackView = LazyProgressView.createDefaultProgressView()
         view.addSubview(projectPomodoroStackView)
