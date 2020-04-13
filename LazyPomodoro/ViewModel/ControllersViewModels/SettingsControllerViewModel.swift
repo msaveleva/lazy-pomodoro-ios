@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SettingsViewControllerConfigurable where Self: ViewModelProtocol {
-    
+    var baseSettingsVMs: [LazySwitchTableViewCellConfigurable] { get }
 }
 
 class SettingsControllerViewModel: SettingsViewControllerConfigurable {

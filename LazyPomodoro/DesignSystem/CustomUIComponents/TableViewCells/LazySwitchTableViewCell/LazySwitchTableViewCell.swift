@@ -29,6 +29,8 @@ class LazySwitchTableViewCell: UITableViewCell {
     
     // MARK: - Public methods
     func bind(viewModel: LazySwitchTableViewCellConfigurable) {
+        //TODO: Unsubscribe from previous viewModel's events.
+        
         viewModel.titleText.bind(to: titleLabel.rx.text).disposed(by: disposeBag)
         switcher
             .rx
@@ -44,7 +46,6 @@ class LazySwitchTableViewCell: UITableViewCell {
     private func setupUI() {
         titleLabel.font = .lp_body2()
         titleLabel.textColor = .lp_defaultTextColor()
-        switcher.backgroundColor = .lp_fillAccentPeach()
         
         contentView.addSubview(titleLabel)
         contentView.addSubview(switcher)
@@ -57,7 +58,7 @@ class LazySwitchTableViewCell: UITableViewCell {
         
         switcher.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().offset(Spacing.s16)
+            make.trailing.equalToSuperview().offset(-Spacing.s16)
         }
     }
 }
