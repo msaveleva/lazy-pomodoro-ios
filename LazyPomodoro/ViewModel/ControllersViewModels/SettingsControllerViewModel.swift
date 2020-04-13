@@ -10,16 +10,19 @@ import Foundation
 
 protocol SettingsViewControllerConfigurable where Self: ViewModelProtocol {
     var baseSettingsVMs: [LazySwitchTableViewCellConfigurable] { get }
+    var sectionsTitles: [String?] { get }
 }
 
 class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     private(set) var baseSettingsVMs = [LazySwitchTableViewCellConfigurable]()
+    private(set) var sectionsTitles = [String?]()
     
     init() {
         self.dependenciesInjected()
     }
     
     internal func dependenciesInjected() {
+        createSectionsTitles()
         createBaseSettingsViewModels()
     }
     
@@ -36,5 +39,11 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
         baseSettingsVMs.append(SwitchTableViewCellVM(text: "Show Motivating Quotes", switchAction: { (value) in
             print("Show quotes: \(value)")
         }))
+    }
+    
+    private func createSectionsTitles() {
+        sectionsTitles.append(nil)
+        sectionsTitles.append("Custom mode settings")
+        sectionsTitles.append("Goals")
     }
 }
