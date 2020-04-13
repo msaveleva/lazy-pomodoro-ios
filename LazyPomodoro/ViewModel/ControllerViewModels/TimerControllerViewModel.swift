@@ -16,8 +16,8 @@ struct TimersServicesContainer {
 }
 
 protocol TimerViewControllerConfigurable where Self: ViewModelProtocol {
-    var projectPomodoroStackVm: TimerLazyProgressViewModel! { get }
-    var todayProgressStackVm: TodayLazyProgressViewModel! { get }
+    var projectPomodoroStackVm: LazyProgressViewConfigurable! { get }
+    var todayProgressStackVm: LazyProgressViewConfigurable! { get }
     
     init(with container: TimersServicesContainer)
     func startPauseButtonPressed()
@@ -26,9 +26,9 @@ protocol TimerViewControllerConfigurable where Self: ViewModelProtocol {
 class TimerControllerViewModel: TimerViewControllerConfigurable {
     private let container: TimersServicesContainer
     
-    private(set) var projectPomodoroStackVm: TimerLazyProgressViewModel!
-    private(set) var todayProgressStackVm: TodayLazyProgressViewModel!
-    private(set) var goalProgressStackVm: GoalLazyProgressViewModel?
+    private(set) var projectPomodoroStackVm: LazyProgressViewConfigurable!
+    private(set) var todayProgressStackVm: LazyProgressViewConfigurable!
+    private(set) var goalProgressStackVm: LazyProgressViewConfigurable?
     private let disposeBag = DisposeBag()
     
     required init(with container: TimersServicesContainer) {
