@@ -19,10 +19,9 @@ class ViewModelsProvider {
     func createViewModelForScene(scene: SceneType, scenesRouter: ScenesRouter) -> ViewModelProtocol {
         switch scene {
         case .timers:
-            let timerControllerViewModel = TimerControllerViewModel()
-            timerControllerViewModel.timerService = servicesProvider.timerService
-            timerControllerViewModel.databaseService = servicesProvider.databaseService
-            timerControllerViewModel.dependenciesInjected()
+            let container = TimersServicesContainer(timerService: servicesProvider.timerService,
+                                                    databaseService: servicesProvider.databaseService)
+            let timerControllerViewModel = TimerControllerViewModel(with: container)
             return timerControllerViewModel
         case .statistics:
             let statisticsControllerViewModel = StatisticsControllerViewModel()

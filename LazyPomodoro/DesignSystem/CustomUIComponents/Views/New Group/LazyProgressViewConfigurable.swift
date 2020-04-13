@@ -14,4 +14,10 @@ protocol LazyProgressViewConfigurable {
     func getInitialProgressText() -> String
     func progressTextObservable() -> Observable<String?>
     func progressValueObservable() -> Observable<Float>
+    
+    func updateState()
+}
+
+extension LazyProgressViewConfigurable {
+    func updateState() {}
 }

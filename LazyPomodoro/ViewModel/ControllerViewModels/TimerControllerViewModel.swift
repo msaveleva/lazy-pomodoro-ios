@@ -10,29 +10,43 @@ import Foundation
 import RxSwift
 import os
 
-class TimerControllerViewModel: ViewModelProtocol {
-    //TODO: load value from storage.
-//    private var project: Project = Project(name: "Personal Project", currentPomodoroIntervals: 2, goalPomodoroIntervals: 15)
+struct TimersServicesContainer {
+    let timerService: TimerService
+    let databaseService: DatabaseService
+}
+
+protocol TimerViewControllerConfigurable where Self: ViewModelProtocol {
+    var projectPomodoroStackVm: LazyProgressViewConfigurable! { get }
+    var todayProgressStackVm: LazyProgressViewConfigurable! { get }
     
-    public var projectPomodoroStackVm: TimerLazyProgressViewModel!
-    public var todayProgressStackVm: TodayLazyProgressViewModel!
-    public var goalProgressStackVm: GoalLazyProgressViewModel?
+    init(with container: TimersServicesContainer)
+    func startPauseButtonPressed()
+}
+
+class TimerControllerViewModel: TimerViewControllerConfigurable {
+    private let container: TimersServicesContainer
     
-    public var timerService: TimerService!
-    public var databaseService: DatabaseService!
-    
+    private(set) var projectPomodoroStackVm: LazyProgressViewConfigurable!
+    private(set) var todayProgressStackVm: LazyProgressViewConfigurable!
+    private(set) var goalProgressStackVm: LazyProgressViewConfigurable?
     private let disposeBag = DisposeBag()
     
-    func dependenciesInjected() {
-        projectPomodoroStackVm = TimerLazyProgressViewModel(title: "Default Project", timerService: timerService)
-        todayProgressStackVm = TodayLazyProgressViewModel(title: "Progress for today") //TODO msaveleva: change to localized string
+    required init(with container: TimersServicesContainer) {
+        self.container = container
         
-        //TODO msaveleva: add check if need to create this vm:
-//        goalProgressStackVm = GoalLazyProgressViewModel(title: "Project goal", currentProject: project) //TODO msaveleva: change to localized string
+        dependenciesInjected()
     }
     
+    // MARK: - Public methods
     func startPauseButtonPressed() {
         projectPomodoroStackVm.updateState()
     }
-    
+}
+
+extension TimerControllerViewModel {
+    func dependenciesInjected() {
+        projectPomodoroStackVm = TimerLazyProgressViewModel(title: "Default Project",
+                                                            timerService: container.timerService)
+        todayProgressStackVm = TodayLazyProgressViewModel(title: "Progress for today")
+    }
 }
