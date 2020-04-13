@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import RxSwift
 
-class SettingsViewController: UIViewController, BindableTypeProtocol {
+class SettingsViewController: UIViewController, BindableTypeProtocol, LazyNavigation {
+    private(set) var disposeBag = DisposeBag()
 
     private(set) var viewModel: SettingsControllerViewModel
     
@@ -26,6 +28,8 @@ class SettingsViewController: UIViewController, BindableTypeProtocol {
         
         view.backgroundColor = UIColor.lp_mainFillColor()
         title = "Settings"
+        
+        setupCustomNavigationBar()
     }
     
     func bindViewModel() {
