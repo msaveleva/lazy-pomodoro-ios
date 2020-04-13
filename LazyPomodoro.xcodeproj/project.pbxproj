@@ -365,7 +365,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3FC01B1522A420DB003ECFD9 /* ControllerViewModels */ = {
+		3FC01B1522A420DB003ECFD9 /* ControllersViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				3FDA05B6222E440900D65C51 /* TimerControllerViewModel.swift */,
@@ -374,7 +374,7 @@
 				3FC01B1E22A428E0003ECFD9 /* SettingsControllerViewModel.swift */,
 				3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */,
 			);
-			path = ControllerViewModels;
+			path = ControllersViewModels;
 			sourceTree = "<group>";
 		};
 		3FDA05B2222E430C00D65C51 /* Scenes */ = {
@@ -391,7 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				3F2CE51F22D65ADD00BD7D04 /* TableViewModels */,
-				3FC01B1522A420DB003ECFD9 /* ControllerViewModels */,
+				3FC01B1522A420DB003ECFD9 /* ControllersViewModels */,
 				3F96E5DD2242AB4E0094A6A9 /* ProgressStackViewModels */,
 				3FFCF51422394D1D00F5E552 /* ModeViewModel.swift */,
 			);
