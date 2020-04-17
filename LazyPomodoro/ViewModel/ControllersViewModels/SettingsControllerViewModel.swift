@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct TableViewSectionViewModel {
-    let sectionTitle: String?
-    let cellVMs: [TableViewCellConfigurable]
-}
-
 protocol SettingsViewControllerConfigurable where Self: ViewModelProtocol {
     var sectionsVMs: [TableViewSectionViewModel] { get }
 }
