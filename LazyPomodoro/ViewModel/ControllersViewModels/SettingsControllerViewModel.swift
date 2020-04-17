@@ -8,33 +8,33 @@
 
 import Foundation
 
+struct TableViewSectionViewModel {
+    let sectionTitle: String?
+    let cellVMs: [TableViewCellConfigurable]
+}
+
 protocol SettingsViewControllerConfigurable where Self: ViewModelProtocol {
-    var baseSettingsVMs: [LazySwitchTableViewCellConfigurable] { get }
-    var sectionsTitles: [String?] { get }
+    var sectionsVMs: [TableViewSectionViewModel] { get }
 }
 
 class SettingsControllerViewModel: SettingsViewControllerConfigurable {
-    private(set) var baseSettingsVMs = [LazySwitchTableViewCellConfigurable]()
-    private(set) var sectionsTitles = [String?]()
+    private(set) var sectionsVMs = [TableViewSectionViewModel]()
     
     init() {
         self.dependenciesInjected()
     }
     
     internal func dependenciesInjected() {
-        createSectionsTitles()
-        createBaseSettingsViewModels()
+        sectionsVMs.append(createBaseSettingsSection())
+        sectionsVMs.append(createCustomModeSettingsSection())
+        sectionsVMs.append(createGoalSettingsSection())
     }
     
     // MARK: - Creating additional view models
     
-    private func createSectionsTitles() {
-        sectionsTitles.append(nil)
-        sectionsTitles.append("Custom mode settings")
-        sectionsTitles.append("Goals")
-    }
-    
-    private func createBaseSettingsViewModels() {
+    private func createBaseSettingsSection() -> TableViewSectionViewModel {
+        var baseSettingsVMs = [TableViewCellConfigurable]()
+        
         baseSettingsVMs.append(SwitchTableViewCellVM(text: "Intervals Auto Start", switchAction: { (value) in
             print("Auto start intervals: \(value)")
         }))
@@ -47,9 +47,11 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
         baseSettingsVMs.append(SwitchTableViewCellVM(text: "Show Motivating Quotes", switchAction: { (value) in
             print("Show quotes: \(value)")
         }))
+        
+        return TableViewSectionViewModel(sectionTitle: nil, cellVMs: baseSettingsVMs)
     }
     
-    private func createCustomModeSettingsViewModels() -> [TableViewCellConfigurable] {
+    private func createCustomModeSettingsSection() -> TableViewSectionViewModel {
         var customModeSettings = [TableViewCellConfigurable]()
         
         customModeSettings.append(SubtitleTableViewCellVM(title: "Work interval", subtitle: "75 min", action: {
@@ -65,6 +67,14 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
             //TODO: implement
         }))
         
-        return customModeSettings
+        return TableViewSectionViewModel(sectionTitle: "Custom mode settings", cellVMs: customModeSettings)
+    }
+    
+    private func createGoalSettingsSection() -> TableViewSectionViewModel {
+        let cellVM = SubtitleTableViewCellVM(title: "Daily intervals goal", subtitle: "6") {
+            //TODO: implement
+        }
+        
+        return TableViewSectionViewModel(sectionTitle: "Goal", cellVMs: [cellVM])
     }
 }

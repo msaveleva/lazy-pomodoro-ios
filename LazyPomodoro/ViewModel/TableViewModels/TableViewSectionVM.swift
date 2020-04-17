@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(*, deprecated, message: "Use TableViewSectionViewModel struct instead.")
 class TableViewSectionVM {
     let title: String
     let cells: [TableViewCellVMProtocol]
@@ -18,10 +19,12 @@ class TableViewSectionVM {
     }
 }
 
+@available(*, deprecated, message: "Use TableViewCellConfigurable instead.")
 protocol TableViewCellVMProtocol {
     
 }
 
+@available(*, deprecated, message: "Use LazySwitchTableViewCellConfigurable or LazySubtitleTableViewCellConfigurable instead.")
 class TableViewCellVM: TableViewCellVMProtocol {
     let title: String
     
