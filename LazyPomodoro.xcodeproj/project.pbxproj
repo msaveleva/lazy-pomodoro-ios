@@ -37,6 +37,7 @@
 		3F91898B244A0D6C00380FCB /* TableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91898A244A0D6C00380FCB /* TableViewCellConfigurable.swift */; };
 		3F91898E244A0DE400380FCB /* LazySubtitleTableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91898D244A0DE400380FCB /* LazySubtitleTableViewCellConfigurable.swift */; };
 		3F918990244A0E4100380FCB /* LazySubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91898F244A0E4100380FCB /* LazySubtitleTableViewCell.swift */; };
+		3F918992244A100800380FCB /* SubtitleTableViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F918991244A100800380FCB /* SubtitleTableViewCellVM.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
 		3F96E5DC2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DB2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift */; };
 		3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */; };
@@ -114,6 +115,7 @@
 		3F91898A244A0D6C00380FCB /* TableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellConfigurable.swift; sourceTree = "<group>"; };
 		3F91898D244A0DE400380FCB /* LazySubtitleTableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazySubtitleTableViewCellConfigurable.swift; sourceTree = "<group>"; };
 		3F91898F244A0E4100380FCB /* LazySubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazySubtitleTableViewCell.swift; sourceTree = "<group>"; };
+		3F918991244A100800380FCB /* SubtitleTableViewCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCellVM.swift; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		3F96E5DB2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyProgressViewConfigurable.swift; sourceTree = "<group>"; };
 		3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressStackViewModel.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				3F8C6EFD2444819C00D25957 /* SwitchTableViewCellVM.swift */,
+				3F918991244A100800380FCB /* SubtitleTableViewCellVM.swift */,
 			);
 			path = TableViewCellsVMs;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				3F539C15243CD99F001BB4A0 /* LazyQuoteView.swift in Sources */,
 				3FFCF519223950EA00F5E552 /* ViewModelsProvider.swift in Sources */,
 				3F44A19322B29F1800DCB738 /* Log.swift in Sources */,
+				3F918992244A100800380FCB /* SubtitleTableViewCellVM.swift in Sources */,
 				3F8C6EFE2444819C00D25957 /* SwitchTableViewCellVM.swift in Sources */,
 				3FC01B2122A42953003ECFD9 /* ProjectsViewController.swift in Sources */,
 				3F539C1B243CDF22001BB4A0 /* DemoLazyQuoteView.swift in Sources */,

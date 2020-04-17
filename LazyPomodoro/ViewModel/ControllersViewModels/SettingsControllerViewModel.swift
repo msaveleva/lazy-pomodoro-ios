@@ -26,6 +26,14 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
         createBaseSettingsViewModels()
     }
     
+    // MARK: - Creating additional view models
+    
+    private func createSectionsTitles() {
+        sectionsTitles.append(nil)
+        sectionsTitles.append("Custom mode settings")
+        sectionsTitles.append("Goals")
+    }
+    
     private func createBaseSettingsViewModels() {
         baseSettingsVMs.append(SwitchTableViewCellVM(text: "Intervals Auto Start", switchAction: { (value) in
             print("Auto start intervals: \(value)")
@@ -41,9 +49,22 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
         }))
     }
     
-    private func createSectionsTitles() {
-        sectionsTitles.append(nil)
-        sectionsTitles.append("Custom mode settings")
-        sectionsTitles.append("Goals")
+    private func createCustomModeSettingsViewModels() -> [TableViewCellConfigurable] {
+        var customModeSettings = [TableViewCellConfigurable]()
+        
+        customModeSettings.append(SubtitleTableViewCellVM(title: "Work interval", subtitle: "75 min", action: {
+            //TODO: implement
+        }))
+        customModeSettings.append(SubtitleTableViewCellVM(title: "Break interval", subtitle: "10 min", action: {
+            //TODO: implement
+        }))
+        customModeSettings.append(SubtitleTableViewCellVM(title: "Long break interval", subtitle: "30 min", action: {
+            //TODO: implement
+        }))
+        customModeSettings.append(SubtitleTableViewCellVM(title: "Intervals before long break", subtitle: "3", action: {
+            //TODO: implement
+        }))
+        
+        return customModeSettings
     }
 }

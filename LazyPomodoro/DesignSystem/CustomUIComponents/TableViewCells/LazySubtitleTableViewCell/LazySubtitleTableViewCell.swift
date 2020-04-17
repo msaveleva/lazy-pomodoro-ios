@@ -32,6 +32,7 @@ class LazySubtitleTableViewCell: UITableViewCell {
         //TODO: Unsubscribe from previous viewModel's events.
         
         viewModel.titleText.bind(to: titleLabel.rx.text).disposed(by: disposeBag)
+        viewModel.subtitleText.bind(to: subtitleLabel.rx.text).disposed(by: disposeBag)
     }
     
     // MARK: - Private methods
