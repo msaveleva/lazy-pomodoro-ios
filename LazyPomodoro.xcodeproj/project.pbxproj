@@ -34,6 +34,9 @@
 		3F8C6EF824447CA000D25957 /* LazySwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EF724447CA000D25957 /* LazySwitchTableViewCell.swift */; };
 		3F8C6EFB244480E400D25957 /* LazySwitchTableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EFA244480E400D25957 /* LazySwitchTableViewCellConfigurable.swift */; };
 		3F8C6EFE2444819C00D25957 /* SwitchTableViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EFD2444819C00D25957 /* SwitchTableViewCellVM.swift */; };
+		3F91898B244A0D6C00380FCB /* TableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91898A244A0D6C00380FCB /* TableViewCellConfigurable.swift */; };
+		3F91898E244A0DE400380FCB /* LazySubtitleTableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91898D244A0DE400380FCB /* LazySubtitleTableViewCellConfigurable.swift */; };
+		3F918990244A0E4100380FCB /* LazySubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91898F244A0E4100380FCB /* LazySubtitleTableViewCell.swift */; };
 		3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */; };
 		3F96E5DC2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DB2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift */; };
 		3F96E5DF2242AB740094A6A9 /* TodayProgressStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */; };
@@ -108,6 +111,9 @@
 		3F8C6EF724447CA000D25957 /* LazySwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazySwitchTableViewCell.swift; sourceTree = "<group>"; };
 		3F8C6EFA244480E400D25957 /* LazySwitchTableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazySwitchTableViewCellConfigurable.swift; sourceTree = "<group>"; };
 		3F8C6EFD2444819C00D25957 /* SwitchTableViewCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCellVM.swift; sourceTree = "<group>"; };
+		3F91898A244A0D6C00380FCB /* TableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellConfigurable.swift; sourceTree = "<group>"; };
+		3F91898D244A0DE400380FCB /* LazySubtitleTableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazySubtitleTableViewCellConfigurable.swift; sourceTree = "<group>"; };
+		3F91898F244A0E4100380FCB /* LazySubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazySubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		3F96E5D92242A81C0094A6A9 /* String+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		3F96E5DB2242A9A90094A6A9 /* LazyProgressViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyProgressViewConfigurable.swift; sourceTree = "<group>"; };
 		3F96E5DE2242AB740094A6A9 /* TodayProgressStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressStackViewModel.swift; sourceTree = "<group>"; };
@@ -324,7 +330,9 @@
 		3F8C6EF624447C9600D25957 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				3F91898C244A0DCE00380FCB /* LazySubtitleTableViewCell */,
 				3F8C6EF9244480D800D25957 /* LazySwitchTableViewCell */,
+				3F91898A244A0D6C00380FCB /* TableViewCellConfigurable.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -344,6 +352,15 @@
 				3F8C6EFD2444819C00D25957 /* SwitchTableViewCellVM.swift */,
 			);
 			path = TableViewCellsVMs;
+			sourceTree = "<group>";
+		};
+		3F91898C244A0DCE00380FCB /* LazySubtitleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3F91898D244A0DE400380FCB /* LazySubtitleTableViewCellConfigurable.swift */,
+				3F91898F244A0E4100380FCB /* LazySubtitleTableViewCell.swift */,
+			);
+			path = LazySubtitleTableViewCell;
 			sourceTree = "<group>";
 		};
 		3F96E5D82242A8020094A6A9 /* Extensions */ = {
@@ -693,6 +710,7 @@
 				3FC01B1F22A428E0003ECFD9 /* SettingsControllerViewModel.swift in Sources */,
 				3FE6CD58222BE013006B1C4A /* UIColor+AppStyle.swift in Sources */,
 				3F8C6EFB244480E400D25957 /* LazySwitchTableViewCellConfigurable.swift in Sources */,
+				3F91898E244A0DE400380FCB /* LazySubtitleTableViewCellConfigurable.swift in Sources */,
 				3FDA05BF222E472A00D65C51 /* SceneTransitionType.swift in Sources */,
 				3FC01B2322A4296B003ECFD9 /* SettingsViewController.swift in Sources */,
 				3FC01B2722A5852E003ECFD9 /* DatabaseService.swift in Sources */,
@@ -704,6 +722,7 @@
 				3FC01B2522A583BE003ECFD9 /* Pomodoro.swift in Sources */,
 				3F8C6EF824447CA000D25957 /* LazySwitchTableViewCell.swift in Sources */,
 				3F96E5DA2242A81C0094A6A9 /* String+Formatting.swift in Sources */,
+				3F918990244A0E4100380FCB /* LazySubtitleTableViewCell.swift in Sources */,
 				3FDA05BB222E453F00D65C51 /* TimersViewController.swift in Sources */,
 				3FFCF5212239569A00F5E552 /* TimerService.swift in Sources */,
 				3FCF72A722A6D58000424D60 /* Realm+Utils.swift in Sources */,
@@ -713,6 +732,7 @@
 				3FE6CD5C222BECD4006B1C4A /* UIFont+AppStyles.swift in Sources */,
 				3F277FAC243BA954005C6173 /* DemoLazyProgressViewModel.swift in Sources */,
 				3FC01B1922A42146003ECFD9 /* StatisticsViewController.swift in Sources */,
+				3F91898B244A0D6C00380FCB /* TableViewCellConfigurable.swift in Sources */,
 				3F575AF6243647D00007B811 /* DesignDemoViewController.swift in Sources */,
 				3F539C20243CE6A6001BB4A0 /* LazyNavigation.swift in Sources */,
 			);
