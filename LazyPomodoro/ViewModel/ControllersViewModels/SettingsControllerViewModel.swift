@@ -8,14 +8,25 @@
 
 import Foundation
 
+struct SettingsServicesContainer {
+    let settingsService: SettingsService
+}
+
 protocol SettingsViewControllerConfigurable where Self: ViewModelProtocol {
     var sectionsVMs: [TableViewSectionViewModel] { get }
+    
+    init(with container: SettingsServicesContainer)
 }
 
 class SettingsControllerViewModel: SettingsViewControllerConfigurable {
-    private(set) var sectionsVMs = [TableViewSectionViewModel]()
+    private let container: SettingsServicesContainer
     
-    init() {
+    private(set) var sectionsVMs = [TableViewSectionViewModel]()
+    private(set) var settings = Settings()
+    
+    required init(with container: SettingsServicesContainer) {
+        self.container = container
+        
         self.dependenciesInjected()
     }
     
@@ -30,7 +41,11 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     private func createBaseSettingsSection() -> TableViewSectionViewModel {
         var baseSettingsVMs = [TableViewCellConfigurable]()
         
-        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Intervals Auto Start", switchAction: { (value) in
+        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Intervals Auto Start", switchAction: { [weak self] (value) in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.settings.autoStartIntervalEnabled = value
+            strongSelf.getSettingsService().saveSettings(settings: strongSelf.settings)
             print("Auto start intervals: \(value)")
         }))
         baseSettingsVMs.append(SwitchTableViewCellVM(text: "Breaks Auto Start", switchAction: { (value) in
@@ -71,5 +86,9 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
         }
         
         return TableViewSectionViewModel(sectionTitle: "Goal", cellVMs: [cellVM])
+    }
+    
+    private func getSettingsService() -> SettingsService {
+        return container.settingsService
     }
 }
