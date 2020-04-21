@@ -53,20 +53,25 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
             print("Auto start intervals: \(value)")
         }))
         
-//        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Prevent From Sleep", switchAction: { [weak self] (value) in
-//            guard let strongSelf = self else { return }
-//
-//            strongSelf.settings.preventFromSleepEnabled = value
-//            strongSelf.getSettingsService().savePreventFromSleepEnabled(value: value)
-//            print("Prevent from sleep: \(value)")
-//        }))
-//        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Show Motivating Quotes", switchAction: { [weak self] (value) in
-//            guard let strongSelf = self else { return }
-//
-//            strongSelf.settings.motivationQuotesEnabled = value
-//            strongSelf.getSettingsService().saveMotivationQuotesEnabled(value: value)
-//            print("Show quotes: \(value)")
-//        }))
+        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Prevent From Sleep",
+                                                     value: settings.preventFromSleepEnabled,
+                                                     switchAction: { [weak self] (value) in
+            guard let strongSelf = self else { return }
+
+            strongSelf.settings.preventFromSleepEnabled = value
+            strongSelf.getSettingsService().savePreventFromSleepEnabled(value: value)
+            print("Prevent from sleep: \(value)")
+        }))
+        
+        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Show Motivating Quotes",
+                                                     value: settings.motivationQuotesEnabled,
+                                                     switchAction: { [weak self] (value) in
+            guard let strongSelf = self else { return }
+
+            strongSelf.settings.motivationQuotesEnabled = value
+            strongSelf.getSettingsService().saveMotivationQuotesEnabled(value: value)
+            print("Show quotes: \(value)")
+        }))
         
         return TableViewSectionViewModel(sectionTitle: nil, cellVMs: baseSettingsVMs)
     }
