@@ -26,35 +26,87 @@ class Settings {
 }
 
 class SettingsService {
+    private enum UserDefaultKey {
+        static let autoStartIntervalEnabled = "autoStartIntervalEnabled"
+        static let preventFromSleepEnabled = "preventFromSleepEnabled"
+        static let motivationQuotesEnabled = "motivationQuotesEnabled"
+        
+        static let workInterval = "workInterval"
+        static let breakInterval = "breakInterval"
+        static let longBreakInterval = "longBreakInterval"
+        
+        static let intervalsBeforeLongBreak = "intervalsBeforeLongBreak"
+        
+        static let dailyIntervalsGoal = "dailyIntervalsGoal"
+    }
+    
+    private var userDefaults = UserDefaults.standard
+    
+    // MARK: - Saving values
+    func saveAutoStartIntervalEnabled(value: Bool) {
+        userDefaults.set(value, forKey: UserDefaultKey.autoStartIntervalEnabled)
+    }
+    
+    func savePreventFromSleepEnabled(value: Bool) {
+        userDefaults.set(value, forKey: UserDefaultKey.preventFromSleepEnabled)
+    }
+    
+    func saveMotivationQuotesEnabled(value: Bool) {
+        userDefaults.set(value, forKey: UserDefaultKey.motivationQuotesEnabled)
+    }
+    
+    func saveWorkInterval(value: TimeInterval) {
+        userDefaults.set(value, forKey: UserDefaultKey.workInterval)
+    }
+    
+    func saveBreakInterval(value: TimeInterval) {
+        userDefaults.set(value, forKey: UserDefaultKey.breakInterval)
+    }
+    
+    func saveLongBreakInterval(value: TimeInterval) {
+        userDefaults.set(value, forKey: UserDefaultKey.longBreakInterval)
+    }
+    
+    func saveIntervalsBeforeLongBreak(value: Int) {
+        userDefaults.set(value, forKey: UserDefaultKey.intervalsBeforeLongBreak)
+    }
+    
+    func saveDailyIntervalsGoal(value: Int) {
+        userDefaults.set(value, forKey: UserDefaultKey.dailyIntervalsGoal)
+    }
+    
+    // MARK: - Load settings
     func loadSettings() -> Settings {
         let settings = Settings()
         
-        //TODO: load from UserDefaults.
+        if let value = userDefaults.value(forKey: UserDefaultKey.autoStartIntervalEnabled) as? Bool {
+            settings.autoStartIntervalEnabled = value
+        }
+        if let value = userDefaults.value(forKey: UserDefaultKey.preventFromSleepEnabled) as? Bool {
+            settings.preventFromSleepEnabled = value
+        }
+        if let value = userDefaults.value(forKey: UserDefaultKey.motivationQuotesEnabled) as? Bool {
+            settings.motivationQuotesEnabled = value
+        }
+        
+        if let value = userDefaults.value(forKey: UserDefaultKey.workInterval) as? TimeInterval {
+            settings.workInterval = value
+        }
+        if let value = userDefaults.value(forKey: UserDefaultKey.breakInterval) as? TimeInterval {
+            settings.breakInterval = value
+        }
+        if let value = userDefaults.value(forKey: UserDefaultKey.longBreakInterval) as? TimeInterval {
+            settings.longBreakInterval = value
+        }
+        
+        if let value = userDefaults.value(forKey: UserDefaultKey.intervalsBeforeLongBreak) as? Int {
+            settings.intervalsBeforeLongBreak = value
+        }
+        if let value = userDefaults.value(forKey: UserDefaultKey.dailyIntervalsGoal) as? Int {
+            settings.dailyIntervalsGoal = value
+        }
         
         return settings
     }
     
-    func saveSettings(settings: Settings) {
-        //TODO: save to UserDefaults
-        let mirror = Mirror(reflecting: settings)
-        
-        for (index, attr) in mirror.children.enumerated() {
-            print("Index: \(index), attribute: \(attr)")
-            
-            if let key = attr.label {
-                UserDefaults.setValue(attr.value, forKey: key)
-            }
-        }
-    }
-}
-
-extension SettingsService {
-    private func getAttributes(for object: Any) -> [Mirror.Child] {
-        let mirror = Mirror(reflecting: object)
-        let attributes = mirror.children.enumerated().map { (value) -> Mirror.Child in
-            value.element
-        }
-        
-        return attributes
-    }
 }

@@ -45,7 +45,7 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
             guard let strongSelf = self else { return }
             
             strongSelf.settings.autoStartIntervalEnabled = value
-            strongSelf.getSettingsService().saveSettings(settings: strongSelf.settings)
+//            strongSelf.getSettingsService().saveSettings(settings: strongSelf.settings)
             print("Auto start intervals: \(value)")
         }))
         baseSettingsVMs.append(SwitchTableViewCellVM(text: "Breaks Auto Start", switchAction: { (value) in
