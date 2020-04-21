@@ -10,5 +10,6 @@ import Foundation
 import RxCocoa
 
 protocol LazySwitchTableViewCellConfigurable: TableViewCellConfigurable {
+    var switchValue: BehaviorRelay<Bool> { get }
     var switchAction: (_ value: Bool) -> Void { get }
 }

@@ -31,6 +31,8 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     }
     
     internal func dependenciesInjected() {
+        settings = getSettingsService().loadSettings()
+        
         sectionsVMs.append(createBaseSettingsSection())
         sectionsVMs.append(createCustomModeSettingsSection())
         sectionsVMs.append(createGoalSettingsSection())
@@ -41,22 +43,30 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     private func createBaseSettingsSection() -> TableViewSectionViewModel {
         var baseSettingsVMs = [TableViewCellConfigurable]()
         
-        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Intervals Auto Start", switchAction: { [weak self] (value) in
+        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Intervals Auto Start",
+                                                     value: settings.autoStartIntervalEnabled,
+                                                     switchAction: { [weak self] (value) in
             guard let strongSelf = self else { return }
             
             strongSelf.settings.autoStartIntervalEnabled = value
-//            strongSelf.getSettingsService().saveSettings(settings: strongSelf.settings)
+            strongSelf.getSettingsService().saveAutoStartIntervalEnabled(value: value)
             print("Auto start intervals: \(value)")
         }))
-        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Breaks Auto Start", switchAction: { (value) in
-            print("Auto start breaks: \(value)")
-        }))
-        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Prevent From Sleep", switchAction: { (value) in
-            print("Prevent from sleep: \(value)")
-        }))
-        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Show Motivating Quotes", switchAction: { (value) in
-            print("Show quotes: \(value)")
-        }))
+        
+//        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Prevent From Sleep", switchAction: { [weak self] (value) in
+//            guard let strongSelf = self else { return }
+//
+//            strongSelf.settings.preventFromSleepEnabled = value
+//            strongSelf.getSettingsService().savePreventFromSleepEnabled(value: value)
+//            print("Prevent from sleep: \(value)")
+//        }))
+//        baseSettingsVMs.append(SwitchTableViewCellVM(text: "Show Motivating Quotes", switchAction: { [weak self] (value) in
+//            guard let strongSelf = self else { return }
+//
+//            strongSelf.settings.motivationQuotesEnabled = value
+//            strongSelf.getSettingsService().saveMotivationQuotesEnabled(value: value)
+//            print("Show quotes: \(value)")
+//        }))
         
         return TableViewSectionViewModel(sectionTitle: nil, cellVMs: baseSettingsVMs)
     }
