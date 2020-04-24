@@ -55,6 +55,8 @@ class LazySwitchTableViewCell: UITableViewCell {
     
     // MARK: - Private methods
     private func setupUI() {
+        selectionStyle = .none
+        
         titleLabel.font = .lp_body2()
         titleLabel.textColor = .lp_defaultTextColor()
         switcher.onTintColor = .lp_fillAccentPeach()
