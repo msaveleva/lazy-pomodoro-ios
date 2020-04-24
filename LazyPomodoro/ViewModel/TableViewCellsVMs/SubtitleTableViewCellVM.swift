@@ -11,13 +11,21 @@ import RxSwift
 import RxCocoa
 
 class SubtitleTableViewCellVM: LazySubtitleTableViewCellConfigurable {
+    private(set) var isExpanded = BehaviorRelay<Bool>(value: false)
+    
     private(set) var titleText: BehaviorRelay<String>
     private(set) var subtitleText: BehaviorRelay<String>
+    private(set) var optionsValues: [String]
     private(set) var action: () -> Void
 
-    init(title: String, subtitle: String, action: @escaping () -> Void) {
+    init(title: String, subtitle: String, optionsValues: [String], action: @escaping () -> Void) {
         self.titleText = BehaviorRelay<String>(value: title)
         self.subtitleText = BehaviorRelay<String>(value: subtitle)
+        self.optionsValues = optionsValues
         self.action = action
+    }
+    
+    func expand(_ expand: Bool) {
+        isExpanded.accept(expand)
     }
 }

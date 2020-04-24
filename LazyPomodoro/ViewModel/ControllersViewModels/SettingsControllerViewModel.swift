@@ -34,7 +34,7 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
         settings = getSettingsService().loadSettings()
         
         sectionsVMs.append(createBaseSettingsSection())
-        sectionsVMs.append(createCustomModeSettingsSection())
+//        sectionsVMs.append(createCustomModeSettingsSection())
         sectionsVMs.append(createGoalSettingsSection())
     }
     
@@ -79,24 +79,24 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     private func createCustomModeSettingsSection() -> TableViewSectionViewModel {
         var customModeSettings = [TableViewCellConfigurable]()
         
-        customModeSettings.append(SubtitleTableViewCellVM(title: "Work interval", subtitle: "75 min", action: {
-            //TODO: implement
-        }))
-        customModeSettings.append(SubtitleTableViewCellVM(title: "Break interval", subtitle: "10 min", action: {
-            //TODO: implement
-        }))
-        customModeSettings.append(SubtitleTableViewCellVM(title: "Long break interval", subtitle: "30 min", action: {
-            //TODO: implement
-        }))
-        customModeSettings.append(SubtitleTableViewCellVM(title: "Intervals before long break", subtitle: "3", action: {
-            //TODO: implement
-        }))
+//        customModeSettings.append(SubtitleTableViewCellVM(title: "Work interval", subtitle: "75 min", action: {
+//            //TODO: implement
+//        }))
+//        customModeSettings.append(SubtitleTableViewCellVM(title: "Break interval", subtitle: "10 min", action: {
+//            //TODO: implement
+//        }))
+//        customModeSettings.append(SubtitleTableViewCellVM(title: "Long break interval", subtitle: "30 min", action: {
+//            //TODO: implement
+//        }))
+//        customModeSettings.append(SubtitleTableViewCellVM(title: "Intervals before long break", subtitle: "3", action: {
+//            //TODO: implement
+//        }))
         
         return TableViewSectionViewModel(sectionTitle: "Custom mode settings", cellVMs: customModeSettings)
     }
     
     private func createGoalSettingsSection() -> TableViewSectionViewModel {
-        let cellVM = SubtitleTableViewCellVM(title: "Daily intervals goal", subtitle: "6") {
+        let cellVM = SubtitleTableViewCellVM(title: "Daily intervals goal", subtitle: "6", optionsValues: ["4", "5", "6", "7", "8"]) {
             //TODO: implement
         }
         
