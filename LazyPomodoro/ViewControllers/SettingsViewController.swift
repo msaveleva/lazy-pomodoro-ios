@@ -104,12 +104,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
         if let vm =
             viewModel.sectionsVMs[indexPath.section].cellVMs[indexPath.row] as? SubtitleTableViewCellVM {
             vm.isExpanded.accept(!vm.isExpanded.value)
-            tableView.reloadData()
+            tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
 }

@@ -61,10 +61,11 @@ class LazySubtitleTableViewCell: UITableViewCell {
     
     // MARK: - Private methods
     private func setupUI() {
+        selectionStyle = .none
+        
         textContentView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
         
         titleLabel.font = .lp_body2()
         titleLabel.textColor = .lp_defaultTextColor()
