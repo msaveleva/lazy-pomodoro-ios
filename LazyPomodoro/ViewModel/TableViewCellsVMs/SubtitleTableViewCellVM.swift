@@ -16,13 +16,13 @@ class SubtitleTableViewCellVM: LazySubtitleTableViewCellConfigurable {
     private(set) var titleText: BehaviorRelay<String>
     private(set) var subtitleText: BehaviorRelay<String>
     private(set) var optionsValues: [String]
-    private(set) var action: () -> Void
+    private(set) var selectOptionsAtIndex: (Int) -> Void
 
-    init(title: String, subtitle: String, optionsValues: [String], action: @escaping () -> Void) {
+    init(title: String, subtitle: String, optionsValues: [String], selectOptionsAtIndex: @escaping (Int) -> Void) {
         self.titleText = BehaviorRelay<String>(value: title)
         self.subtitleText = BehaviorRelay<String>(value: subtitle)
         self.optionsValues = optionsValues
-        self.action = action
+        self.selectOptionsAtIndex = selectOptionsAtIndex
     }
     
     func expand(_ expand: Bool) {

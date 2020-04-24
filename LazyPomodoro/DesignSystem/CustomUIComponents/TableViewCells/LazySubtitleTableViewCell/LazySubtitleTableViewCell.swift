@@ -117,6 +117,11 @@ extension LazySubtitleTableViewCell: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //TODO: implement
+        if let selectedText = viewModel?.optionsValues[row] {
+            viewModel?.subtitleText.accept(selectedText)
+            viewModel?.selectOptionsAtIndex(row)
+        } else {
+            fatalError("Options without title should not be available.")
+        }
     }
 }

@@ -96,7 +96,7 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     }
     
     private func createGoalSettingsSection() -> TableViewSectionViewModel {
-        let cellVM = SubtitleTableViewCellVM(title: "Daily intervals goal", subtitle: "6", optionsValues: ["4", "5", "6", "7", "8"]) {
+        let cellVM = SubtitleTableViewCellVM(title: "Daily intervals goal", subtitle: "6", optionsValues: ["4", "5", "6", "7", "8"]) { index in
             //TODO: implement
         }
         

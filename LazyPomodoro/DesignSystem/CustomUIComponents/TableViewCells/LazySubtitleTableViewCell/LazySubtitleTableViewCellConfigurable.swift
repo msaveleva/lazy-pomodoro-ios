@@ -13,5 +13,5 @@ protocol LazySubtitleTableViewCellConfigurable: TableViewCellConfigurable {
     var isExpanded: BehaviorRelay<Bool> { get }
     var subtitleText: BehaviorRelay<String> { get }
     var optionsValues: [String] { get }
-    var action: () -> Void { get }
+    var selectOptionsAtIndex: (Int) -> Void { get }
 }
