@@ -9,11 +9,6 @@
 import Foundation
 
 class Settings {
-    enum Constant {
-        static let minNumberOfDailyIntervals = 1
-        static let maxNumberOfDailyIntervals = 20
-    }
-    
     var autoStartIntervalEnabled = true
     var preventFromSleepEnabled = true
     var motivationQuotesEnabled = true
@@ -28,8 +23,49 @@ class Settings {
     var intervalsBeforeLongBreak = 3
     
     var dailyIntervalsGoal = 6
-    func dailyIntervalsOptions() -> [Int] {
+    
+}
+
+extension TimeInterval {
+    func minutesToMilliseconds() -> TimeInterval {
+        return self * 60000
+    }
+    
+    func millisecondsToMinutes() -> TimeInterval {
+        return self / 60000
+    }
+}
+
+class SettingsUtil {
+    enum Constant {
+        static let minWorkInterval: TimeInterval = 60000
+        static let maxWorkInterval: TimeInterval = 59 * 60000
+        
+        static let minNumberOfDailyIntervals = 1
+        static let maxNumberOfDailyIntervals = 20
+    }
+    
+    class func workIntervalsOptions() -> [TimeInterval] {
+        let step: TimeInterval = 60000
+        return generateTimeOptions(minValue: Constant.maxWorkInterval,
+                                   maxValue: Constant.maxWorkInterval,
+                                   step: step)
+    }
+    
+    class func dailyIntervalsOptions() -> [Int] {
         return Array(Constant.minNumberOfDailyIntervals...Constant.maxNumberOfDailyIntervals)
+    }
+    
+    private class func generateTimeOptions(minValue: TimeInterval, maxValue: TimeInterval, step: TimeInterval) -> [TimeInterval] {
+        let numberOfElements = Int(Constant.maxWorkInterval / Constant.minWorkInterval)
+        
+        var options: [TimeInterval] = [Constant.minWorkInterval]
+        for i in 1..<numberOfElements {
+            let newElement = options[i - 1] + step
+            options.append(newElement)
+        }
+        
+        return options
     }
 }
 

@@ -34,7 +34,7 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
         settings = getSettingsService().loadSettings()
         
         sectionsVMs.append(createBaseSettingsSection())
-//        sectionsVMs.append(createCustomModeSettingsSection())
+        sectionsVMs.append(createCustomModeSettingsSection())
         sectionsVMs.append(createGoalSettingsSection())
     }
     
@@ -78,7 +78,21 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     
     private func createCustomModeSettingsSection() -> TableViewSectionViewModel {
         var customModeSettings = [TableViewCellConfigurable]()
+        let customSuffix = " min"
         
+        let workSelectedIndex = SettingsUtil.workIntervalsOptions().firstIndex(of: settings.workInterval) ?? 0
+        let workOptions = SettingsUtil.workIntervalsOptions().map { (value) -> String in
+            String(format: "%.0f", value.millisecondsToMinutes())
+        }
+        customModeSettings.append(SubtitleTableViewCellVM(title: "Work Interval", customSuffix: customSuffix, selectedOptionIndex: workSelectedIndex, optionsValues: workOptions, selectOptionsAtIndex: { [weak self] index in
+            guard let self = self else { return }
+            
+            if let value = TimeInterval(workOptions[index]) {
+                let valueToSave = value.minutesToMilliseconds()
+                self.settings.workInterval = valueToSave
+                self.getSettingsService().saveWorkInterval(value: valueToSave)
+            }
+        }))
 //        customModeSettings.append(SubtitleTableViewCellVM(title: "Work interval", subtitle: "75 min", action: {
 //            //TODO: implement
 //        }))
@@ -96,8 +110,8 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     }
     
     private func createGoalSettingsSection() -> TableViewSectionViewModel {
-        let selectedIndex = settings.dailyIntervalsOptions().firstIndex(of: settings.dailyIntervalsGoal) ?? 0
-        let options = settings.dailyIntervalsOptions().map { (value) -> String in
+        let selectedIndex = SettingsUtil.dailyIntervalsOptions().firstIndex(of: settings.dailyIntervalsGoal) ?? 0
+        let options = SettingsUtil.dailyIntervalsOptions().map { (value) -> String in
             "\(value)"
         }
         
