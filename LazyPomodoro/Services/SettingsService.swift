@@ -41,22 +41,36 @@ class SettingsUtil {
         static let minWorkInterval: TimeInterval = 60000
         static let maxWorkInterval: TimeInterval = 59 * 60000
         
+        static let minBreakInterval: TimeInterval = 60000
+        static let maxBreakInterval: TimeInterval = 20 * 60000
+        
+        static let minLongBreakInterval: TimeInterval = 60000
+        static let maxLongBreakInterval: TimeInterval = 45 * 60000
+        
         static let minNumberOfDailyIntervals = 1
         static let maxNumberOfDailyIntervals = 20
     }
     
     class func workIntervalsOptions() -> [TimeInterval] {
-        let step: TimeInterval = 60000
         return generateTimeOptions(minValue: Constant.maxWorkInterval,
-                                   maxValue: Constant.maxWorkInterval,
-                                   step: step)
+                                   maxValue: Constant.maxWorkInterval)
+    }
+    
+    class func breakIntervalsOptions() -> [TimeInterval] {
+        return generateTimeOptions(minValue: Constant.minBreakInterval,
+                                   maxValue: Constant.maxBreakInterval)
+    }
+    
+    class func longBreakIntervalsOptions() -> [TimeInterval] {
+        return generateTimeOptions(minValue: Constant.minLongBreakInterval,
+                                   maxValue: Constant.maxLongBreakInterval)
     }
     
     class func dailyIntervalsOptions() -> [Int] {
         return Array(Constant.minNumberOfDailyIntervals...Constant.maxNumberOfDailyIntervals)
     }
     
-    private class func generateTimeOptions(minValue: TimeInterval, maxValue: TimeInterval, step: TimeInterval) -> [TimeInterval] {
+    private class func generateTimeOptions(minValue: TimeInterval, maxValue: TimeInterval, step: TimeInterval = 60000) -> [TimeInterval] {
         let numberOfElements = Int(Constant.maxWorkInterval / Constant.minWorkInterval)
         
         var options: [TimeInterval] = [Constant.minWorkInterval]

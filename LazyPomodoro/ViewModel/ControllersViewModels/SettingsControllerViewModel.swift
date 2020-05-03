@@ -80,6 +80,7 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
         var customModeSettings = [TableViewCellConfigurable]()
         let customSuffix = " min"
         
+        //Work Interval
         let workSelectedIndex = SettingsUtil.workIntervalsOptions().firstIndex(of: settings.workInterval) ?? 0
         let workOptions = SettingsUtil.workIntervalsOptions().map { (value) -> String in
             String(format: "%.0f", value.millisecondsToMinutes())
@@ -93,15 +94,37 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
                 self.getSettingsService().saveWorkInterval(value: valueToSave)
             }
         }))
-//        customModeSettings.append(SubtitleTableViewCellVM(title: "Work interval", subtitle: "75 min", action: {
-//            //TODO: implement
-//        }))
-//        customModeSettings.append(SubtitleTableViewCellVM(title: "Break interval", subtitle: "10 min", action: {
-//            //TODO: implement
-//        }))
-//        customModeSettings.append(SubtitleTableViewCellVM(title: "Long break interval", subtitle: "30 min", action: {
-//            //TODO: implement
-//        }))
+
+        //Break Interval
+        let breakSelectedIndex = SettingsUtil.breakIntervalsOptions().firstIndex(of: settings.breakInterval) ?? 0
+        let breakOptions = SettingsUtil.breakIntervalsOptions().map { (value) -> String in
+            String(format: "%.0f", value.millisecondsToMinutes())
+        }
+        customModeSettings.append(SubtitleTableViewCellVM(title: "Break Interval", customSuffix: customSuffix, selectedOptionIndex: breakSelectedIndex, optionsValues: breakOptions, selectOptionsAtIndex: { [weak self] index in
+            guard let self = self else { return }
+            
+            if let value = TimeInterval(breakOptions[index]) {
+                let valueToSave = value.minutesToMilliseconds()
+                self.settings.breakInterval = valueToSave
+                self.getSettingsService().saveBreakInterval(value: valueToSave)
+            }
+        }))
+
+        //Long Break Interval
+        let longBreakSelectedIndex = SettingsUtil.longBreakIntervalsOptions().firstIndex(of: settings.longBreakInterval) ?? 0
+        let longBreakOptions = SettingsUtil.longBreakIntervalsOptions().map { (value) -> String in
+            String(format: "%.0f", value.millisecondsToMinutes())
+        }
+        customModeSettings.append(SubtitleTableViewCellVM(title: "Long Break Interval", customSuffix: customSuffix, selectedOptionIndex: longBreakSelectedIndex, optionsValues: longBreakOptions, selectOptionsAtIndex: { [weak self] index in
+            guard let self = self else { return }
+            
+            if let value = TimeInterval(longBreakOptions[index]) {
+                let valueToSave = value.minutesToMilliseconds()
+                self.settings.longBreakInterval = valueToSave
+                self.getSettingsService().saveLongBreakInterval(value: valueToSave)
+            }
+        }))
+
 //        customModeSettings.append(SubtitleTableViewCellVM(title: "Intervals before long break", subtitle: "3", action: {
 //            //TODO: implement
 //        }))
