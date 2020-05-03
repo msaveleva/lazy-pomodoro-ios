@@ -11,7 +11,11 @@ import RxCocoa
 
 protocol LazySubtitleTableViewCellConfigurable: TableViewCellConfigurable {
     var isExpanded: BehaviorRelay<Bool> { get }
-    var subtitleText: BehaviorRelay<String> { get }
+    
+    var selectedOptionIndex: Int { get set }
+    /// Allows to show custom suffix after value in subtitle area.
+    var customSuffix: String? { get }
     var optionsValues: [String] { get }
+    
     var selectOptionsAtIndex: (Int) -> Void { get }
 }

@@ -9,6 +9,11 @@
 import Foundation
 
 class Settings {
+    enum Constant {
+        static let minNumberOfDailyIntervals = 1
+        static let maxNumberOfDailyIntervals = 20
+    }
+    
     var autoStartIntervalEnabled = true
     var preventFromSleepEnabled = true
     var motivationQuotesEnabled = true
@@ -22,7 +27,10 @@ class Settings {
     
     var intervalsBeforeLongBreak = 3
     
-    var dailyIntervalsGoal = 8
+    var dailyIntervalsGoal = 6
+    func dailyIntervalsOptions() -> [Int] {
+        return Array(Constant.minNumberOfDailyIntervals...Constant.maxNumberOfDailyIntervals)
+    }
 }
 
 class SettingsService {

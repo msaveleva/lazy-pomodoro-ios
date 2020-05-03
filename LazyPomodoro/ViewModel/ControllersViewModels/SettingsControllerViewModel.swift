@@ -96,8 +96,18 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
     }
     
     private func createGoalSettingsSection() -> TableViewSectionViewModel {
-        let cellVM = SubtitleTableViewCellVM(title: "Daily intervals goal", subtitle: "6", optionsValues: ["4", "5", "6", "7", "8"]) { index in
-            //TODO: implement
+        let selectedIndex = settings.dailyIntervalsOptions().firstIndex(of: settings.dailyIntervalsGoal) ?? 0
+        let options = settings.dailyIntervalsOptions().map { (value) -> String in
+            "\(value)"
+        }
+        
+        let cellVM = SubtitleTableViewCellVM(title: "Daily intervals goal", selectedOptionIndex: selectedIndex, optionsValues: options) { [weak self] index in
+            guard let self = self else { return }
+            
+            if let value = Int(options[index]) {
+                self.settings.dailyIntervalsGoal = value
+                self.getSettingsService().saveDailyIntervalsGoal(value: value)
+            }
         }
         
         return TableViewSectionViewModel(sectionTitle: "Goal", cellVMs: [cellVM])

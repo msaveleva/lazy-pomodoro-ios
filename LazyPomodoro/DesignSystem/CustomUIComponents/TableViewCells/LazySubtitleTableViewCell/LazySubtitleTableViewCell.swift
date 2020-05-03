@@ -50,7 +50,9 @@ class LazySubtitleTableViewCell: UITableViewCell {
         //TODO: Unsubscribe from previous viewModel's events.
         
         viewModel.titleText.bind(to: titleLabel.rx.text).disposed(by: disposeBag)
-        viewModel.subtitleText.bind(to: subtitleLabel.rx.text).disposed(by: disposeBag)
+        
+        updateSubtitleText()
+        pickerView.selectRow(viewModel.selectedOptionIndex, inComponent: 0, animated: false)
         
         viewModel.isExpanded.distinctUntilChanged().subscribe(onNext: { [weak self] expanded in
             guard let strongSelf = self else { return }
@@ -102,6 +104,20 @@ class LazySubtitleTableViewCell: UITableViewCell {
         stackView.addArrangedSubview(textContentView)
         stackView.addArrangedSubview(pickerView)
     }
+    
+    private func updateSubtitleText() {
+        if let viewModel = self.viewModel,
+            viewModel.optionsValues.count > viewModel.selectedOptionIndex {
+            var text = "\(viewModel.optionsValues[viewModel.selectedOptionIndex])"
+            if let suffix = viewModel.customSuffix {
+                text += " \(suffix)"
+            }
+            
+            subtitleLabel.text = text
+        } else {
+            fatalError("Incorrect selected option index")
+        }
+    }
 }
 
 extension LazySubtitleTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -118,11 +134,8 @@ extension LazySubtitleTableViewCell: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if let selectedText = viewModel?.optionsValues[row] {
-            viewModel?.subtitleText.accept(selectedText)
-            viewModel?.selectOptionsAtIndex(row)
-        } else {
-            fatalError("Options without title should not be available.")
-        }
+        viewModel?.selectedOptionIndex = row
+        viewModel?.selectOptionsAtIndex(row)
+        updateSubtitleText()
     }
 }

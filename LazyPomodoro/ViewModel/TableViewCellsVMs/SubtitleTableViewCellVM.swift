@@ -14,14 +14,20 @@ class SubtitleTableViewCellVM: LazySubtitleTableViewCellConfigurable {
     private(set) var isExpanded = BehaviorRelay<Bool>(value: false)
     
     private(set) var titleText: BehaviorRelay<String>
-    private(set) var subtitleText: BehaviorRelay<String>
+    
+    var selectedOptionIndex: Int
+    private(set) var customSuffix: String?
     private(set) var optionsValues: [String]
+    
     private(set) var selectOptionsAtIndex: (Int) -> Void
 
-    init(title: String, subtitle: String, optionsValues: [String], selectOptionsAtIndex: @escaping (Int) -> Void) {
+    init(title: String, customSuffix: String? = nil, selectedOptionIndex: Int = 0, optionsValues: [String], selectOptionsAtIndex: @escaping (Int) -> Void) {
         self.titleText = BehaviorRelay<String>(value: title)
-        self.subtitleText = BehaviorRelay<String>(value: subtitle)
+        
+        self.selectedOptionIndex = selectedOptionIndex
+        self.customSuffix = customSuffix
         self.optionsValues = optionsValues
+        
         self.selectOptionsAtIndex = selectOptionsAtIndex
     }
     
