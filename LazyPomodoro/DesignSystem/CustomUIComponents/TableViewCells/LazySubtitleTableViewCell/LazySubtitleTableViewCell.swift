@@ -110,7 +110,7 @@ class LazySubtitleTableViewCell: UITableViewCell {
             viewModel.optionsValues.count > viewModel.selectedOptionIndex {
             var text = "\(viewModel.optionsValues[viewModel.selectedOptionIndex])"
             if let suffix = viewModel.customSuffix {
-                text += " \(suffix)"
+                text += suffix
             }
             
             subtitleLabel.text = text
