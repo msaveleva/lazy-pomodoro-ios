@@ -125,9 +125,20 @@ class SettingsControllerViewModel: SettingsViewControllerConfigurable {
             }
         }))
 
-//        customModeSettings.append(SubtitleTableViewCellVM(title: "Intervals before long break", subtitle: "3", action: {
-//            //TODO: implement
-//        }))
+        //Intervals Before Long Break
+        let selectedIndex = SettingsUtil.intervalsBeforeLongBreakOptions().firstIndex(of: settings.intervalsBeforeLongBreak) ?? 0
+        let options = SettingsUtil.intervalsBeforeLongBreakOptions().map { (value) -> String in
+            "\(value)"
+        }
+        
+        customModeSettings.append(SubtitleTableViewCellVM(title: "Intervals Before Long Break", selectedOptionIndex: selectedIndex, optionsValues: options, selectOptionsAtIndex: { [weak self] index in
+            guard let self = self else { return }
+            
+            if let value = Int(options[index]) {
+                self.settings.intervalsBeforeLongBreak = value
+                self.getSettingsService().saveIntervalsBeforeLongBreak(value: value)
+            }
+        }))
         
         return TableViewSectionViewModel(sectionTitle: "Custom mode settings", cellVMs: customModeSettings)
     }

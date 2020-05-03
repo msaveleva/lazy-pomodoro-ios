@@ -47,6 +47,9 @@ class SettingsUtil {
         static let minLongBreakInterval: TimeInterval = 60000
         static let maxLongBreakInterval: TimeInterval = 45 * 60000
         
+        static let minIntervalsBeforeLongBreak: Int = 1
+        static let maxIntervalsBeforeLongBreak: Int = 10
+        
         static let minNumberOfDailyIntervals = 1
         static let maxNumberOfDailyIntervals = 20
     }
@@ -64,6 +67,10 @@ class SettingsUtil {
     class func longBreakIntervalsOptions() -> [TimeInterval] {
         return generateTimeOptions(minValue: Constant.minLongBreakInterval,
                                    maxValue: Constant.maxLongBreakInterval)
+    }
+    
+    class func intervalsBeforeLongBreakOptions() -> [Int] {
+        return Array(Constant.minIntervalsBeforeLongBreak...Constant.maxIntervalsBeforeLongBreak)
     }
     
     class func dailyIntervalsOptions() -> [Int] {
