@@ -54,6 +54,8 @@ class SettingsViewController: UIViewController, BindableTypeProtocol, LazyNaviga
         tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(LazySwitchTableViewCell.self, forCellReuseIdentifier: CellId.switchCellId)
         tableView.register(LazySubtitleTableViewCell.self, forCellReuseIdentifier: CellId.subtitleCellId)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44.0
         
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
@@ -99,10 +101,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             
             return cell
         }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let vm =
+            viewModel.sectionsVMs[indexPath.section].cellVMs[indexPath.row] as? SubtitleTableViewCellVM {
+            vm.isExpanded.accept(!vm.isExpanded.value)
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
     }
 }

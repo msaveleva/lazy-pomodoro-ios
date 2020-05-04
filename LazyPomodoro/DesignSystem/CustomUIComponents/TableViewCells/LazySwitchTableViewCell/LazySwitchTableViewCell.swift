@@ -32,18 +32,31 @@ class LazySwitchTableViewCell: UITableViewCell {
         //TODO: Unsubscribe from previous viewModel's events.
         
         viewModel.titleText.bind(to: titleLabel.rx.text).disposed(by: disposeBag)
+        
         switcher
             .rx
             .isOn
             .changed //Only user-initiated changes.
-            .distinctUntilChanged().subscribe(onNext: { value in
-                viewModel.switchAction(value)
-            })
+            .distinctUntilChanged()
+            .bind(to: viewModel.switchValue)
             .disposed(by: disposeBag)
+        
+        viewModel.switchValue.bind(to: switcher.rx.value).disposed(by: disposeBag)
+        
+        switcher
+            .rx
+            .isOn
+            .changed //Only user-initiated changes.
+            .distinctUntilChanged()
+        .subscribe(onNext: { value in
+            viewModel.switchAction(value)
+        })
     }
     
     // MARK: - Private methods
     private func setupUI() {
+        selectionStyle = .none
+        
         titleLabel.font = .lp_body2()
         titleLabel.textColor = .lp_defaultTextColor()
         switcher.onTintColor = .lp_fillAccentPeach()

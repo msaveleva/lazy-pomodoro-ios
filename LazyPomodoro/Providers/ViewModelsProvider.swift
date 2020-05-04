@@ -30,7 +30,8 @@ class ViewModelsProvider {
             let projectsControllerViewModel = ProjectsControllerViewModel(scenesRouter: scenesRouter)
             return projectsControllerViewModel
         case .settings:
-            let settingsControllerViewModel = SettingsControllerViewModel()
+            let container = SettingsServicesContainer(settingsService: servicesProvider.settingsService)
+            let settingsControllerViewModel = SettingsControllerViewModel(with: container)
             return settingsControllerViewModel
         case .createProject:
             let createProjectControllerViewModel = CreateProjectControllerViewModel(scenesRouter: scenesRouter)

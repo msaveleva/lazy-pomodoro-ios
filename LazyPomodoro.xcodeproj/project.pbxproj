@@ -28,6 +28,7 @@
 		3F575AF8243647DC0007B811 /* DesignDemoControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */; };
 		3F575AFC243796DC0007B811 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F575AFB243796DC0007B811 /* Icons.xcassets */; };
 		3F575AFF2437975C0007B811 /* IconsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575AFE2437975C0007B811 /* IconsNames.swift */; };
+		3F5FAA58244C48E400588E15 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FAA57244C48E400588E15 /* SettingsService.swift */; };
 		3F7C92C022CE5E02005A79A1 /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */; };
 		3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */; };
 		3F8C6EAF2443340300D25957 /* LazyPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C6EAE2443340300D25957 /* LazyPlayButton.swift */; };
@@ -107,6 +108,7 @@
 		3F575AF7243647DC0007B811 /* DesignDemoControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDemoControllerViewModel.swift; sourceTree = "<group>"; };
 		3F575AFB243796DC0007B811 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		3F575AFE2437975C0007B811 /* IconsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsNames.swift; sourceTree = "<group>"; };
+		3F5FAA57244C48E400588E15 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		3F7C92BF22CE5E02005A79A1 /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
 		3F7C92C122CE5E41005A79A1 /* CreateProjectControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectControllerViewModel.swift; sourceTree = "<group>"; };
 		3F8C6EAE2443340300D25957 /* LazyPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyPlayButton.swift; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 				3FFCF5202239569A00F5E552 /* TimerService.swift */,
 				3FC5E2EE224561490057D979 /* ProgressService.swift */,
 				3FC01B2622A5852E003ECFD9 /* DatabaseService.swift */,
+				3F5FAA57244C48E400588E15 /* SettingsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				3F002F1A222F8F0F00B53C34 /* BindableTypeProtocol.swift in Sources */,
 				3F575AF8243647DC0007B811 /* DesignDemoControllerViewModel.swift in Sources */,
 				3F2CE52122D65AEB00BD7D04 /* TableViewSectionVM.swift in Sources */,
+				3F5FAA58244C48E400588E15 /* SettingsService.swift in Sources */,
 				3FDA05B4222E431700D65C51 /* Scene.swift in Sources */,
 				3FC5E2EF224561490057D979 /* ProgressService.swift in Sources */,
 				3F7C92C222CE5E41005A79A1 /* CreateProjectControllerViewModel.swift in Sources */,

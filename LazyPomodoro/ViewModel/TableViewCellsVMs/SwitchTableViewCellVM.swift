@@ -12,10 +12,12 @@ import RxCocoa
 
 class SwitchTableViewCellVM: LazySwitchTableViewCellConfigurable {
     private(set) var titleText: BehaviorRelay<String>
+    private(set) var switchValue: BehaviorRelay<Bool>
     private(set) var switchAction: (Bool) -> Void
     
-    init(text: String, switchAction: @escaping (Bool) -> Void) {
+    init(text: String, value: Bool, switchAction: @escaping (Bool) -> Void) {
         self.titleText = BehaviorRelay<String>(value: text)
+        self.switchValue = BehaviorRelay<Bool>(value: value)
         self.switchAction = switchAction
     }
 }

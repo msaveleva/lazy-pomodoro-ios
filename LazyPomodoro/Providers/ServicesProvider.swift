@@ -9,8 +9,7 @@
 import Foundation
 
 class ServicesProvider {
-    
     let timerService = TimerService()
     let databaseService = DatabaseService()
-    
+    let settingsService = SettingsService()
 }
