@@ -35,7 +35,7 @@ class TimersViewController: UIViewController, BindableTypeProtocol, LazyNavigati
     }
     
     override func viewDidLoad() {
-        super .viewDidLoad()
+        super.viewDidLoad()
         
         setupNavigationBar()
         setupUI()

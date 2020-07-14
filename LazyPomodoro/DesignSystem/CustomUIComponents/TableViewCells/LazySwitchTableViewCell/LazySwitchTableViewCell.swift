@@ -50,7 +50,7 @@ class LazySwitchTableViewCell: UITableViewCell {
             .distinctUntilChanged()
         .subscribe(onNext: { value in
             viewModel.switchAction(value)
-        })
+        }).disposed(by: disposeBag)
     }
     
     // MARK: - Private methods

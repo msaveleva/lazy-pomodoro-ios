@@ -10,8 +10,8 @@ target 'LazyPomodoro' do
   pod 'SwiftGen', '~> 6.1'
 
   # core RxSwift
-  pod 'RxSwift', '~> 5.1'
-  pod 'RxCocoa', '~> 5.1'
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
 
   # Realm database
   pod 'RealmSwift', '~> 4.4'

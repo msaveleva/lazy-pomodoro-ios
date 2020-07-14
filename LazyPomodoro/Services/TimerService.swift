@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 
+//TODO: remove
 class TimerService {
     private(set) var currentTimerObservable: Observable<Int>
     

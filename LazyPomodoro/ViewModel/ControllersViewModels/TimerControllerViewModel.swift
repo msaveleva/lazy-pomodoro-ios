@@ -15,6 +15,34 @@ struct TimersServicesContainer {
     let databaseService: DatabaseService
 }
 
+enum TimerType {
+    case work, shortBreak, longBreak
+}
+
+class CurrentTimer {
+    private(set) var value: TimeInterval
+    private(set) var type: TimerType
+    private(set) var inProgress: Bool
+    
+    init() {
+        self.value = 0
+        self.type = .work
+        self.inProgress = false
+    }
+    
+    func update(value: TimeInterval) {
+        self.value = value
+    }
+    
+    func update(type: TimerType) {
+        self.type = type
+    }
+    
+    func update(inProgress: Bool) {
+        self.inProgress = inProgress
+    }
+}
+
 protocol TimerViewControllerConfigurable where Self: ViewModelProtocol {
     var projectPomodoroStackVm: LazyProgressViewConfigurable! { get }
     var todayProgressStackVm: LazyProgressViewConfigurable! { get }
@@ -29,6 +57,7 @@ class TimerControllerViewModel: TimerViewControllerConfigurable {
     private(set) var projectPomodoroStackVm: LazyProgressViewConfigurable!
     private(set) var todayProgressStackVm: LazyProgressViewConfigurable!
     private(set) var goalProgressStackVm: LazyProgressViewConfigurable?
+    
     private let disposeBag = DisposeBag()
     
     required init(with container: TimersServicesContainer) {
